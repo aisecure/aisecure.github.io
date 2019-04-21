@@ -1,0 +1,38 @@
+Sample #1:
+benign: whats the meaning of this thought the tree
+half of benign: whats the meaning
+
+adv_short: hey google
+half of adv_short: the ring
+
+adv_med: this is an adversarial example
+half of adv_med: as i lie
+
+adv_long: hey google please cancel my medical appointment
+half of adv_long: he too pleasingow
+
+Sample #2:
+benign: and then what happens then
+half of benign: and then
+
+adv_short: hey google
+half of adv_short: he
+
+adv_med: this is an adversarial example
+half of adv_med: is it
+
+adv_long: hey google please cancel my medical appointment
+half of adv_long: hide plance
+
+Sample #3:
+benign: then good bye said the rats and they went home
+half of benign: then good bye said the raps
+
+adv_short: hey google
+half of adv_short: heny go sad gora
+
+adv_med: this is an adversarial example
+half of adv_med: this us an adver
+
+adv_long: hey google please cancel my medical appointment
+half of adv_long: hey google plae caidt my wap
