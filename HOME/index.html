@@ -1,341 +1,372 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<!-- saved from url=(0036)https://secure-ai.github.io/#members -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>AI Security Lab</title>
-<style type="text/css">
-body {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-p {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
+<!DOCTYPE html>
+<html lang="en"><!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-.caption {
-    font-size: 34px;
-    font-weight: normal;
-    color: #000;
-    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
-}
-.caption-1 {
-    font-size: 16px;
-    font-family: Tahoma, Geneva, sans-serif;
-}
-.caption-2 {
-    font-size: 16px;
-    font-family: Tahoma, Geneva, sans-serif;
-    font-weight: bold;
-    color: #990000;
-}
-.caption-3 {
-    font-size: 16px;
-    font-family: Tahoma, Geneva, sans-serif;
-    font-weight: bold;
-    color: #F00;
-}
+  <title>AI Security(UIUC)</title>
 
-.caption-4 {
-    font-size: 16px;
-    font-family: Tahoma, Geneva, sans-serif;
-    color: #990000;
-}
-.content {
-    font-size: 16px;
-    font-family: Tahoma, Geneva, sans-serif;
-    text-align: justify;
-}
+  <meta name="author" content="Bo Li">
 
-.title-small {
-    font-size: 20px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: bold;
-    color: #F90;
-}
-.title-large {
-    font-size: 28px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: bold;
-    color: #000;
-}
-.margin {
-    font-size: 10px;
-    line-height: 10px;
-}
-.margin-small {
-    font-size: 5px;
-    line-height: 5px;
-}
-.margin-large {
-    font-size: 16px;
-    line-height: 16px;
-}
+  
+  <meta name="description" content="Assistant Professor, University of Illinois, Urbana Champaign">
+  
 
-.logo{
-    height: 55px;
-    width: 55px;
-    display: inline;
-}
-.icon{
-    position:absolute;
-    height: 60px;
-    width: 50px;
-    display: block;
-}
+  <link rel="alternate" type="application/rss+xml" title="" href="">
 
-#banner {
-  top: 0%;
-  left: 0%;
-  right: 0%;
-  width: 100%;
-  height: 30%;
-  z-index: -1;
-}
+  
+    
+      <link rel="stylesheet" href="./files/font-awesome.min.css">
+    
+  
 
-</style>
-<script type="text/javascript" src="./Security for Artificial Intelligence_files/jquery.js"></script>     
-<script type="text/javascript"> 
+  
+    
+      <link rel="stylesheet" href="./files/bootstrap.min.css">
+    
+      <link rel="stylesheet" href="./files/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="./files/main.css">
+    
+  
 
-function displaypage(){
-	$(".tag-all").hide();
-	if(document.getElementById('tag-all-box').checked){
-		$(".tag-all").show();
-	}
-	if(document.getElementById('tag-theoretical-foundations-box').checked){
-		$(".tag-theoretical-foundations").show();
-	}
-	if(document.getElementById('tag-host-security-box').checked){
-		$(".tag-host-security").show();
-	}
-	if(document.getElementById('tag-network-security-box').checked){
-		$(".tag-network-security").show();
-	}
-	if(document.getElementById('tag-privacy-box').checked){
-		$(".tag-privacy").show();
-	}
+  
+    
+      <link rel="stylesheet" href="./files/css">
+    
+      <link rel="stylesheet" href="./files/css(1)">
+    
+      <link rel="stylesheet" href="./files/css(2)">
+    
+  
 
-}
+  
 
-$(document).ready(function() {    
+  
 
-$("#tag-all-box").click(function() {
-	displaypage();
-});   
-$("#tag-theoretical-foundations-box").click(function() {
-	displaypage();
-});
-$("#tag-host-security-box").click(function() {
-	displaypage();
-}); 
-$("#tag-network-security-box").click(function() {
-	displaypage();
-}); 
-$("#tag-privacy-box").click(function() {
-	displaypage();
-}); 
+  
 
-});             
-</script>     
+    <!-- Facebook OpenGraph tags -->
+  
 
-<meta name="GENERATOR" content="MSHTML 9.00.8112.16443"></head>
+  
+  <meta property="og:title" content="Bo Li">
+  
 
-<header>
-  <img class = 'icon' src='./Security for Artificial Intelligence_files/i_mark_bold.png'/>
-  <img id = 'banner' src="./Security for Artificial Intelligence_files/siebel.jpg">
+   
+  <meta property="og:description" content="Assistant Professor, University of Illinois, Urbana Champaign">
+  
+
+
+  <meta property="og:type" content="website">
+
+  
+  <meta property="og:url" content="https://aisecure.github.io/">
+  <link rel="canonical" href="https://aisecure.github.io/">
+  
+
+  
+  
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@boli">
+  <meta name="twitter:creator" content="@boli">
+
+  
+  <meta name="twitter:title" content="Bo Li">
+  
+
+  
+  <meta name="twitter:description" content="Assistant Professor, University of Illinois, Urbana Champaign">
+  
+
+  
+
+<script type="text/x-mathjax-config;executed=true">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$', '$'], ["$$", "$$"] ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      "HTML-CSS": {
+        linebreaks: {
+          automatic: true
+        },
+        scale: 90,
+        fonts: ["TeX"],
+        mtextFontInherit: false,
+        matchFontHeight: true
+      },
+      "TeX": {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "mediawiki-texvc.js"],
+      }
+      //,
+      //displayAlign: "left",
+      //displayIndent: "2em"
+    });
+</script>
+  <script src="./files/MathJax.js" id=""></script>
+
+<!--
+   <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+     });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+--> 
+
+
+<style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style></head>
+  <body><div id="MathJax_Message" style="display: none;"></div>
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom top-nav-short">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="https://aisecure.github.io/HOME/">AI Security</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="">Publications</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="">Group</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="">Courses</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="">Github</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="">Bio</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+        <div class="page-heading">
+          
+          <p><img class="img-200" src="./files/logo.png"></p>
+          
+          <h1>AI Security</h1>
+		  
+		    
+            <hr class="small">
+            <span class="page-subheading">University of Illinois, Urbana Champaign</span>
+			
+		  
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </header>
-<body>
-<center> <h1><span><img class = 'logo' src="./Security for Artificial Intelligence_files/logo.png"/> AI Security </span></h1></center>
-
-<center>
-		[<a href="https://aisecure.github.io/home/#statement">Research Statement</a>] 
-    [<a href="https://aisecure.github.io/home/#publications">Publications</a>] 
-    [<a href="https://aisecure.github.io/home/#members">Members</a>]  
-</center>
-
-<h2 class="label"><a name="statement"><span>Research Statement</span></a></h2> 
-As intelligent systems become pervasive, safeguarding their security and privacy is critical. However, recent research have demonstrated that machine learning systems, including state-of-the-art deep neural networks, can be easily fooled by an adversary. For example, it is easy to generate adversarial examples, which are close to the benign inputs but are misidentified by the machine learning models. Moreover, in our recent work, we have shown that such attacks can be successful even without access to the model internals, i.e., in a black-box setting. These attacks may cause severe outcomes: for example, the adversary can mislead the perceptual systems of autonomous vehicles to wrongly identify road signs, which can result in catastrophic traffic accidents. Therefore, such security issues hinder the application of machine learning to security-critical systems.
-
-<br><br>
-
-In AI security research, we aim at investigating into the vulnerability of automatic learning systems, and ultimately, developing robust defense strategies against such sophisticated adversarial manipulations in real-world applications.
- 
-<hr>
-
-<h2 class="label"><a name="publications"><span>Recent Publications</span></a></h2>
-
-
-<table border="0" cellpadding="0" cellspacing="15" width="100%">
-  <tbody><tr>
-    <td width="200"><img src="./Security for Artificial Intelligence_files/RL_privacy.png" border="1" width="210"></td>
-    <td width="20"></td>
-    <td valign="middle" width="800"><p class="content"><strong>How You Act Tells a Lot: Privacy-Leaking Attack on Deep Reinforcement Learning</strong></p>
-      <p class="content">​Xinlei Pan, Weiyao Wang, Xiaoshuai Zhang, Bo Li, Jinfeng Yi, Dawn Song.</p>
-      <p class="content">International Conference on Autonomous Agents and Multiagent Systems (AAMAS). May, 2019</p>
-     <p class="margin-small">&nbsp;</p>
-      </td></tr>
-</tbody></table>
-
-<table border="0" cellpadding="0" cellspacing="15" width="100%">
-  <tbody><tr>
-    <td width="200"><img src="./Security for Artificial Intelligence_files/Fig_TD_demo.png" border="1" width="210"></td>
-    <td width="20"></td>
-    <td valign="middle" width="800"><p class="content"><a href="https://aisecure.github.io/AATD/"><strong>Characterizing Audio Adversarial Examples Using Temporal Dependency</strong></a></p>
-      <p class="content">Zhuolin Yang, Bo Li, Pin-Yu Chen, Dawn Song.</p>
-      <p class="content">International Conference on Learning Representations (ICLR). May, 2019.</p>
-     <p class="margin-small">&nbsp;</p>
-      </td></tr>
-</tbody></table>
-
-<table border="0" cellpadding="0" cellspacing="15" width="100%">
-  <tbody><tr>
-    <td width="200"><img src="./Security for Artificial Intelligence_files/segmentation-eccv.png" border="1" width="210"></td>
-    <td width="20"></td>
-    <td valign="middle" width="800"><p class="content"><a href="https://arxiv.org/abs/1810.05162"><strong>Characterizing Adversarial Examples Based on Spatial Consistency Information for Semantic Segmentation</strong></a></p>
-      <p class="content">Chaowei Xiao, Ruizhi Deng, Bo Li, Fisher Yu, Mingyan Liu, Dawn Song.</p>
-      <p class="content">The European Conference on Computer Vision (ECCV), September, 2018.</p>
-     <p class="margin-small">&nbsp;</p>
-      </td></tr>
-</tbody></table>
-
-<table border="0" cellpadding="0" cellspacing="15" width="100%">
-  <tbody><tr>
-    <td width="200"><img src="./Security for Artificial Intelligence_files/blackbox-eccv.png" border="1" width="210"></td>
-    <td width="20"></td>
-    <td valign="middle" width="800"><p class="content"><a href="https://arxiv.org/abs/1712.09491"><strong>Exploring the Space of Black-box Attacks on Deep Neural Networks</strong></a></p>
-      <p class="content">Arjun Nitin Bhagoji, Warren He, Bo Li, Dawn Song.</p>
-      <p class="content">The European Conference on Computer Vision (ECCV), September, 2018.</p>
-     <p class="margin-small">&nbsp;</p>
-      </td></tr>
-</tbody></table>
-
-<table border="0" cellpadding="0" cellspacing="15" width="100%">
-  <tbody><tr>
-    <td width="200"><img src="./Security for Artificial Intelligence_files/advGAN.png" border="1" width="210"></td>
-    <td width="20"></td>
-    <td valign="middle" width="800"><p class="content"><a href="https://arxiv.org/abs/1801.02610"><strong>Generating Adversarial Examples with Adversarial Networks</strong></a></p>
-      <p class="content">Chaowei Xiao, Bo Li, Jun-Yan Zhu, Warren He, Mingyan Liu, Dawn Song.</p>
-      <p class="content">The International Joint Conference on Artificial Intelligence (IJCAI), July, 2018.</p>
-     <p class="margin-small">&nbsp;</p>
-      </td></tr>
-</tbody></table>
-
-<table border="0" cellpadding="0" cellspacing="15" width="100%">
-  <tbody><tr>
-    <td width="200"><img src="./Security for Artificial Intelligence_files/VQAAdv.png" border="1" width="210"></td>
-    <td width="20"></td>
-    <td valign="middle" width="800"><p class="content"><a href="https://arxiv.org/abs/1709.08693"><strong>Fooling Vision and Language Models Despite Localization and Attention Mechanism</strong></a></p>
-      <p class="content">Xiaojun Xu, Xinyun Chen, Chang Liu, Anna Rohrbach, Trevor Darell, Dawn Song.</p>
-      <p class="content">The Conference on Computer Vision and Pattern Recognition (CVPR). June, 2018.</p>
-     <p class="margin-small">&nbsp;</p>
-      </td></tr>
-</tbody></table>
-
-<table border="0" cellpadding="0" cellspacing="15" width="100%">
-  <tbody><tr>
-    <td width="200"><img src="./Security for Artificial Intelligence_files/stopsign.jpg" border="1" width="210"></td>
-    <td width="20"></td>
-    <td valign="middle" width="800"><p class="content"><a href="https://arxiv.org/abs/1707.08945"><strong>Robust Physical-World Attacks on Deep Learning Visual Classification</strong></a></p>
-      <p class="content">Ivan Evtimov, Kevin Eykholt, Earlence Fernandes, Tadayoshi Kohno, Bo Li, Atul Prakash, Amir Rahmati, Chaowei Xiao, Dawn Song.</p>
-      <p class="content">The Conference on Computer Vision and Pattern Recognition (CVPR). June, 2018.</p>
-     <p class="margin-small">&nbsp;</p>
-      <p class="content">
-        Press: <a href="https://spectrum.ieee.org/cars-that-think/transportation/sensors/slight-street-sign-modifications-can-fool-machine-learning-algorithms">IEEE Spectrum</a> | <a href="https://sg.news.yahoo.com/researchers-demonstrate-limits-driverless-car-technology-151138885.html">Yahoo News</a> | <a href="https://www.wired.com/story/security-news-august-5-2017">Wired</a> | <a href="https://www.engadget.com/2017/08/06/altered-street-signs-confuse-self-driving-cars/">Engagdet</a> | <a href="http://www.telegraph.co.uk/technology/2017/08/07/graffiti-road-signs-could-trick-driverless-cars-driving-dangerously/">Telegraph</a> | <a href="http://blog.caranddriver.com/researchers-find-a-malicious-way-to-meddle-with-autonomous-cars/">Car and Driver</a> | <a href="https://www.cnet.com/roadshow/news/it-is-surprisingly-easy-to-bamboozle-a-self-driving-car/">CNET</a> | <a href="https://www.digitaltrends.com/cars/self-driving-cars-confuse-stickers-signs/">Digital Trends</a> | <a href="https://www.scmagazine.com/subtle-manipulation-of-street-signs-can-fool-self-driving-cars-researchers-report/article/680146/">SCMagazine</a> | <a href="https://www.schneier.com/blog/archives/2017/08/confusing_self-.html">Schneier on Security</a> | <a href="https://arstechnica.com/cars/2017/09/hacking-street-signs-with-stickers-could-confuse-self-driving-cars/?amp=1">Ars Technica</a> | <a href="http://fortune.com/2017/09/02/researchers-show-how-simple-stickers-could-trick-self-driving-cars/">Fortune</a> | <a href="http://www.sciencemag.org/news/2018/07/turtle-or-rifle-hackers-easily-fool-ais-seeing-wrong-thing">Science Magazine</a>
-      </p>
-      </td></tr>
-</tbody></table>
-
-<table border="0" cellpadding="0" cellspacing="15" width="100%">
-  <tbody><tr>
-    <td width="200"><img src="./Security for Artificial Intelligence_files/advSubspace.png" border="1" width="210"></td>
-    <td width="20"></td>
-    <td valign="middle" width="800"><p class="content"><a href="https://arxiv.org/abs/1801.02613"><strong>Characterizing Adversarial Subspaces Using Local Intrinsic Dimensionality</strong></a></p>
-      <p class="content">Xingjun Ma, Bo Li, Yisen Wang, Sarah M. Erfani, Sudanthi Wijewickrema, Michael E. Houle, Grant Schoenebeck, Dawn Song, James Bailey.</p>
-      <p class="content">International Conference on Learning Representations (ICLR). May, 2018.</p>
-     <p class="margin-small">&nbsp;</p>
-      </td></tr>
-</tbody></table>
-
-<table border="0" cellpadding="0" cellspacing="15" width="100%">
-  <tbody><tr>
-    <td width="200"><img src="./Security for Artificial Intelligence_files/spAdv.png" border="1" width="210"></td>
-    <td width="20"></td>
-    <td valign="middle" width="800"><p class="content"><a href="https://arxiv.org/abs/1801.02612"><strong>Spatially Transformed Adversarial Examples
-</strong></a></p>
-      <p class="content">Chaowei Xiao*, Jun-Yan Zhu*, Bo Li, Mingyan Liu, Dawn Song.</p>
-      <p class="content">International Conference on Learning Representations (ICLR). May, 2018.</p>
-     <p class="margin-small">&nbsp;</p>
-      </td></tr>
-</tbody></table>
-
-<table border="0" cellpadding="0" cellspacing="15" width="100%">
-  <tbody><tr>
-    <td width="200"><img src="./Security for Artificial Intelligence_files/decisionBoundary.png" border="1" width="210"></td>
-    <td width="20"></td>
-    <td valign="middle" width="800"><p class="content"><a href="https://openreview.net/forum?id=BkpiPMbA-&amp;noteId=BkpiPMbA-"><strong>Decision Boundary Analysis of Adversarial Examples</strong></a></p>
-      <p class="content">Warren He, Bo Li, Dawn Song.</p>
-      <p class="content">International Conference on Learning Representations (ICLR). May, 2018.</p>
-     <p class="margin-small">&nbsp;</p>
-      </td></tr>
-</tbody></table>
-
-<table border="0" cellpadding="0" cellspacing="15" width="100%">
-  <tbody><tr>
-    <td width="200"><img src="./Security for Artificial Intelligence_files/backdoorPoisoning.jpg" border="1" width="210"></td>
-    <td width="20"></td>
-    <td valign="middle" width="800"><p class="content"><a href="https://arxiv.org/abs/1712.05526"><strong>Targeted Backdoor Attacks on Deep Learning Systems Using Data Poisoning</strong></a></p>
-      <p class="content">Xinyun Chen, Chang Liu, Bo Li, Kimberly Lu, Dawn Song.</p>
-      <p class="content">December, 2017.</p>
-     <p class="margin-small">&nbsp;</p>
-      <p class="content">
-        Press: <a href="https://motherboard.vice.com/en_us/article/yw5dng/how-to-turn-a-pair-of-glasses-into-an-ai-fooling-spy-tool">Motherboard</a> | <a href="https://www.theregister.co.uk/2017/12/20/fool_ai_facial_recognition_poison/">The Register</a>
-      </p>
-      </td></tr>
-</tbody></table>
-
-<table border="0" cellpadding="0" cellspacing="15" width="100%">
-  <tbody><tr>
-    <td width="200"><img src="./Security for Artificial Intelligence_files/queryAdv.png" border="1" width="210"></td>
-    <td width="20"></td>
-    <td valign="middle" width="800"><p class="content"><a href="https://arxiv.org/abs/1712.09491"><strong>Exploring the Space of Black-box Attacks on Deep Neural Networks</strong></a></p>
-      <p class="content">Arjun Nitin Bhagoji, Warren He, Bo Li, Dawn Song.</p>
-      <p class="content">December, 2017.</p>
-     <p class="margin-small">&nbsp;</p>
-      </td></tr>
-</tbody></table>
 
 
 
-<hr>
 
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <p>
+        Our group is affiliated with
+<a href="https://cs.illinois.edu/">Computer Science Department</a> with the 
+<a href="https://engineering.illinois.edu/">School of Engineering</a>
+at <a href="https://illinois.edu/">University of Illinois, Urbana Champaign</a>.</p>
 
+<p>As intelligent systems become pervasive, safeguarding their security and privacy is critical. However, recent research have demonstrated that machine learning systems, including state-of-the-art deep neural networks, can be easily fooled by an adversary. For example, it is easy to generate adversarial examples, which are close to the benign inputs but are misidentified by the machine learning models. Moreover, in our recent work, we have shown that such attacks can be successful even without access to the model internals, i.e., in a black-box setting. These attacks may cause severe outcomes: for example, the adversary can mislead the perceptual systems of autonomous vehicles to wrongly identify road signs, which can result in catastrophic traffic accidents. Therefore, such security issues hinder the application of machine learning to security-critical systems.</p>
 
-<h2 class="label"><a name="members"><span>Members</span></a></h2>
-
+<h3 id="recent-news">Recent News</h3>
 <ul>
-  <li><p class="content"><b>Faculty</b></p><ul>
-    <li><p class="content"><a href="">Bo Li</a> (UIUC)</p></li>
-  </ul><br></li>
-  <li><p class="content"><b>Postdocs:</b></p><ul>
-    <li><p class="content"><a href=""></a></p></li>
-  </ul><br></li>
-
-  <li><p class="content"><b>Ph.D. Students:</b></p>
-  <ul>
-    <li><p class="content"><a href="">Huichen Li</a></p></li>
-  </ul>
-  <br>
-  </li>
-
-
-  <li><p class="content"><b>Others:</b></p>
- <ul>
-   <li><p class="content"><a href="https://kaizhaoliang.github.io/Portfolio/">Kaizhao Liang</a></p> </li>
-   <li><p class="content"><a href="">Michael Qian</a></p> </li>
-  </ul><br>
-  </li>
-
 </ul>
-<br><br>
+<div class="collapse no-return" id="oldnews">
+  <ul>
+  </ul>
+</div>
+<p><a href="" data-toggle="collapse">Older news</a></p>
+
+
+	    
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <h4>Contact</h4>
+          <div class="text-muted">
+        	Bo Li
+        	&nbsp;&nbsp;•&nbsp;&nbsp;
+        	<a href="lbo@illinois.edu">lbo@illinois.edu</a>
+          &nbsp;&nbsp;•&nbsp;&nbsp;
+          <a href="http://www.twitter.com/">@boli</a>
+          <br>
+            Computer Science Department <br> University of Illinois, Urbana Champaign <br> Champaign, IL <br>
+          </div>
+        </div>
+    </div>
+  </div>
+</footer>
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script><script src="./files/jquery-1.11.2.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="./files/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="./files/main.js"></script>
+    
+  
+
+
+
+
+  
+  
+
 </body></html>
