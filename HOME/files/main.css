@@ -698,7 +698,12 @@ td.gutter {
 ul {
   list-style-type: square;
 }
-
+.img-20 {
+  display: inline;
+  width: 50px;
+  height: 50px;
+  over
+}
 .img-128 {
   width: 128px;
   height: 128px;
