@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Group Blog</title>
+
+  <meta name="author" content="Zico Kolter" />
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="LocusLab blog - Blog for the LocusLab group." href="feed.xml.rss" />
+
+  
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="css/main.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway::400,700,300" />
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Group Blog" />
+  
+
+   
+  <meta property="og:description" content="{% for post in paginator.posts %} {{ post.title }} {% if post.subtitle %} {{ post.subtitle }} {% endif %} Posted on {{ post.date | date: &quot;%B %-d, %Y&quot; }} {% if post.image %} {% endif %} {% if post.tags.size &gt; 0 %} Tags: {% if site.link-tags %} {% for tag...">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="index.html" />
+  <link rel="canonical" href="index.html" />
+  
+
+  
+  
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@zicokolter" />
+  <meta name="twitter:creator" content="@zicokolter" />
+
+  
+  <meta name="twitter:title" content="Group Blog" />
+  
+
+  
+  <meta name="twitter:description" content="{% for post in paginator.posts %} {{ post.title }} {% if post.subtitle %} {{ post.subtitle }} {% endif %} Posted on {{ post.date | date: &quot;%B %-d, %Y&quot; }} {% if post.image %} {% endif %} {% if post.tags.size &gt; 0 %} Tags: {% if site.link-tags %} {% for tag...">
+  
+
+  
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$', '$'], ["$$", "$$"] ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      "HTML-CSS": {
+        linebreaks: {
+          automatic: true
+        },
+        scale: 90,
+        fonts: ["TeX"],
+        mtextFontInherit: false,
+        matchFontHeight: true
+      },
+      "TeX": {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "mediawiki-texvc.js"],
+      }
+      //,
+      //displayAlign: "left",
+      //displayIndent: "2em"
+    });
+</script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default" type="text/javascript"></script>
+
+<!--
+   <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+     });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+--> 
+
+
+</head>
+
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="https://aisecure.github.io/HOME/">Secure Learning Lab</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="https://aisecure.github.io/HOME/">About</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="https://aisecure.github.io/GROUP/">People</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="https://github.com/aisecure">GitHub</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          
+          
+          <p><img class="img-circle img-200" src="files/logo.jpg"/></p>
+          
+          
+          <h1>Group Blog</h1>
+		  
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="posts-list">
+  
+  <article class="post-preview">
+    <a href="https://sites.google.com/view/generate-semantic-adv-example">
+	  <h2 class="post-title">SemanticAdv: Generating Adversarial Examples via Attribute-conditional Image Editing
+    </h2>
+
+	  
+	  <p class="post-subtitle">
+	Deep neural networks (DNNs) have achieved great success in various applications due to their strong expressive power. However, recent studies have shown that DNNs are vulnerable to adversarial examples which are manipulated instances aiming to mislead DNNs to make incorrect predictions. Currently, most such adversarial examples try to guarantee the subtle perturbation by limiting its Lp norm. In this paper, we aim to explore the impact of semantic manipulation on DNNs by manipulating semantic attributes of images and generate unrestricted adversarial examples. Such semantic based perturbation is more practical compared with pixel level manipulation. In particular, we propose SemanticAdv which leverages disentangled semantic factors to generate adversarial perturbation via altering a single semantic attribute.
+
+We conduct extensive experiments to show that the semantic based adversarial examples can not only attack different learning tasks such as face verification and landmark detection, but also achieve high attack success rate against real-world black-box services such as Azure face verification service. Such structured adversarial examples with controlled semantic manipulation can shed light on further understanding about vulnerabilities of DNNs as well as potential defensive approaches.
+	  </p>
+	  
+    </a>
+
+    <p class="post-meta">
+      Posted on July 4, 2019
+    </p>
+
+    <div class="post-entry-container">
+      
+    </div>
+
+    
+
+   </article>
+  
+  
+</div>
+
+
+	    
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <h4>Contact</h4>
+          <div class="text-muted">
+          Bo Li
+          &nbsp;&nbsp;•&nbsp;&nbsp;
+          <a href="lbo@illinois.edu">lbo@illinois.edu</a>
+          &nbsp;&nbsp;•&nbsp;&nbsp;
+          <a href="http://www.twitter.com/">@boli</a>
+          <br>
+            Computer Science Department <br> University of Illinois, Urbana Champaign <br> Champaign, IL <br>
+          </div>
+        </div>
+    </div>
+  </div>
+</footer>
+  
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="js/main.js"></script>
+    
+  
+
+
+
+
+  
+  </body>
+</html>
