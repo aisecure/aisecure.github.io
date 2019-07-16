@@ -1,0 +1,6 @@
+@inproceedings{chao2018workloadinorder,
+    title={ Get Your Workload in Order: Game Theoretic Prioritization of Database Auditing},
+    author={Chao Yan, Bo Li, Yevgeniy Vorobeychik, Aron Laszka, Daniel Fabbri, Bradley Malin},
+    booktitle={ICDE},
+    year={2018}
+}

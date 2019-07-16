@@ -1,0 +1,6 @@
+@inproceedings{b2010cryptographicalt,
+    title={A Cryptographic Alternative for Preserving PHI in Compliance with HIPAA Privacy/Security Regulations},
+    author={B. Li and J. S. Lee},
+    journal={ Journal of Computers, vol. 21, pp. 27-36},
+    year={2010}
+}

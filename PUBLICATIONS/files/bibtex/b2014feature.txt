@@ -1,0 +1,6 @@
+@inproceedings{b2014feature,
+    title={Feature corss-substitution in adversarial classification,},
+    author={B. Li and Y. Vorobeychik},
+    booktitle={In Proc. of the Neural Information Processing Systems (NIPS)},
+    year={2014}
+}

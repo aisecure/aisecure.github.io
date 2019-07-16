@@ -1,0 +1,6 @@
+@inproceedings{qingrong2017do,
+    title={Do We Need Original Data for Training? Toward Designing Privacy-Preserving Machine Learning},
+    author={Qingrong Chen, Minhui Xue, Chong Xiang, Bo Li, Haizhong Zheng, and Haojin Zhu},
+    booktitle={DLSRF},
+    year={2017}
+}

@@ -1,0 +1,6 @@
+@inproceedings{chong2019generating,
+    title={Generating 3D Adversarial Point Clouds},
+    author={​Chong Xiang, Charles R. Qi, Bo Li},
+    booktitle={CVPR},
+    year={2019}
+}

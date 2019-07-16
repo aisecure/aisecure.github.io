@@ -1,0 +1,6 @@
+@inproceedings{xinlei2019how,
+    title={How You Act Tells a Lot: Privacy-Leakage Attack on Deep Reinforcement Learning},
+    author={​Xinlei Pan, Weiyao Wang, Xiaoshuai Zhang, Bo Li, Jinfeng Yi, Dawn Song},
+    booktitle={AAMAS},
+    year={2019}
+}

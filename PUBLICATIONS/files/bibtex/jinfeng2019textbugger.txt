@@ -1,0 +1,6 @@
+@inproceedings{jinfeng2019textbugger,
+    title={TextBugger: Generating Adversarial Text Against Real-world Applications},
+    author={Jinfeng Li, Shouling Ji, Tianyu Du, Bo Li, Ting Wang},
+    booktitle={NDSS},
+    year={2019}
+}

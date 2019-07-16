@@ -1,0 +1,6 @@
+@inproceedings{zhuolin2019characterizing,
+    title={Characterizing Audio Adversarial Examples Using Temporal Dependency},
+    author={Zhuolin Yang, Bo Li, Pin-Yu Chen, Dawn Song},
+    booktitle={ICLR},
+    year={2019}
+}

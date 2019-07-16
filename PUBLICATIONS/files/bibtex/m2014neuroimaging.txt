@@ -1,0 +1,6 @@
+@inproceedings{m2014neuroimaging,
+    title={Neuroimaging Genetics Study Design: A Comparison of the OpenMX and SOLAR Software Packages for Estimating Heritability of Neuroimaging Traits},
+    author={M. E. Koran, B. Li, N. Jahanshad, T. A. Thornton-Wells, D. C. Glahn, P. M. Thompson, J. Blangero, T. E. Nichols, P. Kochunov, and B. A. Landman},
+    booktitle={In Proc. of the International Imaging Genetics Conference (GC)},
+    year={2014}
+}

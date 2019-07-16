@@ -1,0 +1,6 @@
+@inproceedings{b2018evasionrobust,
+    title={Evasion-Robust Classification on Binary Domains},
+    author={B. Li, Y. Vorobeychik},
+    journal={ACM Transactions on Knowledge Discovery from Data (TKDD},
+    year={2018}
+}

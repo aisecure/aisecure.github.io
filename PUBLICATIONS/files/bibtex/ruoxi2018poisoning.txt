@@ -1,0 +1,6 @@
+@inproceedings{ruoxi2018poisoning,
+    title={Poisoning Attacks on Data-Driven Utility Learning in Games},
+    author={Ruoxi Jia, Ioannis Konstantakopoulos, Bo Li, Dawn Song, Costas J. Spanos},
+    booktitle={ACC},
+    year={2018}
+}

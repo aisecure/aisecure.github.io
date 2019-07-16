@@ -1,0 +1,6 @@
+@inproceedings{chaowei2018,
+    title={ Generating Adversarial Examples with Adversarial Networks},
+    author={Chaowei Xiao, Bo Li, Jun-Yan Zhu, Warren He, Mingyan Liu, Dawn Song},
+    booktitle={IJCAI},
+    year={2018}
+}

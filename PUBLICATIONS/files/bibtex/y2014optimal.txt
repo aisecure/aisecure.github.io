@@ -1,0 +1,6 @@
+@inproceedings{y2014optimal,
+    title={Optimal randomized classification in adversarial settings},
+    author={Y. Vorobeychik and B. Li},
+    booktitle={ In Proc. of the International Joint Conference on Autonomous Agents and Multiagent Systems (AAMAS)},
+    year={2014}
+}

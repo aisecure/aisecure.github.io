@@ -1,0 +1,6 @@
+@inproceedings{j2017engineering,
+    title={Engineering Agreement: The Naming Game with Asymmetric and Heterogeneous Agents},
+    author={J. Gao, B. Li, G. Schoenebeck and F. Yu},
+    booktitle={In Proceedings of the 30th International Conference on Artificial Intelligence (AAAI)},
+    year={2017}
+}

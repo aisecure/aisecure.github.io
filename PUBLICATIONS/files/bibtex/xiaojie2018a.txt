@@ -1,0 +1,6 @@
+@inproceedings{xiaojie2018a,
+    title={A Joint Optimization Approach for Personalized Recommendation Diversification},
+    author={Xiaojie Wang, Jianzhong Qi, Ramamohanarao Kotagiri, Yu Sun, Bo Li, and Rui Zhang},
+    booktitle={PAKDD},
+    year={2018}
+}

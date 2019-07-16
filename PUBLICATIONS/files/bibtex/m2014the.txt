@@ -1,0 +1,6 @@
+@inproceedings{m2014familystruct,
+    title={The impact of family structure and common environment on heritability estimation for neuroimaging genetics studies using SOLAR},
+    author={M. E. Koran, B. Li, N. Jahanshad, T. A. Thornton-Wells, D. C. Glahn, P. M. Thompson, J. Blangero, T. E. Nichols, P. Kochunov, and B. A. Landman},
+    booktitle={In Proc. of the International Imaging Genetics Conference (GC)},
+    year={2014}
+}

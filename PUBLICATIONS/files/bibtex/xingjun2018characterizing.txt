@@ -1,0 +1,6 @@
+@inproceedings{xingjun2018characterizing,
+    title={Characterizing Adversarial Subspaces Using Local Intrinsic Dimensionality},
+    author={Xingjun Ma, Bo Li, Yisen Wang, Sarah M. Erfani, Sudanthi Wijewickrema, Grant Schoenebeck , Dawn Song, Michael E. Houle, and James Bailey},
+    booktitle={ICLR},
+    year={2018}
+}

@@ -1,0 +1,6 @@
+@inproceedings{j2013note,
+    title={Note on ‘Authentication protocol using an identifier in an ad hoc network environment’},
+    author={J. S. Lee, and B. Li},
+    journal={Mathematical and Computer Modeling, vol. 57, pp. 1572-1575},
+    year={2013}
+}

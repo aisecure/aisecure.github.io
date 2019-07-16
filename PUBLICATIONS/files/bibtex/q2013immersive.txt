@@ -1,0 +1,6 @@
+@inproceedings{q2013immersive,
+    title={Immersive Virtual Reality for Visualization of Abdominal CT.},
+    author={Q. Lin, Z. Xu, B. Li, R. Baucom, B. Poulose, B. A. Landman, and R. E. Bodenheimer},
+    booktitle={In Proc. of the SPIE Medical Imaging Conference. Orlando (SPIE)},
+    year={2013}
+}

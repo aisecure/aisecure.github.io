@@ -1,0 +1,6 @@
+@inproceedings{c2016clinicalworkflows,
+    title={Learning clinical workflows to identify subgroups of heart failure patients},
+    author={C. Yan, B. Li, Y. Chen, D. Liebovitz, and B. Malin},
+    booktitle={In Proc. Of the American Medical Informatics Association Annual Fall Symposium (AMIA)},
+    year={2016}
+}

@@ -1,0 +1,6 @@
+@inproceedings{b2012rapid,
+    title={Rapid Prototyping of Image Processing Workflows on Massively Parallel Architectures},
+    author={B. Li, P. Volgyesi, and A. Ledeczi},
+    booktitle={In Proc. of Intelligent Solutions in Embedded Systems (WISES)},
+    year={2012}
+}

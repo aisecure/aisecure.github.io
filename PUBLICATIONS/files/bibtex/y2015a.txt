@@ -1,0 +1,6 @@
+@inproceedings{y2015a,
+    title={A Hybrid Illumination Refinement Technique based on Double Niblack Thresholds},
+    author={Y. H. Wang, J. S. Lee, B. Li},
+    booktitle={In Proc. of the International Conference on Communication and Information Systems (ICCIS)},
+    year={2015}
+}

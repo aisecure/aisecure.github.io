@@ -1,0 +1,6 @@
+@inproceedings{kimin2019robust,
+    title={Robust Inference via Generative Classifiers for Handling Noisy Labels},
+    author={Kimin Lee, Sukmin Yun, Kibok Lee, Honglak Lee, Bo Li, Jinwoo Shin},
+    booktitle={ICML},
+    year={2019}
+}

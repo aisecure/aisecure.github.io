@@ -1,0 +1,6 @@
+@inproceedings{xiang2019deepsec,
+    title={​DeepSec: A Uniform Platform for Security Analysis of Deep Learning Models},
+    author={Xiang Ling, Shouling Ji, Jiaxu Zou, Jiannan Wang, Chunming Wu, Bo Li, Ting Wang},
+    booktitle={Oakland},
+    year={2019}
+}

@@ -1,0 +1,6 @@
+@inproceedings{b2012nextgenjava,
+    title={Next Generation of the JAVA Image Science Toolkit (JIST) Visualization and Validation},
+    author={B. Li, F. Bryan, and B. A. Landman},
+    journal={ InSight Journal, vol. 12, pp. 23-34},
+    year={2012}
+}

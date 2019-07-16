@@ -1,0 +1,6 @@
+@inproceedings{chaowei2018characterizing,
+    title={Characterizing Adversarial Examples Based on Spatial Consistency Information for Semantic Segmentation},
+    author={Chaowei Xiao, Duizhi Deng, Bo Li, Fisher Yu, Jinfeng Yi, Mingyan Liu and Dawn Song},
+    booktitle={ECCV},
+    year={2018}
+}

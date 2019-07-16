@@ -1,0 +1,6 @@
+@inproceedings{matthew2018manipulating,
+    title={Manipulating Machine Learning: Poisoning Attacks and Countermeasures for Regression Learning},
+    author={Matthew Jagielski, Alina Oprea, Battista Biggio, Chang Liu, Cristina Nita-Rotaru, Bo Li},
+    booktitle={Oakland},
+    year={2018}
+}

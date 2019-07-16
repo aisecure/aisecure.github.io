@@ -1,0 +1,6 @@
+@inproceedings{liang2019improving,
+    title={Improving Robustness of ML Classifiers against Realizable Evasion Attacks Using Conserved Features},
+    author={Liang Tong, Bo Li, Chen Hajaj, Chaowei Xiao, Ning Zhang, Yevgeniy Vorobeychik},
+    booktitle={USENIXSecurity},
+    year={2019}
+}

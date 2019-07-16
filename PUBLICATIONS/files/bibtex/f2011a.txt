@@ -1,0 +1,6 @@
+@inproceedings{f2011neoteric,
+    title={A neoteric progressive scheme for visual secret sharing},
+    author={F. P. Lin, B. Li and J. S. Lee},
+    booktitle={In the Proc. of the First National Conference on Web Intelligence and Applications (CWIA)},
+    year={2011}
+}

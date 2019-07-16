@@ -1,0 +1,6 @@
+@inproceedings{j2012effectivepreprop,
+    title={An Effective Preprocessor for Enhancing Edge Detection in Speckle Images},
+    author={J. S. Lee, B. Li , and H. Y. Tsai},
+    booktitle={In Proc. of the 8th International Conference on Information Science and Digital Content Technology (ICIDT)},
+    year={2012}
+}
