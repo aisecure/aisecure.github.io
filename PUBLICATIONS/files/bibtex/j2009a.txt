@@ -1,0 +1,6 @@
+@inproceedings{j2009mobilevalue,
+    title={A Brand-new Mobile Value-added Service: M-Check},
+    author={J. S. Lee, B. Li and Y. C. Chou},
+    booktitle={In Proc. of International Conference on Networked Computing, Advanced Information Management and Digital Content and Multimedia Technologies (AICIT)},
+    year={2009}
+}

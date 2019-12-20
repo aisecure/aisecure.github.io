@@ -1,0 +1,6 @@
+@inproceedings{z2014shapeconstrained,
+    title={Shape-Constrained Multi-Atlas Segmentation of Spleen in CT.},
+    author={Z. Xu, B. Li, S. Panda, A. J. Asman, K. L. Merkle, P. L. Shanahan, R. G. Abramson, and B. A. Landman},
+    booktitle={In Proc. of the SPIE Medical Imaging Conference. San Diego (SPIE)},
+    year={2014}
+}

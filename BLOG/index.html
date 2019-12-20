@@ -127,17 +127,19 @@
 
   <body>
   
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom" style="background:#8CB6E1">
+     <nav class="navbar navbar-default navbar-fixed-top navbar-custom top-nav-short" style="background:#8CB6E1">
   <div class="container">
     <div class="navbar-header">
+
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      
+
         <a class="navbar-brand" href="https://aisecure.github.io/HOME/">Secure Learning Lab</a>
+
       
     </div>
 
@@ -149,11 +151,17 @@
             
             
 
+<a href="https://aisecure.github.io/PUBLICATIONS/">Publications</a>
+
+          </li>
+        
+        
+        
+          <li>
 
 
 
-
-<a href="https://aisecure.github.io/HOME/">About</a>
+<a href="https://aisecure.github.io/PROJECTS/">Projects</a>
 
           </li>
         
@@ -176,23 +184,41 @@
           <li>
             
             
-
-
-
-
-
-<a href="https://github.com/aisecure">GitHub</a>
+<a href="https://aisecure.github.io/TEACHING/">Teaching</a>
 
           </li>
+        
+        
+        
+          <li>
+
+
+<a href="https://aisecure.github.io/BLOG/">Blog</a>
+
+</li>
+        
+        
+          <li>
+
+
+
+
+
+<a href="https://github.com/aisecure">Github</a>
+
+          </li>
+        
         
         
       </ul>
     </div>
 
-	
+  
 
   </div>
 </nav>
+
+
 
 
     <!-- TODO this file has become a mess, refactor it -->
@@ -210,7 +236,7 @@
         <div class="page-heading">
           
           
-          <p><img class="img-circle img-200" src="files/logo.jpg"/></p>
+          <p><img class="img-200" src="files/logo.jpg"/></p>
           
           
           <h1>Group Blog</h1>
@@ -231,19 +257,103 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <div class="posts-list">
+   
+        <article class="post-preview">
+          <a href="https://github.com/aisecure/Provable-Training-and-Verification-Approaches-Towards-Robust-Neural-Networks">
+          <h2 class="post-title">A Leaderboard for Provable Training and Verification Approaches Towards Robust Neural Networks
+          </h2>
   
-  <article class="post-preview">
-    <a href="https://sites.google.com/view/generate-semantic-adv-example">
-	  <h2 class="post-title">SemanticAdv: Generating Adversarial Examples via Attribute-conditional Image Editing
-    </h2>
+          
+          <p class="post-subtitle">
+            Recently, provable (i.e. certified) adversarial robustness training and robustness verification approaches have demonstrated their importance in the adversarial learning community.
+          </p>
 
-	  
-	  <p class="post-subtitle">
-	Deep neural networks (DNNs) have achieved great success in various applications due to their strong expressive power. However, recent studies have shown that DNNs are vulnerable to adversarial examples which are manipulated instances aiming to mislead DNNs to make incorrect predictions. Currently, most such adversarial examples try to guarantee the subtle perturbation by limiting its Lp norm. In this paper, we aim to explore the impact of semantic manipulation on DNNs by manipulating semantic attributes of images and generate unrestricted adversarial examples. Such semantic based perturbation is more practical compared with pixel level manipulation. In particular, we propose SemanticAdv which leverages disentangled semantic factors to generate adversarial perturbation via altering a single semantic attribute.
+          <p class="post-subtitle">
+            In contrast to empirical robustness and empirical adversarial attacks, (common) provable robustness training/verification approaches provide rigorous lower bound for the network robustness, such that no existing or future attacks will be able to attack the model further. The verification approaches, which verifies the robustness bound given a neural network model, are strongly connected with the training methods. Thus, after training on the training set, the provable robustness bound of a model can be measured in terms of the ratio of the verifiable robust points in the test set.
+            To better record the advances in this field, we release a repo on Github (click to open) which keeps track of state-of-the-art provable robustness models on common datasets such as ImageNet, CIFAR10, and MNIST. Besides, a categorized paper list is attached.
+          </p>
 
-We conduct extensive experiments to show that the semantic based adversarial examples can not only attack different learning tasks such as face verification and landmark detection, but also achieve high attack success rate against real-world black-box services such as Azure face verification service. Such structured adversarial examples with controlled semantic manipulation can shed light on further understanding about vulnerabilities of DNNs as well as potential defensive approaches.
+          <p class="post-subtitle">
+            Welcome to visit our repo and provide any feedback or updates!
+      </p>
+      
+      </a>
+  
+      <p class="post-meta">
+        Posted on November 7, 2019
+      </p>
+  
+      <div class="post-entry-container">
+        
+      </div>
+  
+      
+  
+     </article>
+
+
+
+      <article class="post-preview">
+        <a href="https://sites.google.com/view/lidar-adv">
+        <h2 class="post-title">Adversarial Objects Against LiDAR-Based Autonomous Driving Systems</h2>
+
+        
+        <p class="post-subtitle">
+        Deep neural networks (DNNs) are found to be vulnerable against adversarial examples, which are carefully crafted inputs with a small magnitude of perturbation aiming to induce arbitrarily incorrect predictions. Recent studies show that adversarial examples can pose a threat to real-world security-critical applications: a "physical adversarial Stop Sign" can be synthesized such that the autonomous driving cars will mis-recognize it as others (e.g., a speed limit sign). However, these image-space adversarial examples cannot easily alter 3D scans of widely equipped LiDAR or radar on autonomous vehicles. In this paper, we reveal the potential vulnerabilities of LiDAR-based autonomous driving detection systems, by proposing an optimization based approach LiDAR-Adv to generate adversarial objects that can evade the LiDAR-based detection system under various conditions. We first show the vulnerabilities using a blackbox evolution-based algorithm, and then explore how much a strong adversary can do, using our gradient-based approach LiDAR-Adv. We test the generated adversarial objects on the Baidu Apollo autonomous driving platform and show that such physical systems are indeed vulnerable to the proposed attacks. We also 3D-print our adversarial objects and perform physical experiments to illustrate that such vulnerability exists in the real world.
+    </p>
+    
+    </a>
+
+    <p class="post-meta">
+      Posted on July 10, 2019
+    </p>
+
+    <div class="post-entry-container">
+      
+    </div>
+
+    
+
+   </article>
+
+
+  
+      <article class="post-preview">
+        <a href="https://sites.google.com/view/generate-semantic-adv-example">
+    	  <h2 class="post-title">SemanticAdv: Generating Adversarial Examples via Attribute-conditional Image Editing
+        </h2>
+
+    	  
+    	  <p class="post-subtitle">
+      	Deep neural networks (DNNs) have achieved great success in various applications due to their strong expressive power. However, recent studies have shown that DNNs are vulnerable to adversarial examples which are manipulated instances aiming to mislead DNNs to make incorrect predictions. Currently, most such adversarial examples try to guarantee the subtle perturbation by limiting its Lp norm. In this paper, we aim to explore the impact of semantic manipulation on DNNs by manipulating semantic attributes of images and generate unrestricted adversarial examples. Such semantic based perturbation is more practical compared with pixel level manipulation. In particular, we propose SemanticAdv which leverages disentangled semantic factors to generate adversarial perturbation via altering a single semantic attribute.
+
+      We conduct extensive experiments to show that the semantic based adversarial examples can not only attack different learning tasks such as face verification and landmark detection, but also achieve high attack success rate against real-world black-box services such as Azure face verification service. Such structured adversarial examples with controlled semantic manipulation can shed light on further understanding about vulnerabilities of DNNs as well as potential defensive approaches.
 	  </p>
 	  
+    </a>
+
+    <p class="post-meta">
+      Posted on July 4, 2019
+    </p>
+
+    <div class="post-entry-container">
+      
+    </div>
+
+    
+
+   </article>
+
+   <article class="post-preview">
+        <a href="https://aisecure.github.io/AATD/">
+        <h2 class="post-title">Characterzing Audio Adversarial Examples using Temporal Dependency
+        </h2>
+
+        
+        <p class="post-subtitle">
+        Recent studies have highlighted adversarial examples as a ubiquitous threat to different neural network models and many downstream applications. Nonetheless, as unique data properties have inspired distinct and powerful learning principles, this paper aims to explore their potentials towards mitigating adversarial inputs. In particular, our results reveal the importance of using the temporal dependency in audio data to gain discriminate power against adversarial examples. Tested on the automatic speech recognition (ASR) tasks and three recent audio adversarial attacks, we find that (i) input transformation developed from image adversarial defense provides limited robustness improvement and is subtle to advanced attacks; (ii) temporal dependency can be exploited to gain discriminative power against audio adversarial examples and is resistant to adaptive attacks considered in our experiments. Our results not only show promising means of improving the robustness of ASR systems but also offer novel insights in exploiting domain-specific data properties to mitigate negative effects of adversarial examples.
+    </p>
+    
     </a>
 
     <p class="post-meta">
@@ -297,29 +407,23 @@ Urbana, IL 61801, USA <br>
 
 
 
-
-
-  
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
       <script>
-      	if (typeof jQuery == 'undefined') {
-      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
-      	}
-      </script>
+        if (typeof jQuery == 'undefined') {
+          document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+        }
+      </script><script src="../files/jquery-1.11.2.min.js"></script>
     
   
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     
-	<script src="js/bootstrap.min.js"></script>
+  <script src="../files/bootstrap.min.js"></script>
     
   
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     
-	<script src="js/main.js"></script>
+  <script src="../files/main.js"></script>
     
   
-
 
 
 

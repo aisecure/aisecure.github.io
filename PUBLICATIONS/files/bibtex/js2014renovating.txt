@@ -1,0 +1,6 @@
+@inproceedings{js2014renovating,
+    title={Renovating Contaminative Image Archives based on Patch Propagation and Adaptive Confidence Collation},
+    author={ J. S. Lee, K. R. Wen, and B. Li},
+    journal={IEEE Transactions on Circuits and Systems for Video Technology, vol. 14, pp. 112-134},
+    year={2014}
+}

@@ -1,0 +1,6 @@
+@inproceedings{c2012horme,
+    title={HORME: Hierarchical-Object-Relational Medical management for Electronic record},
+    author={C. C. Yang, K. J. Wei, B. Li and J. S. Lee},
+    journal={Security and Communication Networks, vol. 17, pp. 53-65},
+    year={2012}
+}

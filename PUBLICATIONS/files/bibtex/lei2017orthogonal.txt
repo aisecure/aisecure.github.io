@@ -1,0 +1,6 @@
+@inproceedings{lei2017orthogonal,
+    title={Orthogonal Weight Normalization: Solution to Optimization over Multiple Dependent Stiefel Manifolds in Deep Neural Networks},
+    author={Lei Huang, Xianglong Liu, Bo Lang, Adams Wei Yu, Bo Li},
+    booktitle={AAAI},
+    year={2017}
+}

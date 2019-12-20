@@ -1,0 +1,6 @@
+@inproceedings{m2015optimizing,
+    title={Optimizing Annotation Resources for Natural Language De-identification via a Game Theoretic Framework},
+    author={M. Li, D. Carrell, J. Aberdeen, L. Hirschman, B. Li, Y.Vorobeychik, and B.Malin},
+    journal={Journal of Biomedical Informatics, vol. 30, pp.142-179},
+    year={2015}
+}

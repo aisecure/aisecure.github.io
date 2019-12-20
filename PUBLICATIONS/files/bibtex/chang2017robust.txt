@@ -1,0 +1,6 @@
+@inproceedings{chang2017robust,
+    title={Robust Linear Regression Against Training Data Poisoning},
+    author={Chang Liu, Bo Li, Yevgeniy Vorobeychik, and Alina Oprea},
+    booktitle={AISec},
+    year={2017}
+}

@@ -1,0 +1,6 @@
+@inproceedings{b2015secure,
+    title={Secure learning and mining in adversarial environments},
+    author={B. Li},
+    booktitle={In Proc. of the IEEE International Conference on Data Mining (ICDM)},
+    year={2015}
+}

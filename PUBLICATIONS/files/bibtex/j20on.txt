@@ -1,0 +1,6 @@
+@inproceedings{j2014eccauthen,
+    title={On the security of two ECC-based authentication mechanisms for confirming authorization},
+    author={J. S. Lee, K. J. Wei, and B. Li},
+    booktitle={ In Proc. of the Cryptography- 20 years of Cryptography in Taiwan, McGraw-Hill International Enterprises},
+    year={2014}
+}

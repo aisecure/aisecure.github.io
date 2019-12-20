@@ -1,0 +1,6 @@
+@inproceedings{b2016datapoisoning,
+    title={Data poisoning attacks on factorization-based collaborative filtering},
+    author={B. Li, Y. Wang, A. Singh, Y. Vorobeychik},
+    booktitle={In Proc. of the Neural Information Processing Systems (NIPS)},
+    year={2016}
+}

@@ -1,0 +1,6 @@
+@inproceedings{b2010providing,
+    title={Providing Anonymous Channels and Mutual Authentication in GSM,},
+    author={B. Li, J. S. Lee, and C. C. Chang},
+    booktitle={In Proc. of International Conference on the Fourth International Conference on Genetic and Evolutionary Computing (WCECS)},
+    year={2010}
+}

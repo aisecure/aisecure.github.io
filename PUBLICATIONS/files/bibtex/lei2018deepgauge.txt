@@ -1,0 +1,6 @@
+@inproceedings{lei2018deepgauge,
+    title={DeepGauge: Multi-Granularity Testing Criteria for Deep Learning Systems},
+    author={Lei Ma, Felix Juefei-Xu, Fuyuan Zhang, Jiyuan Sun, Minhui Xue, Bo Li, Chunyang Chen, Ting Su, Li Li, Yang Liu, Jianjun Zhao, and Yadong Wang},
+    booktitle={ASE},
+    year={2018}
+}

@@ -1,0 +1,6 @@
+@inproceedings{b2016scalable,
+    title={Scalable Iterative Classification for Sanitizing Large-Scale Datasets,},
+    author={B. Li, Y. Vorobeychik, M. Li, B. Malin},
+    journal={IEEE Transactions on Knowledge and Data Engineering (TKDE)},
+    year={2016}
+}

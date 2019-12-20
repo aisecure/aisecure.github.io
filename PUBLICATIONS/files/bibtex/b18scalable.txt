@@ -1,0 +1,6 @@
+@inproceedings{b2018scalableopt,
+    title={Scalable Optimization of Randomized Operational Decisions in Adversarial Classification Settings},
+    author={B. Li and Y. Vorobeychik},
+    booktitle={in Proc. of the 18th International Conference on Artificial Intelligence and Statistics (AISTATS)},
+    year={2018}
+}

@@ -1,0 +1,6 @@
+@inproceedings{chao2018database,
+    title={Database Audit Workload Prioritization via Game Theory},
+    author={Chao Yan, Bo Li, Yevgeniy Vorobeychik, Aron Laszka, Daniel Fabbri, Bradley Malin},
+    journal={ACM Transactionson Privacy and Security(TOPS)},
+    year={2018}
+}

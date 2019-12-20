@@ -1,0 +1,6 @@
+@inproceedings{j2014selfrecognized,
+    title={Self-recognized Watermarking Technique with Resistance to Large Scale Cropping},
+    author={J. S. Lee, and B. Li},
+    journal={IEEE Multimedia, vol. 21, pp. 60-73},
+    year={2014}
+}

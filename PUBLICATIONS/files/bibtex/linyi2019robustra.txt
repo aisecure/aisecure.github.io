@@ -1,0 +1,6 @@
+@inproceedings{linyi2019robustra,
+    title={Robustra: Training Provable Robust Neural Networks over Reference Adversarial Space},
+    author={Linyi Li, Zexuan Zhong, Tao Xie, Bo Li},
+    booktitle={IJCAI},
+    year={2019}
+}

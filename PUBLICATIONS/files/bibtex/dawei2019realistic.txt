@@ -1,0 +1,6 @@
+@inproceedings{dawei2019realistic,
+    title={Realistic Adversarial Examples in 3D Meshes},
+    author={Dawei Yang, Chaowei Xiao, Bo Li, Jia Deng, Mingyan Liu},
+    booktitle={CVPR},
+    year={2019}
+}

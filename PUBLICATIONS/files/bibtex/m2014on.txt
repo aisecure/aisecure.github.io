@@ -1,0 +1,6 @@
+@inproceedings{m2014heritability,
+    title={On study design in neuroimaging heritability analyses},
+    author={​M. E. Koran, B. Li, N. Jahanshad, T. A. Thornton-Wells, D. C. Glahn, P. M. Thompson, J. Blangero, T. E. Nichols, P. Kochunov, and B. A. Landman},
+    booktitle={In Proc. of the SPIE Medical Imaging Conference. San Diego (SPIE)},
+    year={2014}
+}

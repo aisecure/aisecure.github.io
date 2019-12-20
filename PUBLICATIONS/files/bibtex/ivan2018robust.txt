@@ -1,0 +1,6 @@
+@inproceedings{ivan2018robust,
+    title={Robust Physical-World Attacks on Deep Learning Visual Classification},
+    author={Ivan Evtimov, Kevin Eykholt, Earlence Fernandes, Bo Li, Amir Rahmati, Chaowei Xiao, Atul Prakash, Tadayoshi Kohno, Dawn Song},
+    booktitle={CVPR},
+    year={2018}
+}

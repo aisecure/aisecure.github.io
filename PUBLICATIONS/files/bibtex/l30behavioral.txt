@@ -1,0 +1,6 @@
+@inproceedings{ke2016behavioral,
+    title={Behavioral Experiments in Email Filter Evasion},
+    author={L. Ke, B. Li , Y. Vorobeychik},
+    booktitle={In Proc. of the 30th International Conference on Artificial Intelligence (AAAI)},
+    year={2016}
+}

@@ -1,0 +1,6 @@
+@inproceedings{ruoxi2019towards,
+    title={Towards Efficient Data Valuation Based on the Shapley Value},
+    author={Ruoxi Jia, David Dao, Boxin Wang, Frances Ann Hubis, Nick Hynes, Bo Li, Ce Zhang, Dawn Song, Costas Spanos},
+    booktitle={AISTATS},
+    year={2019}
+}

@@ -1,0 +1,6 @@
+@inproceedings{b2013regression,
+    title={Regression forest region recognition enhances multi-atlas spleen labeling},
+    author={B. Li, S. Panda, Z. Xu, A. J. Asman, P. L. Shanahan, R. G. Abramson, and B. A. Landman},
+    booktitle={In Proc. of the Medical Image Computing and Computer Assisted Intervention (MICCAI)},
+    year={2013}
+}

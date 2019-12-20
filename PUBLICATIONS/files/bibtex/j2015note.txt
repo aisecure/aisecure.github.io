@@ -1,0 +1,6 @@
+@inproceedings{j2015note,
+    title={Note on an anonymous multi-server authenticated key agreement scheme based on trust computing using smart cards and biometrics,},
+    author={J. S. Lee, K. J. Wei, B. R. Huang, and B. Li},
+    booktitle={In Proc. of the Cryptography and Information Security Conference (CISC)},
+    year={2015}
+}

@@ -1,0 +1,6 @@
+@inproceedings{b2011wallywatermarking,
+    title={A wally watermarking scheme with blind extraction based on structured encoding system},
+    author={B. Li, and J. S. Lee},
+    booktitle={International Conference on 2nd World Congress on Computer Science and Information Engineering (CSIE)},
+    year={2011}
+}

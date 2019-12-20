@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Here are the current paper tags:
+1) tag-all (for all papers)
+2) tag-privacy
+3) tag-host-security
+4) tag-network-security
+5) tag-theoretical-foundations
+
+
+-->
+<html><head>
+<title>Security for Artificial Intelligence</title>
+<style type="text/css">
+body {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.caption {
+    font-size: 34px;
+    font-weight: normal;
+    color: #000;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+}
+.caption-1 {
+    font-size: 16px;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.caption-2 {
+    font-size: 16px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    color: #990000;
+}
+.caption-3 {
+    font-size: 16px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    color: #F00;
+}
+
+.caption-4 {
+    font-size: 16px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #990000;
+}
+.content {
+    font-size: 16px;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-align: justify;
+}
+
+.title-small {
+    font-size: 20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+    color: #F90;
+}
+.title-large {
+    font-size: 28px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+    color: #000;
+}
+.margin {
+    font-size: 10px;
+    line-height: 10px;
+}
+.margin-small {
+    font-size: 5px;
+    line-height: 5px;
+}
+.margin-large {
+    font-size: 16px;
+    line-height: 16px;
+}
+</style>
+<script type="text/javascript" src="jquery.js"></script>     
+<script type="text/javascript"> 
+
+function displaypage(){
+	$(".tag-all").hide();
+	if(document.getElementById('tag-all-box').checked){
+		$(".tag-all").show();
+	}
+	if(document.getElementById('tag-theoretical-foundations-box').checked){
+		$(".tag-theoretical-foundations").show();
+	}
+	if(document.getElementById('tag-host-security-box').checked){
+		$(".tag-host-security").show();
+	}
+	if(document.getElementById('tag-network-security-box').checked){
+		$(".tag-network-security").show();
+	}
+	if(document.getElementById('tag-privacy-box').checked){
+		$(".tag-privacy").show();
+	}
+
+}
+
+$(document).ready(function() {    
+
+$("#tag-all-box").click(function() {
+	displaypage();
+});   
+$("#tag-theoretical-foundations-box").click(function() {
+	displaypage();
+});
+$("#tag-host-security-box").click(function() {
+	displaypage();
+}); 
+$("#tag-network-security-box").click(function() {
+	displaypage();
+}); 
+$("#tag-privacy-box").click(function() {
+	displaypage();
+}); 
+
+});             
+</script>     
+<meta content="text/html; charset=unicode" http-equiv="Content-Type">
+<meta name="GENERATOR" content="MSHTML 9.00.8112.16443"></head>
+<body><center><h1><span>Privacy-preserving Machine Learning and Data Analytics</span></h1></center>
+
+<center>
+		[<a href="#statement">Research Statement</a>] [<a href ="#publications">Publications</a>] [<a  href="https://aisecure.github.io/HOME/">Home</a>]
+    <!-- [<a href="#members">Members</a>]   -->
+</center>
+
+<h2 class="label"><a name="statement"><span >Research Statement</span></a></h2> 
+Machine learning has recently been widely adopted in various applications, and such success is largely due to a combination of algorithmic breakthroughs, computation resource improvements, and especially the access to a large amount of diverse training data. However, such massive data usually contain privacy sensitive information such as medical and financial information of individuals. With the rise of ubiquitous sensing, personalization, and virtual assistants, users' privacy is at ever-increasing risk. Can we enable the power and utility of machine learning and data analytics while still ensuring users' privacy? What is the relationship between privacy-preservation and generalization and robustness in machine learning? Can we design privacy preserving learning algorithms that can ensure privacy and guarantee high data utility?
+
+
+
+<br><br>
+We will explore novel techniques including differential privacy to enable privacy-preserving machine learning and data analytics in practice. Our long-term goal is to both provide practical real-world solutions for privacy-preserving machine learning and data analytics and deepen the theoretical understanding in the big data era.
+
+
+
+
+ 
+<hr>
+
+<h2 class="label"><a name="publications"><span >Recent Publications</span></a></h2>
+
+<!--<form> 
+  <div id="tags"> 
+    <input type="radio" name="tags" checked id="tag-all-box"> 
+    <label for="tag-all-box">All Publications</label> 
+   
+    <input type="radio" name="tags" id="tag-theoretical-foundations-box"> 
+    <label for="tag-theoretical-foundations-box">Theoretical Foundations</label>
+ 
+    <input type="radio" name="tags" id="tag-host-security-box">
+    <label for="tag-host-security-box">Host Security</label> 
+    
+    <input type="radio" name="tags" id="tag-network-security-box"> 
+    <label for="tag-network-security-box">Network Security</label> 
+    
+    <input type="radio" name="tags" id="tag-privacy-box"> 
+    <label for="tag-privacy-box">Privacy</label> 
+    
+  </div> 
+</form> -->
+
+<table border="0" cellpadding="0" cellspacing="15" width="100%">
+  <tbody><tr>
+    <td width="200"><img src="files/RL_privacy.png" border="1"width="210"></a></td>
+    <td width="20"></td>
+    <td valign="middle" width="800"><p class="content"><a href="https://arxiv.org/abs/1904.11082"><strong>How You Act Tells a Lot: Privacy-Leakage Attack on Deep Reinforcement Learning</strong></a></p>
+      <p class="content">​Xinlei Pan, Weiyao Wang, Xiaoshuai Zhang, Bo Li, Jinfeng Yi, Dawn Song.</p>
+      <p class="content">International Conference on Autonomous Agents and Multiagent Systems (AAMAS). May, 2019</p>
+     <p class="margin-small">&nbsp;</p>
+      </tr>
+</tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="15" width="100%">
+  <tbody><tr>
+    <td width="200"><img src="files/sharpley_value.png" border="1"width="210"></a></td>
+    <td width="20"></td>
+    <td valign="middle" width="800"><p class="content"><a href="https://arxiv.org/abs/1902.10275"><strong>Towards Efficient Data Valuation Based on the Shapley Value</strong></a></p>
+      <p class="content">​Ruoxi Jia, David Dao, Boxin Wang, Frances Ann Hubis, Nick Hynes, Bo Li, Ce Zhang, Dawn Song, Costas Spanos. </p>
+      <p class="content">AISTATS 2019</p>
+     <p class="margin-small">&nbsp;</p>
+      </tr>
+</tbody></table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="15" width="100%">
+  <tbody><tr>
+    <td width="200"><img src="files/workload_in_order.png" border="1"width="210"></a></td>
+    <td width="20"></td>
+    <td valign="middle" width="800"><p class="content"><a href="https://arxiv.org/abs/1801.07215"><strong>Get Your Workload in Order: Game Theoretic Prioritization of Database Auditing</strong></a></p>
+      <p class="content">​Chao Yan, Bo Li, Yevgeniy Vorobeychik, Aron Laszka, Daniel Fabbri, Bradley Malin.  </p>
+      <p class="content">ICDE 2018</p>
+     <p class="margin-small">&nbsp;</p>
+      </tr>
+</tbody></table>
+
+
+<table border="0" cellpadding="0" cellspacing="15" width="100%">
+  <tbody><tr>
+    <td width="200"><img src="files/engineering_agreement.png" border="1"width="210"></a></td>
+    <td width="20"></td>
+    <td valign="middle" width="800"><p class="content"><a href="http://www-personal.umich.edu/~fayu/papers/Naming_Game.pdf"><strong>Engineering Agreement: The Naming Game with Asymmetric and Heterogeneous Agents</strong></a></p>
+      <p class="content">​J. Gao, B. Li, G. Schoenebeck and F. Yu. </p>
+      <p class="content"> In Proceedings of the 30th International Conference on Artificial Intelligence (AAAI 2017). </p>
+     <p class="margin-small">&nbsp;</p>
+      </tr>
+</tbody></table>
+
+
+<table border="0" cellpadding="0" cellspacing="15" width="100%">
+  <tbody><tr>
+    <td width="200"><img src="files/scalable_itr_clf.png" border="1"width="210"></a></td>
+    <td width="20"></td>
+    <td valign="middle" width="800"><p class="content"><a href="https://ieeexplore.ieee.org/document/7742323"><strong>Iterative classification for sanitizing large-scale datasets</strong></a></p>
+      <p class="content">​B. Li, Y. Vorobeychik, M. Li, and B. Malin. </p>
+      <p class="content">ICDM 2015</p>
+     <p class="margin-small">&nbsp;</p>
+      </tr>
+</tbody></table>
+
+<!-- 
+<hr>
+
+
+
+<h2 class="label"><a name="members"><span >Members</span></a></h2>
+
+<ul>
+  <li><p class="content"><b>Faculty</b></p><ul>
+
+    <li><p class="content"><a href="http://www.crystal-boli.com/">Bo Li</a> (UIUC)</p></li>
+  </ul><br></li>
+  
+  <li><p class="content"><b>Ph.D. Students:</b></p>
+  <ul>
+    <li><p class="content"><a href="https://jungyhuk.github.io/">Xinyun Chen</a></p></li>
+    <li><p class="content"><a href="https://people.eecs.berkeley.edu/~ricshin/">Richard Shin</a></p></li>
+    <li><p class="content">Warren He</p></li>
+  </ul>
+  <br>
+  </li>
+
+  <li><p class="content"><b>Others:</b></p>
+ <ul>
+   <li><p class="content"> <a href=""></a>(NUS)</p> </li>
+  </ul><br>
+  </li>
+</li>
+</ul> -->
+<br><br></body></html>

@@ -1,0 +1,6 @@
+@inproceedings{js2015oblivious,
+    title={Oblivious Transfer System for Information Concealing and Recovery in Cloud Computing},
+    author={ J. S. Lee, B. Li, and B. R. Huang},
+    journal={Journal of Internet Technology, vol. 20, pp. 132-145},
+    year={2015}
+}

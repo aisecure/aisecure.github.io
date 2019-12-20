@@ -1,0 +1,6 @@
+@inproceedings{s2017automated,
+    title={Automated Poisoning Attacks and Defenses in Malware Detection Systems: An Adversarial Machine Learning Approach,},
+    author={S. Chen, M. Xue, L. Fan, S. Hao, L. Xu, H. Zhu, and B. Li},
+    journal={Elsevier Computers & Security},
+    year={2017}
+}

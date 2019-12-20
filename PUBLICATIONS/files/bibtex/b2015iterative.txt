@@ -1,0 +1,6 @@
+@inproceedings{b2015iterative,
+    title={Iterative classification for sanitizing large-scale datasets},
+    author={​B. Li, Y. Vorobeychik, M. Li, and B. Malin},
+    booktitle={In Proc. of the IEEE International Conference on Data Mining (ICDM)},
+    year={2015}
+}

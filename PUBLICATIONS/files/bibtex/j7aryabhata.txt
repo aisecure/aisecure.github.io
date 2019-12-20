@@ -1,0 +1,6 @@
+@inproceedings{j2013aryabhata,
+    title={Aryabhata Remainder Theorem-Based Non-Iterative Electronic Lottery Mechanism with Robustness,},
+    author={​J. S. Lee, W. C. Kao, and B. Li},
+    journal={IET Information Security, vol. 7, pp. 172-182},
+    year={2013}
+}

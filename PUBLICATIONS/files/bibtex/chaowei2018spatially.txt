@@ -1,0 +1,6 @@
+@inproceedings{chaowei2018spatially,
+    title={Spatially Transformed Adversarial Examples},
+    author={Chaowei Xiao, Jun-Yan Zhu, Bo Li, Warren He, Mingyan Liu, and Dawn Song},
+    booktitle={ICLR},
+    year={2018}
+}
