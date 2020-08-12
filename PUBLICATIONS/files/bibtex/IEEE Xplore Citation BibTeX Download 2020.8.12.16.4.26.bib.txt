@@ -1,0 +1,13 @@
+@ARTICLE{9144212,
+  author={S. {Bulusu} and B. {Kailkhura} and B. {Li} and P. K. {Varshney} and D. {Song}},
+  journal={IEEE Access}, 
+  title={Anomalous Example Detection in Deep Learning: A Survey}, 
+  year={2020},
+  volume={8},
+  number={},
+  pages={132330-132347},
+  abstract={Deep Learning (DL) is vulnerable to out-of-distribution and adversarial examples resulting in incorrect outputs. To make DL more robust, several posthoc (or runtime) anomaly detection techniques to detect (and discard) these anomalous samples have been proposed in the recent past. This survey tries to provide a structured and comprehensive overview of the research on anomaly detection for DL based applications. We provide a taxonomy for existing techniques based on their underlying assumptions and adopted approaches. We discuss various techniques in each of the categories and provide the relative strengths and weaknesses of the approaches. Our goal in this survey is to provide an easier yet better understanding of the techniques belonging to different categories in which research has been done on this topic. Finally, we highlight the unsolved research challenges while applying anomaly detection techniques in DL systems and present some high-impact future research directions.},
+  keywords={Anomaly detection;Machine learning;Training data;Data models;Training;Neural networks;Licenses;Anomaly detection;out-of-distribution;adversarial examples;deep learning;neural network},
+  doi={10.1109/ACCESS.2020.3010274},
+  ISSN={2169-3536},
+  month={},}
