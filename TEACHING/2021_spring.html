@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>
+      CS 498 - Special Topics on Trustworthy Machine Learning (Spring 2021)
+    </title>
+    <link rel="stylesheet" type="text/css" href="2020_fall_style.css" />
+    <link rel="icon" href="" />
+  </head>
+
+  <body class="main">
+    <h1>CS 498: Special Topics on Trustworthy Machine Learning</h1>
+    <h2 class="h1sub">Spring 2021</h2>
+
+    <p></p>
+    <dl>
+      <dt>
+        <b>Instructor</b>
+      </dt>
+      <dd>
+        <a href="https://aisecure.github.io" target="_blank">Bo Li</a>
+        <br /><a href="mailto:lbo@illinois.edu">lbo@illinois.edu</a> <br />
+        4310 Siebel Center
+        <p></p>
+      </dd>
+
+      <dt><b>Lectures</b></dt>
+      <dd>
+        Wed/Fri 3:30-4:45pm
+        <br />
+        <!-- <a
+          href="https://illinois.zoom.us/j/7486428863?pwd=RFFCSnE0UkluMTd3UXpxS01BY3puUT09"
+          >Zoom</a
+        > -->
+        <p></p>
+      </dd>
+
+      <dt><b>Teaching Assistant</b></dt>
+      <dd>
+        Fan Wu, <a href="mailto:fanw6@illinois.edu">fanw6@illinois.edu</a>
+        <p></p>
+      </dd>
+
+      <dt><b>Office Hours</b></dt>
+      <dd>
+        Bo Li: TBD
+        <!-- Tue/Thu 4:45-5:30 pm -->
+        <!-- <br>
+            Fan Wu: TBD -->
+        <p></p>
+      </dd>
+
+      <dt><b>Forums</b></dt>
+      <dd>
+        <!-- <a href="https://piazza.com/illinois/fall2020/cs598bl"> -->
+        Piazza
+        <!-- </a> -->
+      </dd>
+    </dl>
+
+    <h2>Course Overview</h2>
+
+    <p>
+      This course introduces students to the understanding about machine
+      learning, security, privacy, adversarial machine learning, and basic game
+      theory. Students will understand the different machine learning algorithms
+      and analyze their implementation and security vulnerabilities through a
+      series of homeworks and projects.
+    </p>
+
+    <p>
+      Please contact the instructor if you have questions regarding the material
+      or concerns about whether your background is suitable for the course.
+    </p>
+
+    <h2>Course Schedule</h2>
+
+    <p>
+      The following table outlines the schedule for the course. We will update
+      it as the quarter progresses.
+    </p>
+    <p></p>
+
+    <!-- <center> -->
+    <style type="text/css">
+      .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #9abad9;
+      }
+
+      .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #9abad9;
+        color: #444;
+        background-color: #ebf5ff;
+      }
+
+      .tg th {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #9abad9;
+        color: #fff;
+        background-color: #409cff;
+      }
+
+      .tg .tg-c3ow {
+        border-color: inherit;
+        text-align: left;
+        vertical-align: center;
+      }
+
+      .tg .tg-reading {
+        border-color: inherit;
+        text-align: left;
+        vertical-align: center;
+        font-size: 13px;
+      }
+
+      .tg .tg-middle {
+        border-color: inherit;
+        text-align: center;
+        vertical-align: center;
+      }
+
+      .tg .tg-0pky {
+        border-color: inherit;
+        text-align: left;
+        vertical-align: center;
+      }
+    </style>
+    <table class="tg">
+      <tr>
+        <th class="tg-0pky">Date</th>
+        <th class="tg-c3ow">Lecture</th>
+        <th class="tg-c3ow">Content</th>
+        <th class="tg-0pky">Materials</th>
+        <th class="tg-0pky">Homework</th>
+      </tr>
+      <tr>
+        <td class="tg-0pky">1/27</td>
+        <td class="tg-c3ow"><b>Course Intro</b></td>
+        <td class="tg-reading"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">1/29</td>
+        <td class="tg-c3ow">Supervised Learning I</td>
+        <td class="tg-reading">Regression, classification, Gradient</td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">2/3</td>
+        <td class="tg-c3ow">Supervised Learning II</td>
+        <td class="tg-reading">
+          PAC Learnability, supervised learning in Adversarial Settings
+        </td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">2/5</td>
+        <td class="tg-c3ow">Unsupervised Learning I</td>
+        <td class="tg-reading">Clustering, PCA, Matrix completion</td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">2/10</td>
+        <td class="tg-c3ow">Unsupervised Learning II</td>
+        <td class="tg-reading">
+          Unsupervised learning in Adversarial Settings
+        </td>
+
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">2/12</td>
+        <td class="tg-middle" colspan="2">
+          <b>Homework 1 Walkthrough, Q&A</b>
+        </td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">2/17</td>
+        <td class="tg-c3ow">Categories of Attacks on Machine Learning</td>
+        <td class="tg-reading"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">2/19</td>
+        <td class="tg-c3ow">Attacks at Decision Time</td>
+        <td class="tg-reading">Evasion Attacks, Anomaly Detection</td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">2/24</td>
+        <td class="tg-c3ow">Modeling Decision-time Attacks</td>
+        <td class="tg-reading"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">2/26</td>
+        <td class="tg-c3ow">
+          White-box/black-box Decision-time Attacks and Physical attacks
+        </td>
+        <td class="tg-reading"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">3/3</td>
+        <td class="tg-c3ow">Defending against decision-time attacks I</td>
+        <td class="tg-reading">Optimal evasion-robust classification</td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">3/5</td>
+        <td class="tg-middle" colspan="2">
+          <b>Homework 2 Walkthrough, Q&A</b>
+        </td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">3/10</td>
+        <td class="tg-c3ow">Defending against decision-time attacks II</td>
+        <td class="tg-reading">
+          Feature level protection, randomized smoothing
+        </td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">3/12</td>
+        <td class="tg-middle" colspan="2"><b>Midterm Exam</b></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">3/17</td>
+        <td class="tg-c3ow">Knowledge enriched robust learning models</td>
+        <td class="tg-reading"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">3/19</td>
+        <td class="tg-middle" colspan="2"><b>Spring Break</b></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">3/24</td>
+        <td class="tg-c3ow">Defending against decision-time attacks III</td>
+        <td class="tg-reading">Adversarial retraining</td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">3/26</td>
+        <td class="tg-middle" colspan="2"><b>Guest lecture</b></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">3/31</td>
+        <td class="tg-c3ow">Data Poisoning attacks</td>
+        <td class="tg-reading">
+          Binary classification, SVM, unsupervised learning, Matrix
+          factorization, general framework
+        </td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">4/2</td>
+        <td class="tg-c3ow">Defending against poisoning attacks I</td>
+        <td class="tg-reading">Data sub-sampling, outlier removal</td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">4/7</td>
+        <td class="tg-c3ow">Defending against poisoning attacks II</td>
+        <td class="tg-reading">Trimmed optimization</td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">4/9</td>
+        <td class="tg-middle" colspan="2">
+          <b>Homework 3 Walkthrough, Q&A</b>
+        </td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">4/14</td>
+        <td class="tg-middle" colspan="2"><b>Guest Lecture</b></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">4/16</td>
+        <td class="tg-c3ow">
+          Connection between information theory with differential privacy I
+        </td>
+        <td class="tg-reading"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">4/21</td>
+        <td class="tg-c3ow">
+          Connection between information theory with differential privacy II
+        </td>
+        <td class="tg-reading"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">4/23</td>
+        <td class="tg-c3ow">Privacy and model stability</td>
+        <td class="tg-reading"></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">4/28</td>
+        <td class="tg-middle" colspan="2"><b>Guest lecture</b></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">4/30</td>
+        <td class="tg-middle" colspan="2">
+          <b>Final review, final project presentation </b>
+        </td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">5/5</td>
+        <td class="tg-middle" colspan="2"><b>Final Exam </b></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">5/7</td>
+        <td class="tg-middle" colspan="2"><b>Final Exam Analysis</b></td>
+        <td class="tg-0pky"></td>
+        <td class="tg-0pky"></td>
+      </tr>
+    </table>
+    <!-- </center> -->
+
+    <h2>Grading</h2>
+    <p>
+      The course will involve 4 programming homework, a midterm, and a final.
+      Unless otherwise noted by the instructor, all work in this course is to be
+      completed independently. If you are ever uncertain of how to complete an
+      assignment, you can go to office hours or engage in high-level discussions
+      about the problem with your classmates on the Piazza boards.
+    </p>
+
+    <p>Grades will be assigned as follows:</p>
+
+    <ul>
+      <li>
+        <b>Homework:</b> Homework accounts for 40% of the grade. Homework will
+        be assigned sparingly.
+      </li>
+      <li>
+        <b>Midterm:</b> The midterm will be worth 25% of your grade, date/time
+        TBD.
+      </li>
+      <li>
+        <b>Final:</b> A final exam will be worth 30% of your grade, date/time
+        TBD (3 credit). For the 4 credit registration, a final project is
+        required, which will take 30% of the final score after normalizing the
+        other parts of performance.
+      </li>
+      <li>
+        <b>Participation:</b> Accounts for 5%. Includes quizzes and class
+        discussion (either in person or online).
+      </li>
+      <li>
+        <b>Bonus Points:</b> If you want to do a class project, you could
+        potentially get extra 20% bonus points depending on the quality of the
+        project.
+      </li>
+    </ul>
+
+    <h2>Course Expectations</h2>
+
+    <p>
+      The expectations for the course are that students will attend every class,
+      do any readings assigned for class, and actively and constructively
+      participate in class discussions. Class participation will be a measure of
+      contributing to the discourse both in class, through discussion and
+      questions, and outside of class through contributing and responding to the
+      Piazza forum.
+    </p>
+
+    <p>
+      More information about course requirements will be made available leading
+      up to the start of classes.
+    </p>
+
+    <h2>Ethics Statement</h2>
+
+    <p>
+      This course will include topics related computer security and privacy. As
+      part of this investigation we may cover technologies whose abuse could
+      infringe on the rights of others. As computer scientists, we rely on the
+      ethical use of these technologies. Unethical use includes circumvention of
+      an existing security or privacy mechanisms for any purpose, or the
+      dissemination, promotion, or exploitation of vulnerabilities of these
+      services. Any activity outside the letter or spirit of these guidelines
+      will be reported to the proper authorities and may result in dismissal
+      from the class and possibly more severe academic and legal sanctions.
+    </p>
+
+    <h2>Academic Integrity Policy</h2>
+
+    <p>
+      The University of Illinois at Urbana-Champaign Student Code should also be
+      considered as a part of this syllabus. Students should pay particular
+      attention to Article 1, Part 4: Academic Integrity. Read the Code at the
+      following URL:
+      <a
+        class="paperlink"
+        href="http://studentcode.illinois.edu/"
+        target="_blank"
+        >http://studentcode.illinois.edu/</a
+      >.
+    </p>
+    <p>
+      Academic dishonesty may result in a failing grade. Every student is
+      expected to review and abide by the Academic Integrity Policy:
+      <a
+        class="paperlink"
+        href="http://studentcode.illinois.edu/"
+        target="_blank"
+        >http://studentcode.illinois.edu/</a
+      >. Ignorance is not an excuse for any academic dishonesty. It is your
+      responsibility to read this policy to avoid any misunderstanding. Do not
+      hesitate to ask the instructor(s) if you are ever in doubt about what
+      constitutes plagiarism, cheating, or any other breach of academic
+      integrity.
+    </p>
+
+    <h2>Students with Disabilities</h2>
+
+    <p>
+      To obtain disability-related academic adjustments and/or auxiliary aids,
+      students with disabilities must contact the course instructor and the as
+      soon as possible. To insure that disability-related concerns are properly
+      addressed from the beginning, students with disabilities who require
+      assistance to participate in this class should contact Disability
+      Resources and Educational Services (DRES) and see the instructor as soon
+      as possible. If you need accommodations for any sort of disability, please
+      speak to me after class, or make an appointment to see me, or see me
+      during my office hours. DRES provides students with academic
+      accommodations, access, and support services. To contact DRES you may
+      visit 1207 S. Oak St., Champaign, call 333-4603 (V/TDD), or e-mail a
+      message to <a href="mailto:disability@uiuc.edu">disability@uiuc.edu</a>.
+      Please refer to
+      <a
+        class="paperlink"
+        href="http://www.disability.illinois.edu/"
+        target="_blank"
+        >http://www.disability.illinois.edu/</a
+      >.
+    </p>
+
+    <h2>Emergency Response Recommendations</h2>
+    <p>
+      Emergency response recommendations can be found at the following website:
+      <a
+        class="paperlink"
+        href="http://police.illinois.edu/emergency-preparedness/"
+        target="_blank"
+        >http://police.illinois.edu/emergency-preparedness/</a
+      >. I encourage you to review this website and the campus building floor
+      plans website within the first 10 days of class:
+      <a
+        class="paperlink"
+        href="http://police.illinois.edu/emergency-preparedness/building-emergency-action-plans/"
+        target="_blank"
+        >http://police.illinois.edu/emergency-preparedness/building-emergency-action-plans/</a
+      >.
+    </p>
+
+    <h2>Family Educational Rights and Privacy Act (FERPA)</h2>
+
+    <p>
+      Any student who has suppressed their directory information pursuant to
+      Family Educational Rights and Privacy Act (FERPA) should self-identify to
+      the instructor to ensure protection of the privacy of their attendance in
+      this course. See
+      <a
+        class="paperlink"
+        href="http://registrar.illinois.edu/ferpa"
+        target="_blank"
+        >http://registrar.illinois.edu/ferpa</a
+      >
+      for more information on FERPA.
+    </p>
+
+    <div class="footer">
+      <hr />
+      <a href="mailto:fanw6@illinois.edu">fanw6@illinois.edu</a>
+    </div>
+  </body>
+</html>
