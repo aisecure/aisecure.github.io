@@ -1,99 +1,82 @@
 <!DOCTYPE html>
-<html lang="en"><!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en"><!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159079655-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-159079655-1');
     </script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>AI Security (UIUC)</title>
+    <title>AI Security (UIUC)</title>
 
-  <meta name="author" content="Bo Li">
+    <meta name="author" content="Bo Li">
 
-  
-  <meta name="description" content="Assistant Professor, University of Illinois, Urbana Champaign">
-  
-  <link rel="icon" href="../files/logo.jpg" />
 
-  <link rel="alternate" type="application/rss+xml" title="" href="">
+    <meta name="description" content="Assistant Professor, University of Illinois, Urbana Champaign">
 
-  
-    
-      <link rel="stylesheet" href="./files/font-awesome.min.css">
-    
-  
+    <link rel="icon" href="../files/logo.jpg"/>
 
-  
-    
-      <link rel="stylesheet" href="./files/bootstrap.min.css">
-    
-      <link rel="stylesheet" href="./files/bootstrap-social.css">
-    
-      <link rel="stylesheet" href="./files/main.css">
-    
-  
+    <link rel="alternate" type="application/rss+xml" title="" href="">
 
-  
-    
-      <link rel="stylesheet" href="./files/css">
-    
-      <link rel="stylesheet" href="./files/css(1)">
-    
-      <link rel="stylesheet" href="./files/css(2)">
-    
-  
 
-  
+    <link rel="stylesheet" href="./files/font-awesome.min.css">
 
-  
 
-  
+    <link rel="stylesheet" href="./files/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./files/bootstrap-social.css">
+
+    <link rel="stylesheet" href="./files/main.css">
+
+
+    <link rel="stylesheet" href="./files/css">
+
+    <link rel="stylesheet" href="./files/css(1)">
+
+    <link rel="stylesheet" href="./files/css(2)">
+
 
     <!-- Facebook OpenGraph tags -->
-  
-
-  
-  <meta property="og:title" content="Bo Li">
-  
-
-   
-  <meta property="og:description" content="Assistant Professor, University of Illinois, Urbana Champaign">
-  
 
 
-  <meta property="og:type" content="website">
+    <meta property="og:title" content="Bo Li">
 
-  
-  <meta property="og:url" content="https://aisecure.github.io/">
-  <link rel="canonical" href="https://aisecure.github.io/">
-  
 
-  
-  
+    <meta property="og:description" content="Assistant Professor, University of Illinois, Urbana Champaign">
 
-  <!-- Twitter summary cards -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@boli">
-  <meta name="twitter:creator" content="@boli">
 
-  
-  <meta name="twitter:title" content="Bo Li">
-  
+    <meta property="og:type" content="website">
 
-  
-  <meta name="twitter:description" content="Assistant Professor, University of Illinois, Urbana Champaign">
-  
 
-  
+    <meta property="og:url" content="https://aisecure.github.io/">
+    <link rel="canonical" href="https://aisecure.github.io/">
 
-<script type="text/x-mathjax-config;executed=true">
+
+    <!-- Twitter summary cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@boli">
+    <meta name="twitter:creator" content="@boli">
+
+
+    <meta name="twitter:title" content="Bo Li">
+
+
+    <meta name="twitter:description" content="Assistant Professor, University of Illinois, Urbana Champaign">
+
+
+    <script type="text/x-mathjax-config;executed=true">
     MathJax.Hub.Config({
       jax: ["input/TeX", "output/HTML-CSS"],
       tex2jax: {
@@ -117,300 +100,2032 @@
       //displayAlign: "left",
       //displayIndent: "2em"
     });
-</script>
-  <script src="./files/MathJax.js" id=""></script>
 
-<!--
-   <script type="text/x-mathjax-config">
-     MathJax.Hub.Config({
-         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-     });
+
+
+
     </script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
---> 
+    <script src="./files/MathJax.js" id=""></script>
+
+    <!--
+       <script type="text/x-mathjax-config">
+         MathJax.Hub.Config({
+             tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+         });
+        </script>
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    -->
 
 
-<style type="text/css">.MathJax_Preview {color: #888}
-#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
-#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
-.MathJax_Error {color: #CC0000; font-style: italic}
-</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_About.MathJax_MousePost {outline: none}
-.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-.MathJax_MenuItem {padding: 1px 2em; background: transparent}
-.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
-.MathJax_MenuActive .MathJax_MenuArrow {color: white}
-.MathJax_MenuArrow.RTL {left: .5em; right: auto}
-.MathJax_MenuCheck {position: absolute; left: .7em}
-.MathJax_MenuCheck.RTL {right: .7em; left: auto}
-.MathJax_MenuRadioCheck {position: absolute; left: .7em}
-.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
-.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
-.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
-.MathJax_MenuDisabled {color: GrayText}
-.MathJax_MenuActive {background-color: #606872; color: white}
-.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
-.MathJax_ContextMenu:focus {outline: none}
-.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
-#MathJax_AboutClose {top: .2em; right: .2em}
-.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
-.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
-.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
-.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_MenuClose:hover span {background-color: #CCC!important}
-.MathJax_MenuClose:hover:focus {outline: none}
-</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
-#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-.navbar-custom .navbar-brand, .navbar-custom .nav li a {color:white;}
+    <style type="text/css">.MathJax_Preview {
+        color: #888
+    }
 
-</style></head>
-  <body><div id="MathJax_Message" style="display: none;"></div>
-  
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom top-nav-short" style="background:#8CB6E1">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-        <a class="navbar-brand" href="https://aisecure.github.io/">Secure Learning Lab</a>
-      
+    #MathJax_Message {
+        position: fixed;
+        left: 1em;
+        bottom: 1.5em;
+        background-color: #E6E6E6;
+        border: 1px solid #959595;
+        margin: 0px;
+        padding: 2px 8px;
+        z-index: 102;
+        color: black;
+        font-size: 80%;
+        width: auto;
+        white-space: nowrap
+    }
+
+    #MathJax_MSIE_Frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0px;
+        z-index: 101;
+        border: 0px;
+        margin: 0px;
+        padding: 0px
+    }
+
+    .MathJax_Error {
+        color: #CC0000;
+        font-style: italic
+    }
+    </style>
+    <style type="text/css">#MathJax_About {
+        position: fixed;
+        left: 50%;
+        width: auto;
+        text-align: center;
+        border: 3px outset;
+        padding: 1em 2em;
+        background-color: #DDDDDD;
+        color: black;
+        cursor: default;
+        font-family: message-box;
+        font-size: 120%;
+        font-style: normal;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        z-index: 201;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -khtml-border-radius: 15px;
+        box-shadow: 0px 10px 20px #808080;
+        -webkit-box-shadow: 0px 10px 20px #808080;
+        -moz-box-shadow: 0px 10px 20px #808080;
+        -khtml-box-shadow: 0px 10px 20px #808080;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+    }
+
+    #MathJax_About.MathJax_MousePost {
+        outline: none
+    }
+
+    .MathJax_Menu {
+        position: absolute;
+        background-color: white;
+        color: black;
+        width: auto;
+        padding: 5px 0px;
+        border: 1px solid #CCCCCC;
+        margin: 0;
+        cursor: default;
+        font: menu;
+        text-align: left;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        z-index: 201;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -khtml-border-radius: 5px;
+        box-shadow: 0px 10px 20px #808080;
+        -webkit-box-shadow: 0px 10px 20px #808080;
+        -moz-box-shadow: 0px 10px 20px #808080;
+        -khtml-box-shadow: 0px 10px 20px #808080;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+    }
+
+    .MathJax_MenuItem {
+        padding: 1px 2em;
+        background: transparent
+    }
+
+    .MathJax_MenuArrow {
+        position: absolute;
+        right: .5em;
+        padding-top: .25em;
+        color: #666666;
+        font-size: .75em
+    }
+
+    .MathJax_MenuActive .MathJax_MenuArrow {
+        color: white
+    }
+
+    .MathJax_MenuArrow.RTL {
+        left: .5em;
+        right: auto
+    }
+
+    .MathJax_MenuCheck {
+        position: absolute;
+        left: .7em
+    }
+
+    .MathJax_MenuCheck.RTL {
+        right: .7em;
+        left: auto
+    }
+
+    .MathJax_MenuRadioCheck {
+        position: absolute;
+        left: .7em
+    }
+
+    .MathJax_MenuRadioCheck.RTL {
+        right: .7em;
+        left: auto
+    }
+
+    .MathJax_MenuLabel {
+        padding: 1px 2em 3px 1.33em;
+        font-style: italic
+    }
+
+    .MathJax_MenuRule {
+        border-top: 1px solid #DDDDDD;
+        margin: 4px 3px
+    }
+
+    .MathJax_MenuDisabled {
+        color: GrayText
+    }
+
+    .MathJax_MenuActive {
+        background-color: #606872;
+        color: white
+    }
+
+    .MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {
+        background-color: #E8E8E8
+    }
+
+    .MathJax_ContextMenu:focus {
+        outline: none
+    }
+
+    .MathJax_ContextMenu .MathJax_MenuItem:focus {
+        outline: none
+    }
+
+    #MathJax_AboutClose {
+        top: .2em;
+        right: .2em
+    }
+
+    .MathJax_Menu .MathJax_MenuClose {
+        top: -10px;
+        left: -10px
+    }
+
+    .MathJax_MenuClose {
+        position: absolute;
+        cursor: pointer;
+        display: inline-block;
+        border: 2px solid #AAA;
+        border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        -khtml-border-radius: 18px;
+        font-family: 'Courier New', Courier;
+        font-size: 24px;
+        color: #F0F0F0
+    }
+
+    .MathJax_MenuClose span {
+        display: block;
+        background-color: #AAA;
+        border: 1.5px solid;
+        border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        -khtml-border-radius: 18px;
+        line-height: 0;
+        padding: 8px 0 6px
+    }
+
+    .MathJax_MenuClose:hover {
+        color: white !important;
+        border: 2px solid #CCC !important
+    }
+
+    .MathJax_MenuClose:hover span {
+        background-color: #CCC !important
+    }
+
+    .MathJax_MenuClose:hover:focus {
+        outline: none
+    }
+    </style>
+    <style type="text/css">#MathJax_Zoom {
+        position: absolute;
+        background-color: #F0F0F0;
+        overflow: auto;
+        display: block;
+        z-index: 301;
+        padding: .5em;
+        border: 1px solid black;
+        margin: 0;
+        font-weight: normal;
+        font-style: normal;
+        text-align: left;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        box-shadow: 5px 5px 15px #AAAAAA;
+        -webkit-box-shadow: 5px 5px 15px #AAAAAA;
+        -moz-box-shadow: 5px 5px 15px #AAAAAA;
+        -khtml-box-shadow: 5px 5px 15px #AAAAAA;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+    }
+
+    #MathJax_ZoomOverlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 300;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        opacity: 0;
+        filter: alpha(opacity=0)
+    }
+
+    #MathJax_ZoomFrame {
+        position: relative;
+        display: inline-block;
+        height: 0;
+        width: 0
+    }
+
+    #MathJax_ZoomEventTrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 302;
+        display: inline-block;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        opacity: 0;
+        filter: alpha(opacity=0)
+    }
+
+    .navbar-custom .navbar-brand, .navbar-custom .nav li a {
+        color: white;
+    }
+
+    </style>
+</head>
+<body>
+<div id="MathJax_Message" style="display: none;"></div>
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-custom top-nav-short" style="background:#8CB6E1">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://aisecure.github.io/">Secure Learning Lab</a>
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="nav navbar-nav navbar-right">
+
+
+                <li>
+
+
+                    <a href="https://aisecure.github.io/PUBLICATIONS/">Publications</a>
+
+                </li>
+
+
+                <li>
+
+
+                    <a href="https://aisecure.github.io/PROJECTS/">Projects</a>
+
+                </li>
+
+
+                <li>
+
+
+                    <a href="https://aisecure.github.io/GROUP/">People</a>
+
+                </li>
+
+
+                <li>
+
+
+                    <a href="https://aisecure.github.io/TEACHING/">Teaching</a>
+
+                </li>
+
+
+                <li>
+
+
+                    <a href="https://aisecure.github.io/BLOG/">Blog</a>
+
+                </li>
+
+                <li>
+
+
+                    <a href="https://github.com/AI-secure">GitHub</a>
+
+                </li>
+
+
+            </ul>
+        </div>
+
+
     </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-      
-        
-          <li>
-            
-            
-<a href="https://aisecure.github.io/PUBLICATIONS/">Publications</a>
-
-          </li>
-        
-        
-        
-          <li>
-
-
-
-
-<a href="https://aisecure.github.io/PROJECTS/">Projects</a>
-
-          </li>
-        
-        
-        
-          <li>
-            
-            
-
-
-
-
-
-<a href="https://aisecure.github.io/GROUP/">People</a>
-
-          </li>
-        
-        
-        
-          <li>
-            
-            
-<a href="https://aisecure.github.io/TEACHING/">Teaching</a>
-
-          </li>
-        
-                
-        
-          <li>
-
-
-<a href="https://aisecure.github.io/BLOG/">Blog</a>
-
-</li>
-        
-          <li>
-
-
-
-
-<a href="https://github.com/AI-secure">GitHub</a>
-
-          </li>
-        
-        
-        
-      </ul>
-    </div>
-
-	
-
-  </div>
 </nav>
 
 
-    <!-- TODO this file has become a mess, refactor it -->
-
-
-
+<!-- TODO this file has become a mess, refactor it -->
 
 
 <header class="header-section ">
 
-<div class="intro-header no-img">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-heading">
-          
-          
-          <p><img class="img-200" src="./files/logo.jpg"/>
-          
-          </p><h1>Publications</h1>
-      
-      
-      
+    <div class="intro-header no-img">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+
+
+                        <p><img class="img-200" src="./files/logo.jpg"/>
+
+                        </p>
+                        <h1>Publications</h1>
+
+
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
 </header>
 
 
-
-
 <div class="container" role="main">
-  <h3>Refereed Conferences</h3>
+    <h3>Refereed Conferences</h3>
     <h4>2021</h4>
     <ul>
-        <li>Xinyun  Chen,  Wenxiao  Wang, Chris Bender, Yiming  Ding, Ruoxi Jia, Bo Li, Dawn  Song. <a href="https://arxiv.org/pdf/1911.07205.pdf">REFIT:  a  Unified  Watermark  Removal  Framework  for  DeepLearning Systems with Limited Data.</a>  (AsiaCCS 2021)</li>
-        <li>Huichen Li*, Linyi Li*, Xiaojun Xu, Xiaolu Zhang, Shuang Yang, Bo Li. Nonlinear Projection Based Gradient Estimation for Query Efficient Blackbox Attacks. (AISTATS 2021)</li>
-        <li>Zhuolin Yang, Zhaoxi Chen, Tiffany Cai, Xinyun Chen, Bo Li, Yuandong Tian. Understanding Robustness in Teacher-Student Setting: A New Perspective. (AISTATS 2021)</li>
-        <li>Boxin Wang, Shuohang Wang, Yu Cheng, Zhe Gan, Ruoxi Jia, Bo Li, Jingjing Liu. <a href="https://openreview.net/forum?id=hpH98mK5Puk">InfoBERT: Improving Robustness of Language Models from An Information Theoretic Perspective.</a> (ICLR 2021)</li>
-        <li>Yige Li, Xingjun Ma, Nodens Koren, Lingjuan Lyu, Xixiang Lyu, Bo Li. <a href="https://openreview.net/forum?id=9l0K4OM-oXE">Neural Attention Distillation: Erasing Backdoor Triggers from Deep Neural Networks.</a> (ICLR 2021)</li>
+        <li>Xinyun Chen, Wenxiao Wang, Chris Bender, Yiming Ding, Ruoxi Jia, Bo Li, Dawn Song. <a
+                href="https://arxiv.org/pdf/1911.07205.pdf">REFIT: a Unified Watermark Removal Framework for
+            DeepLearning Systems with Limited Data.</a> (AsiaCCS 2021)
+            <a href="#chen2019refit" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="chen2019refit" aria-expanded="false" style="height: 0px">
+<pre><code>@article{chen2019refit,
+  title={Refit: a unified watermark removal framework for deep learning systems with limited data},
+  author={Chen, Xinyun and Wang, Wenxiao and Bender, Chris and Ding, Yiming and Jia, Ruoxi and Li, Bo and Song, Dawn},
+  journal={arXiv preprint arXiv:1911.07205},
+  year={2019}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Huichen Li*, Linyi Li*, Xiaojun Xu, Xiaolu Zhang, Shuang Yang, Bo Li. Nonlinear Projection Based Gradient
+            Estimation for Query Efficient Blackbox Attacks. (AISTATS 2021)
+            <a href="#li2021nonlinear" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2021nonlinear" aria-expanded="false" style="height: 0px">
+<pre><code>@article{li2021nonlinear,
+  title={Nonlinear Projection Based Gradient Estimation for Query Efficient Blackbox Attacks},
+  author={Li, Huichen and Li, Linyi and Xu, Xiaojun and Zhang, Xiaolu and Yang, Shuang and Li, Bo},
+  journal={arXiv preprint arXiv:2102.13184},
+  year={2021}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Zhuolin Yang, Zhaoxi Chen, Tiffany Cai, Xinyun Chen, Bo Li, Yuandong Tian. Understanding Robustness in
+            Teacher-Student Setting: A New Perspective. (AISTATS 2021)
+            <a href="#yang2021understanding" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="yang2021understanding" aria-expanded="false" style="height: 0px">
+<pre><code>@article{yang2021understanding,
+  title={Understanding Robustness in Teacher-Student Setting: A New Perspective},
+  author={Yang, Zhuolin and Chen, Zhaoxi and Cai, Tiffany and Chen, Xinyun and Li, Bo and Tian, Yuandong},
+  journal={arXiv preprint arXiv:2102.13170},
+  year={2021}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Boxin Wang, Shuohang Wang, Yu Cheng, Zhe Gan, Ruoxi Jia, Bo Li, Jingjing Liu. <a
+                href="https://openreview.net/forum?id=hpH98mK5Puk">InfoBERT: Improving Robustness of Language Models
+            from An Information Theoretic Perspective.</a> (ICLR 2021)
+            <a href="#wang2021infobert" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="wang2021infobert" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{wang2021infobert,
+    title={InfoBERT: Improving Robustness of Language Models from An Information Theoretic Perspective},
+    author={Wang, Boxin and Wang, Shuohang and Cheng, Yu and Gan, Zhe and Jia, Ruoxi and Li, Bo and Liu, Jingjing},
+    booktitle={International Conference on Learning Representations},
+    year={2021}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Yige Li, Xingjun Ma, Nodens Koren, Lingjuan Lyu, Xixiang Lyu, Bo Li. <a
+                href="https://openreview.net/forum?id=9l0K4OM-oXE">Neural Attention Distillation: Erasing Backdoor
+            Triggers from Deep Neural Networks.</a> (ICLR 2021)
+            <a href="#li2021neural" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2021neural" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{li2021neural,
+  title={Neural Attention Distillation: Erasing Backdoor Triggers from Deep Neural Networks},
+  author={Li, Yige and Koren, Nodens and Lyu, Lingjuan and Lyu, Xixiang and Li, Bo and Ma, Xingjun},
+  booktitle={International Conference on Learning Representations},
+  year={2021}
+}
+</code></pre>
+            </div>
+        </li>
     </ul>
     <h4>2020</h4>
     <ul>
-        <li>Luka Rimanic, Cedric Renggli, Bo Li, Ce Zhang. <a href="#">On Convergence of Nearest Neighbor Classifiers over Feature Transformations</a>. (NeurIPS 2020)</li>
-        <li>Huan Zhang, Hongge Chen, Chaowei Xiao, Bo Li, Mingyan Liu, Duane Boning, Cho-Jui Hsieh. <a href="https://arxiv.org/abs/2003.08938">Robust Deep Reinforcement Learning against Adversarial Perturbations on State Observations</a>. (NeurIPS 2020)</li>
-        <li>Boxin Wang, Hengzhi Pei, Boyuan Pan, Qian Chen, Shuohang Wang, Bo Li. <a href="https://arxiv.org/abs/1912.10375">T3: Tree-Autoencoder Regularized Adversarial Text Generation for Targeted Attack</a>. (EMNLP 2020)</li>
-        <li>Xiaojun Xu, Qi Wang, Huichen Li, Nikita Borisov, Carl A. Gunter, Bo Li. <a href="https://arxiv.org/abs/1910.03137">Detecting AI Trojans Using Meta Neural Analysis</a>. (IEEE Symposium on Security and Privacy (Oakland, 2020))</li>
-        <li>Dongqi Fu, Zhe Xu, Bo Li, Hanghang Tong, Jingrui He. <a href="https://dl.acm.org/doi/abs/10.1145/3340531.3412127">A View-Adversarial Framework for Multi-View Network Embedding. </a> (CIKM 2020) </li>
-        <li>Shawn Shan, Emily Wenger, Bolun Wang, Bo Li, Haitao Zheng, Ben Y. Zhao. <a href="https://www.shawnshan.com/files/publication/trapdoor.pdf">Gotta Catch`Em All: Using Honeypots to Catch Adversarial Attacks on Neural Networks.</a> (CCS 2020)</li>
-        <li>Haonan Qiu, Chaowei Xiao, Lei Yang, Xinchen Yan, Honglak Lee, Bo Li. SemanticAdv: Generating Adversarial Examples via Attribute-conditioned Image Editing. (ECCV 2020)</li>
-        <li>Ankit Raj, Yoram Bresler, Bo Li. Improving Robustness of Deep-Learning-Based Image Reconstruction. (ICML 2020)  </span><br></span> </li>
-        <li>Boyuan Pan, Yazheng Yang, Kaizhao Liang, Bhavya Kailkhura, Zhongming Jin, Xian-Sheng Hua, Deng Cai, Bo Li. Adversarial Mutual Information for Text Generation. (ICML 2020)  </span><br></span> </li>
-        <li> Gerald Friedland, Jingkang Wang, Ruoxi Jia, Bo Li. The Helmholtz Method: Using Perceptual Compression to Reduce Machine Learning Complexity. (IEEE on Multimedia Information Processing and Retrieval 2020)  </span><br></span> </li>
-        <li>Zhenkai Zhang*, Zihao Zhan*, Daniel Balasubramanian, Bo Li, Peter Volgyesi, Xenofon Koutsoukos. Leveraging EM Side-Channel Information to Detect Rowhammer Attacks.
-            (IEEE Symposium on Security and Privacy (Oakland, 2020)) </span><br></span> </li>
-        <li> Huichen Li, Xiaojun Xu, Xiaolu Zhang, Shuang Yang, Bo Li. QEBA: Query-Efficient Boundary-Based Blackbox Attack. (CVPR 2020) </span><br></span> </li>
-        <li> Yuheng Zhang, Ruoxi Jia, Hengzhi Pei, Wenxiao Wang, Bo Li, Dawn Song, <a href="https://arxiv.org/abs/1911.07135"> Secret Revealer: Generative Model-Inversion Attacks Against Deep Neural Networks.</a>  (CVPR 2020) [oral] </span><br></span> </li>
-        <li> Lei Huang, Li Liu, Fan Zhu, Diwen Wan, Zehuan Yuan, Bo Li, Ling Shao, Controllable Orthogonalization in Training DNNs. (CVPR 2020) </span><br></span> </li>
-        <li> Chao Yan, Haifeng Xu, Yevgeniy Vorobeychik, Bo Li, Daniel Fabbri, Bradley Malin, <a href="https://arxiv.org/abs/1905.06946">To Warn or Not to Warn: Online Signaling in Audit Games.</a> (ICDE 2020) </span><br></span> </li>
-        <li> Huan Zhang, Hongge Chen, Chaowei Xiao, Sven Gowal, Robert Stanforth, Bo Li, Duane Boning, Cho-Jui Hsieh, <a href="https://openreview.net/forum?id=Skxuk1rFwB">Towards Stable and Efficient Training of Verifiably Robust Neural Networks.</a> (ICLR 2020).</span><br></span></li>
-        <li> Anand Bhattad, Min Jin Chong, Kaizhao Liang, Bo Li, David Forsyth, <a href="https://openreview.net/forum?id=Sye_OgHFwH">Unrestricted Adversarial Examples via Semantic Manipulation. </a> (ICLR 2020).</span><br></span></li>
-        <li> Chulin Xie, Keli Huang, Pin-Yu Chen, Bo Li, <a href="https://openreview.net/forum?id=rkgyS0VFvr">DBA: Distributed Backdoor Attacks against Federated Learning. </a> (ICLR 2020).</span><br></span></li>
-        <li> Yuyu Zhang, Xinshi Chen, Yuan Yang, Arun Ramamurthy, Bo Li, Yuan Qi, Le Song, <a href="https://openreview.net/forum?id=rJg76kStwH">Efficient Probabilistic Logic Reasoning with Graph Neural Networks. </a> (ICLR 2020).</span><br></span></li>
-        <li> Yunan Ye, Hengzhi Pei, Boxin Wang, Pin-Yu Chen, Yada Zhu, Bo Li, <a href="#">Reinforcement-Learning based Portfolio Management with Augmented Asset Movement Prediction States.</a> (AAAI 2020).</span><br></span></li>
-        <li> Jingkang Wang, Yang Liu, Bo Li, <a href="https://arxiv.org/abs/1810.01032">Reinforcement Learning with Perturbed Rewards. </a> (AAAI 2020).</span><br></span></li>
+        <li>Luka Rimanic, Cedric Renggli, Bo Li, Ce Zhang. <a href="#">On Convergence of Nearest Neighbor Classifiers
+            over Feature Transformations</a>. (NeurIPS 2020)
+            <a href="#rimanic2020convergence" data-toggle="collapse" class="collapsed"
+               aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="rimanic2020convergence" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{rimanic2020convergence,
+  title={On Convergence of Nearest Neighbor Classifiers over Feature Transformations},
+  author={Rimanic, Luka and Renggli, Cedric and Li, Bo and Zhang, Ce},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Huan Zhang, Hongge Chen, Chaowei Xiao, Bo Li, Mingyan Liu, Duane Boning, Cho-Jui Hsieh. <a
+                href="https://arxiv.org/abs/2003.08938">Robust Deep Reinforcement Learning against Adversarial
+            Perturbations on State Observations</a>. (NeurIPS 2020)
+            <a href="#zhang2020robust" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="zhang2020robust" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{zhang2020robust,
+  title={Robust deep reinforcement learning against adversarial perturbations on observations},
+  author={Zhang, Huan and Chen, Hongge and Xiao, Chaowei and Li, Bo and Boning, Duane and Hsieh, Cho-Jui},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Boxin Wang, Hengzhi Pei, Boyuan Pan, Qian Chen, Shuohang Wang, Bo Li. <a
+                href="https://arxiv.org/abs/1912.10375">T3: Tree-Autoencoder Regularized Adversarial Text Generation for
+            Targeted Attack</a>. (EMNLP 2020)
+            <a href="#wang2020t3" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="wang2020t3" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{wang2020t3,
+  title={T3: Tree-Autoencoder Regularized Adversarial Text Generation for Targeted Attack},
+  author={Wang, Boxin and Pei, Hengzhi and Pan, Boyuan and Chen, Qian and Wang, Shuohang and Li, Bo},
+  booktitle={Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pages={6134--6150},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Xiaojun Xu, Qi Wang, Huichen Li, Nikita Borisov, Carl A. Gunter, Bo Li. <a
+                href="https://arxiv.org/abs/1910.03137">Detecting AI Trojans Using Meta Neural Analysis</a>. (IEEE
+            Symposium on Security and Privacy (Oakland, 2020))
+            <a href="#xu2019detecting" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="xu2019detecting" aria-expanded="false" style="height: 0px">
+<pre><code>@article{xu2019detecting,
+  title={Detecting ai trojans using meta neural analysis},
+  author={Xu, Xiaojun and Wang, Qi and Li, Huichen and Borisov, Nikita and Gunter, Carl A and Li, Bo},
+  journal={arXiv preprint arXiv:1910.03137},
+  year={2019}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Dongqi Fu, Zhe Xu, Bo Li, Hanghang Tong, Jingrui He. <a
+                href="https://dl.acm.org/doi/abs/10.1145/3340531.3412127">A View-Adversarial Framework for Multi-View
+            Network Embedding. </a> (CIKM 2020)
+            <a href="#fu2020view" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="fu2020view" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{fu2020view,
+  title={A View-Adversarial Framework for Multi-View Network Embedding},
+  author={Fu, Dongqi and Xu, Zhe and Li, Bo and Tong, Hanghang and He, Jingrui},
+  booktitle={Proceedings of the 29th ACM International Conference on Information \& Knowledge Management},
+  pages={2025--2028},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Shawn Shan, Emily Wenger, Bolun Wang, Bo Li, Haitao Zheng, Ben Y. Zhao. <a
+                href="https://www.shawnshan.com/files/publication/trapdoor.pdf">Gotta Catch`Em All: Using Honeypots to
+            Catch Adversarial Attacks on Neural Networks.</a> (CCS 2020)
+            <a href="#shan2020gotta" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="shan2020gotta" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{shan2020gotta,
+  title={Gotta Catch'Em All: Using Honeypots to Catch Adversarial Attacks on Neural Networks},
+  author={Shan, Shawn and Wenger, Emily and Wang, Bolun and Li, Bo and Zheng, Haitao and Zhao, Ben Y},
+  booktitle={Proceedings of the 2020 ACM SIGSAC Conference on Computer and Communications Security},
+  pages={67--83},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Haonan Qiu, Chaowei Xiao, Lei Yang, Xinchen Yan, Honglak Lee, Bo Li. SemanticAdv: Generating Adversarial
+            Examples via Attribute-conditioned Image Editing. (ECCV 2020)
+            <a href="#qiu2020semanticadv" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="qiu2020semanticadv" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{qiu2020semanticadv,
+  title={SemanticAdv: Generating Adversarial Examples via Attribute-conditioned Image Editing},
+  author={Qiu, Haonan and Xiao, Chaowei and Yang, Lei and Yan, Xinchen and Lee, Honglak and Li, Bo},
+  booktitle={European Conference on Computer Vision},
+  pages={19--37},
+  year={2020},
+  organization={Springer}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Ankit Raj, Yoram Bresler, Bo Li. Improving Robustness of Deep-Learning-Based Image Reconstruction. (ICML
+            2020)
+            <a href="#raj2020improving" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="raj2020improving" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{raj2020improving,
+  title={Improving robustness of deep-learning-based image reconstruction},
+  author={Raj, Ankit and Bresler, Yoram and Li, Bo},
+  booktitle={International Conference on Machine Learning},
+  pages={7932--7942},
+  year={2020},
+  organization={PMLR}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Boyuan Pan, Yazheng Yang, Kaizhao Liang, Bhavya Kailkhura, Zhongming Jin, Xian-Sheng Hua, Deng Cai, Bo Li.
+            Adversarial Mutual Information for Text Generation. (ICML 2020)
+            <a href="#pan2020adversarial" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="pan2020adversarial" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{pan2020adversarial,
+  title={Adversarial Mutual Information for Text Generation},
+  author={Pan, Boyuan and Yang, Yazheng and Liang, Kaizhao and Kailkhura, Bhavya and Jin, Zhongming and Hua, Xian-Sheng and Cai, Deng and Li, Bo},
+  booktitle={International Conference on Machine Learning},
+  pages={7476--7486},
+  year={2020},
+  organization={PMLR}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> Gerald Friedland, Jingkang Wang, Ruoxi Jia, Bo Li. The Helmholtz Method: Using Perceptual Compression to
+            Reduce Machine Learning Complexity. (IEEE on Multimedia Information Processing and Retrieval 2020)
+            <a href="#friedland2018helmholtz" data-toggle="collapse" class="collapsed"
+               aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="friedland2018helmholtz" aria-expanded="false" style="height: 0px">
+<pre><code>@article{friedland2018helmholtz,
+  title={The helmholtz method: Using perceptual compression to reduce machine learning complexity},
+  author={Friedland, Gerald and Wang, Jingkang and Jia, Ruoxi and Li, Bo},
+  journal={arXiv preprint arXiv:1807.10569},
+  year={2018}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Zhenkai Zhang*, Zihao Zhan*, Daniel Balasubramanian, Bo Li, Peter Volgyesi, Xenofon Koutsoukos. Leveraging
+            EM Side-Channel Information to Detect Rowhammer Attacks.
+            (IEEE Symposium on Security and Privacy (Oakland, 2020))
+            <a href="#zhang2020leveraging" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="zhang2020leveraging" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{zhang2020leveraging,
+  title={Leveraging em side-channel information to detect rowhammer attacks},
+  author={Zhang, Zhenkai and Zhan, Zihao and Balasubramanian, Daniel and Li, Bo and Volgyesi, Peter and Koutsoukos, Xenofon},
+  booktitle={2020 IEEE Symposium on Security and Privacy (SP)},
+  pages={729--746},
+  year={2020},
+  organization={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> Huichen Li, Xiaojun Xu, Xiaolu Zhang, Shuang Yang, Bo Li. QEBA: Query-Efficient Boundary-Based Blackbox
+            Attack. (CVPR 2020)
+            <a href="#li2020qeba" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2020qeba" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{li2020qeba,
+  title={QEBA: Query-Efficient Boundary-Based Blackbox Attack},
+  author={Li, Huichen and Xu, Xiaojun and Zhang, Xiaolu and Yang, Shuang and Li, Bo},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={1221--1230},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> Yuheng Zhang, Ruoxi Jia, Hengzhi Pei, Wenxiao Wang, Bo Li, Dawn Song, <a
+                href="https://arxiv.org/abs/1911.07135"> Secret Revealer: Generative Model-Inversion Attacks Against
+            Deep Neural Networks.</a> (CVPR 2020) [oral]
+            <a href="#zhang2020secret" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="zhang2020secret" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{zhang2020secret,
+  title={The secret revealer: Generative model-inversion attacks against deep neural networks},
+  author={Zhang, Yuheng and Jia, Ruoxi and Pei, Hengzhi and Wang, Wenxiao and Li, Bo and Song, Dawn},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={253--261},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> Lei Huang, Li Liu, Fan Zhu, Diwen Wan, Zehuan Yuan, Bo Li, Ling Shao, Controllable Orthogonalization in
+            Training DNNs. (CVPR 2020)
+            <a href="#huang2020controllable" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="huang2020controllable" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{huang2020controllable,
+  title={Controllable orthogonalization in training dnns},
+  author={Huang, Lei and Liu, Li and Zhu, Fan and Wan, Diwen and Yuan, Zehuan and Li, Bo and Shao, Ling},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={6429--6438},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> Chao Yan, Haifeng Xu, Yevgeniy Vorobeychik, Bo Li, Daniel Fabbri, Bradley Malin, <a
+                href="https://arxiv.org/abs/1905.06946">To Warn or Not to Warn: Online Signaling in Audit Games.</a>
+            (ICDE 2020)
+            <a href="#yan2020warn" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="yan2020warn" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{yan2020warn,
+  title={To warn or not to warn: Online signaling in audit games},
+  author={Yan, Chao and Xu, Haifeng and Vorobeychik, Yevgeniy and Li, Bo and Fabbri, Daniel and Malin, Bradley A},
+  booktitle={2020 IEEE 36th International Conference on Data Engineering (ICDE)},
+  pages={481--492},
+  year={2020},
+  organization={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> Huan Zhang, Hongge Chen, Chaowei Xiao, Sven Gowal, Robert Stanforth, Bo Li, Duane Boning, Cho-Jui Hsieh, <a
+                href="https://openreview.net/forum?id=Skxuk1rFwB">Towards Stable and Efficient Training of Verifiably
+            Robust Neural Networks.</a> (ICLR 2020).
+            <a href="#zhang2019towards" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="zhang2019towards" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{zhang2019towards,
+  title={Towards stable and efficient training of verifiably robust neural networks},
+  author={Zhang, Huan and Chen, Hongge and Xiao, Chaowei and Gowal, Sven and Stanforth, Robert and Li, Bo and Boning, Duane and Hsieh, Cho-Jui},
+  booktitle={International Conference on Learning Representations},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> Anand Bhattad, Min Jin Chong, Kaizhao Liang, Bo Li, David Forsyth, <a
+                href="https://openreview.net/forum?id=Sye_OgHFwH">Unrestricted Adversarial Examples via Semantic
+            Manipulation. </a> (ICLR 2020).
+            <a href="#bhattad2019unrestricted" data-toggle="collapse" class="collapsed"
+               aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="bhattad2019unrestricted" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{bhattad2019unrestricted,
+  title={Unrestricted adversarial examples via semantic manipulation},
+  author={Bhattad, Anand and Chong, Min Jin and Liang, Kaizhao and Li, Bo and Forsyth, David A},
+  booktitle={International Conference on Learning Representations},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> Chulin Xie, Keli Huang, Pin-Yu Chen, Bo Li, <a href="https://openreview.net/forum?id=rkgyS0VFvr">DBA:
+            Distributed Backdoor Attacks against Federated Learning. </a> (ICLR 2020).
+            <a href="#xie2019dba" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="xie2019dba" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{xie2019dba,
+  title={Dba: Distributed backdoor attacks against federated learning},
+  author={Xie, Chulin and Huang, Keli and Chen, Pin-Yu and Li, Bo},
+  booktitle={International Conference on Learning Representations},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> Yuyu Zhang, Xinshi Chen, Yuan Yang, Arun Ramamurthy, Bo Li, Yuan Qi, Le Song, <a
+                href="https://openreview.net/forum?id=rJg76kStwH">Efficient Probabilistic Logic Reasoning with Graph
+            Neural Networks. </a> (ICLR 2020).
+            <a href="#zhang2020efficient" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="zhang2020efficient" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{zhang2020efficient,
+  title={Efficient probabilistic logic reasoning with graph neural networks},
+  author={Zhang, Yuyu and Chen, Xinshi and Yang, Yuan and Ramamurthy, Arun and Li, Bo and Qi, Yuan and Song, Le},
+  booktitle={International Conference on Learning Representations},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> Yunan Ye, Hengzhi Pei, Boxin Wang, Pin-Yu Chen, Yada Zhu, Bo Li, <a href="#">Reinforcement-Learning based
+            Portfolio Management with Augmented Asset Movement Prediction States.</a> (AAAI 2020).
+            <a href="#ye2020reinforcement" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="ye2020reinforcement" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{ye2020reinforcement,
+  title={Reinforcement-learning based portfolio management with augmented asset movement prediction states},
+  author={Ye, Yunan and Pei, Hengzhi and Wang, Boxin and Chen, Pin-Yu and Zhu, Yada and Xiao, Ju and Li, Bo},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={34},
+  number={01},
+  pages={1112--1119},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> Jingkang Wang, Yang Liu, Bo Li, <a href="https://arxiv.org/abs/1810.01032">Reinforcement Learning with
+            Perturbed Rewards. </a> (AAAI 2020).
+            <a href="#wang2020reinforcement" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="wang2020reinforcement" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{wang2020reinforcement,
+  title={Reinforcement learning with perturbed rewards},
+  author={Wang, Jingkang and Liu, Yang and Li, Bo},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={34},
+  number={04},
+  pages={6202--6209},
+  year={2020}
+}
+</code></pre>
+            </div>
+        </li>
     </ul>
-  <h4>2019</h4>
+    <h4>2019</h4>
 
-  <ul>
-    <li>Ruoxi Jia, David Dao, Boxin Wang, Frances Ann Hubis, Nezihe Merve Gurel, Bo Li, Ce Zhang, Costas Spanos, Dawn Song, <a href = "#">"Efficient Task-Specific Data Valuation for Nearest Neighbor Algorithms"</a>. (VLDB 2019)<a href="#"> [BibTeX]</a></li>
-    <li>Chaowei Xiao, Ruizhi Deng, Bo Li, Taesung Lee, Benjamin Edwards, Jinfeng Yi, Dawn Song, Mingyan Liu, Ian Molloy, <a href = "#">"AdvIT: Adversarial Frames Identifier Based on Temporal Consistency In Videos"</a>. (ICCV 2019)<a href="#"> [BibTeX]</a></li>
-    <li> Kin Sum Liu, Chaowei Xiao, Bo Li, and Jie Gao, <a href = "#">"Performing Co-Membership Attacks Against Deep Generative Models "</a>. (ICDM 2019)<a href="#"> [BibTeX]</a></li>
-    <li>Xiaofei Xie, Lei Ma, Felix Juefei-Xu, Minhui Xue, Hongxu Chen, Yang Liu, Jianjun Zhao, Bo Li, Jianxiong Yin, Simon See, <a href = "#">"DeepHunter: a coverage-guided fuzz testing framework for deep neural networks"</a>. (In Proceedings of the 28th ACM SIGSOFT International Symposium on Software Testing and Analysis.)<a href="#"> [BibTeX]</a></li>
+    <ul>
+        <li>Ruoxi Jia, David Dao, Boxin Wang, Frances Ann Hubis, Nezihe Merve Gurel, Bo Li, Ce Zhang, Costas Spanos,
+            Dawn Song, <a href="#">"Efficient Task-Specific Data Valuation for Nearest Neighbor Algorithms"</a>. (VLDB
+            2019)<a href="#jia12efficient" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="jia12efficient" aria-expanded="false" style="height: 0px">
+<pre><code>@article{jia12efficient,
+  title={Efficient Task-Specific Data Valuation for Nearest Neighbor Algorithms},
+  author={Jia, Ruoxi and Dao, David and Wang, Boxin and Hubis, Frances Ann and Gurel, Nezihe Merve and Li, Bo and Zhang, Ce and Spanos, Costas J and Song, Dawn},
+  journal={Proceedings of the VLDB Endowment},
+  volume={12},
+  number={11}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Chaowei Xiao, Ruizhi Deng, Bo Li, Taesung Lee, Benjamin Edwards, Jinfeng Yi, Dawn Song, Mingyan Liu, Ian
+            Molloy, <a href="#">"AdvIT: Adversarial Frames Identifier Based on Temporal Consistency In Videos"</a>.
+            (ICCV 2019)<a href="#xiao2019advit" data-toggle="collapse" class="collapsed"
+                          aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="xiao2019advit" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{xiao2019advit,
+  title={Advit: Adversarial frames identifier based on temporal consistency in videos},
+  author={Xiao, Chaowei and Deng, Ruizhi and Li, Bo and Lee, Taesung and Edwards, Benjamin and Yi, Jinfeng and Song, Dawn and Liu, Mingyan and Molloy, Ian},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={3968--3977},
+  year={2019}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> Kin Sum Liu, Chaowei Xiao, Bo Li, and Jie Gao, <a href="#">"Performing Co-Membership Attacks Against Deep
+            Generative Models "</a>. (ICDM 2019)<a href="#liu2019performing" data-toggle="collapse" class="collapsed"
+                                                   aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="liu2019performing" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{liu2019performing,
+  title={Performing Co-membership Attacks Against Deep Generative Models},
+  author={Liu, Kin Sum and Xiao, Chaowei and Li, Bo and Gao, Jie},
+  booktitle={Proceedings of the 19th IEEE International Conference on Data Mining (ICDM'19)},
+  year={2019}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Xiaofei Xie, Lei Ma, Felix Juefei-Xu, Minhui Xue, Hongxu Chen, Yang Liu, Jianjun Zhao, Bo Li, Jianxiong Yin,
+            Simon See, <a href="#">"DeepHunter: a coverage-guided fuzz testing framework for deep neural networks"</a>.
+            (In Proceedings of the 28th ACM SIGSOFT International Symposium on Software Testing and Analysis.)<a
+                    href="#xie2019deephunter" data-toggle="collapse" class="collapsed"
+                    aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="xie2019deephunter" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{xie2019deephunter,
+  title={DeepHunter: a coverage-guided fuzz testing framework for deep neural networks},
+  author={Xie, Xiaofei and Ma, Lei and Juefei-Xu, Felix and Xue, Minhui and Chen, Hongxu and Liu, Yang and Zhao, Jianjun and Li, Bo and Yin, Jianxiong and See, Simon},
+  booktitle={Proceedings of the 28th ACM SIGSOFT International Symposium on Software Testing and Analysis},
+  pages={146--157},
+  year={2019}
+}
+</code></pre>
+            </div>
+        </li>
 
 
-    <li>Liang Tong, Bo Li, Chen Hajaj, Chaowei Xiao, Ning Zhang, Yevgeniy Vorobeychik, <a href = "https://arxiv.org/abs/1708.08327">"Improving Robustness of ML Classifiers against Realizable Evasion Attacks Using Conserved Features"</a>. (USENIX Security, 2019)<a href="./files/bibtex/liang2019improving.txt"> [BibTeX]</a></li>
+        <li>Liang Tong, Bo Li, Chen Hajaj, Chaowei Xiao, Ning Zhang, Yevgeniy Vorobeychik, <a
+                href="https://arxiv.org/abs/1708.08327">"Improving Robustness of ML Classifiers against Realizable
+            Evasion Attacks Using Conserved Features"</a>. (USENIX Security, 2019)<a href="#tong2019improving"
+                                                                                     data-toggle="collapse"
+                                                                                     class="collapsed"
+                                                                                     aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="tong2019improving" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{tong2019improving,
+  title={Improving robustness of $\{$ML$\}$ classifiers against realizable evasion attacks using conserved features},
+  author={Tong, Liang and Li, Bo and Hajaj, Chen and Xiao, Chaowei and Zhang, Ning and Vorobeychik, Yevgeniy},
+  booktitle={28th $\{$USENIX$\}$ Security Symposium ($\{$USENIX$\}$ Security 19)},
+  pages={285--302},
+  year={2019}
+}
+</code></pre>
+            </div>
+        </li>
 
-    <li>Linyi Li, Zexuan Zhong, Tao Xie, Bo Li. <a href = "https://taoxie.cs.illinois.edu/publications/ijcai19-robustra.pdf">"Robustra: Training Provable Robust Neural Networks over Reference Adversarial Space"</a>.  (IJCAI 2019)<a href="./files/bibtex/linyi2019robustra.txt"> [BibTeX]</a></li><li>Kimin Lee, Sukmin Yun, Kibok Lee, Honglak Lee, Bo Li, Jinwoo Shin. <a href = "https://arxiv.org/abs/1901.11300">"Robust Inference via Generative Classifiers for Handling Noisy Labels"</a>. (ICML 2019)<a href="./files/bibtex/kimin2019robust.txt"> [BibTeX]</a></li>
-    <li>Chaowei Xiao, Dawei Yang, Bo Li, Jia Deng, Mingyan Liu. <a href = "http://openaccess.thecvf.com/content_CVPR_2019/papers/Xiao_MeshAdv_Adversarial_Meshes_for_Visual_Recognition_CVPR_2019_paper.pdf">"MeshAdv: Adversarial Meshes for Visual Recognition"</a>. (CVPR 2019) [Oral]<a href="./files/bibtex/dawei2019realistic.txt"> [BibTeX]</a></li><li>​Chong Xiang, Charles R. Qi, Bo Li. <a href = "https://arxiv.org/abs/1809.07016">"Generating 3D Adversarial Point Clouds"</a>. (CVPR 2019)<a href="./files/bibtex/chong2019generating.txt"> [BibTeX]</a></li><li>​Xinlei Pan, Weiyao Wang, Xiaoshuai Zhang, Bo Li, Jinfeng Yi, Dawn Song. <a href = "https://arxiv.org/abs/1904.11082">"How you act tells a lot: Privacy-leaking attack on deep reinforcement learning"</a>. (AAMAS 2019) [Oral]<a href="./files/bibtex/xinlei2019how.txt"> [BibTeX]</a></li><li>Ruoxi Jia, David Dao, Boxin Wang, Frances Ann Hubis, Nick Hynes, Bo Li, Ce Zhang, Dawn Song, Costas Spanos. <a href = "https://arxiv.org/abs/1902.10275">"Towards Efficient Data Valuation Based on the Shapley Value"</a>. (AISTATS 2019)<a href="./files/bibtex/ruoxi2019towards.txt"> [BibTeX]</a></li><li>Zhuolin Yang, Bo Li, Pin-Yu Chen, Dawn Song. <a href = "https://openreview.net/forum?id=r1g4E3C9t7">"Characterizing Audio Adversarial Examples Using Temporal Dependency"</a>. (ICLR 2019)<a href="./files/bibtex/zhuolin2019characterizing.txt"> [BibTeX]</a><p>Press: <a href="https://www.nature.com/articles/d41586-019-01510-1">Nature</a> </p></li>
-    <li>Jinfeng Li, Shouling Ji, Tianyu Du, Bo Li, Ting Wang. <a href = "https://arxiv.org/abs/1812.05271">"TextBugger: Generating Adversarial Text Against Real-world Applications"</a>. (NDSS 2019)<a href="./files/bibtex/jinfeng2019textbugger.txt"> [BibTeX]</a></li><li>Xiang Ling, Shouling Ji, Jiaxu Zou, Jiannan Wang, Chunming Wu, Bo Li, Ting Wang. <a href = "https://nesa.zju.edu.cn/download/DEEPSEC%20A%20Uniform%20Platform%20for%20Security%20Analysis%20of%20Deep%20Learning%20Model.pdf">"​DeepSec: A Uniform Platform for Security Analysis of Deep Learning Models"</a>. (Oakland, 2019)<a href="./files/bibtex/xiang2019deepsec.txt"> [BibTeX]</a></li>
-  </ul>
-  <h4>2018</h4>
-  <ul>
-    <li>Ruoxi Jia, Ioannis Konstantakopoulos, Bo Li, Dawn Song, Costas J. Spanos. <a href="https://ruoxijia.github.io/assets/papers/IoT_poisoning.pdf">"Poisoning Attacks on Data-Driven Utility Learning in Games"</a>. (ACC, 2018) <a href="./files/bibtex/ruoxi2018poisoning.txt"> [BibTeX]</a></li>
-    <li>Arjun Nitin Bhagoji, Warren He, Bo Li, Dawn Song. <a href = "https://arxiv.org/abs/1712.09491">"Practical Black-box Attacks on Deep Neural Networks using Efficient Query Mechanisms"</a>. (ECCV, 2018)<a href="./files/bibtex/arjun2018exploring.txt"> [BibTeX]</a></li><li>Chaowei Xiao, Duizhi Deng, Bo Li, Fisher Yu, Jinfeng Yi, Mingyan Liu and Dawn Song. <a href = "https://arxiv.org/abs/1810.05162">"Characterizing Adversarial Examples Based on Spatial Consistency Information for Semantic Segmentation"</a>. (ECCV, 2018)<a href="./files/bibtex/chaowei2018characterizing.txt"> [BibTeX]</a></li><li>Lei Ma, Felix Juefei-Xu, Fuyuan Zhang, Jiyuan Sun, Minhui Xue, Bo Li, Chunyang Chen, Ting Su, Li Li, Yang Liu, Jianjun Zhao, and Yadong Wang. <a href = "https://arxiv.org/abs/1803.07519">"DeepGauge: Multi-Granularity Testing Criteria for Deep Learning Systems"</a>. (ASE, 2018) <span style="color:#FF0000;">[Distinguished Paper Award]</span><a href="./files/bibtex/lei2018deepgauge.txt"> [BibTeX]</a></li><li>Chaowei Xiao, Armin Sarabi, Yang Liu, Bo Li, Mingyan Liu, Tudor Dumitras. <a href = "https://www.usenix.org/node/217574">" From Patching Delays to Infection Symptoms: Using Risk Profiles for an Early Discovery of Vulnerabilities Exploited in the Wild"</a>. (USENIX Security, 2018) <a href="./files/bibtex/chaowei2018.txt"> [BibTeX]</a></li><li>Chaowei Xiao, Bo Li, Jun-Yan Zhu, Warren He, Mingyan Liu, Dawn Song. <a href = "https://arxiv.org/abs/1801.02610">" Generating Adversarial Examples with Adversarial Networks"</a>. (IJCAI, 2018) <a href="./files/bibtex/chaowei2018.txt"> [BibTeX]</a></li><li>Matthew Jagielski, Alina Oprea, Battista Biggio, Chang Liu, Cristina Nita-Rotaru, Bo Li. <a href = "https://arxiv.org/abs/1804.00308">"Manipulating Machine Learning: Poisoning Attacks and Countermeasures for Regression Learning"</a>. (Oakland, 2018) <a href="./files/bibtex/matthew2018manipulating.txt"> [BibTeX]</a></li><li>Ivan Evtimov, Kevin Eykholt, Earlence Fernandes, Bo Li, Amir Rahmati, Chaowei Xiao, Atul Prakash, Tadayoshi Kohno, Dawn Song. <a href = "https://arxiv.org/abs/1707.08945">"Robust Physical-World Attacks on Deep Learning Visual Classification"</a>. (CVPR, 2018) <a href="./files/bibtex/ivan2018robust.txt"> [BibTeX]
-</a><p>
-Press:&nbsp;<a href="http://spectrum.ieee.org/cars-that-think/transportation/sensors/slight-street-sign-modifications-can-fool-machine-learning-algorithms" target="">IEEE Spectrum</a>,&nbsp;<a href="https://sg.news.yahoo.com/researchers-demonstrate-limits-driverless-car-technology-151138885.html" target="">Yahoo News</a>,&nbsp;<a href="https://www.wired.com/story/security-news-august-5-2017/" target="">Wired</a>,&nbsp;<a href="https://www.engadget.com/2017/08/06/altered-street-signs-confuse-self-driving-cars/" target="">Engagdet</a>,&nbsp;<a href="https://www.telegraph.co.uk/technology/2017/08/07/graffiti-road-signs-could-trick-driverless-cars-driving-dangerously/" target="">Telegraph</a>,&nbsp;<a href="https://www.caranddriver.com/news/researchers-find-a-malicious-way-to-meddle-with-autonomous-cars" target="">Car and Driver,</a>&nbsp;<a href="https://www.cnet.com/roadshow/news/it-is-surprisingly-easy-to-bamboozle-a-self-driving-car/" target="">CNET</a>,&nbsp;<a href="https://www.digitaltrends.com/cars/self-driving-cars-confuse-stickers-signs/" target="">Digital Trends</a>,&nbsp;<a href="https://www.scmagazine.com/home/news/iot/subtle-manipulation-of-street-signs-can-fool-self-driving-cars-researchers-report/" target="">SCMagazine</a>,&nbsp;<a href="https://www.schneier.com/blog/archives/2017/08/confusing_self-.html" target="">Schneier on Security</a>,&nbsp;<a href="https://arstechnica.com/cars/2017/09/hacking-street-signs-with-stickers-could-confuse-self-driving-cars/?amp=1" target="">Ars Technica</a>,&nbsp;<a href="http://fortune.com/2017/09/02/researchers-show-how-simple-stickers-could-trick-self-driving-cars/" target="">Fortune</a>
-</p>
-  <li>Xingjun Ma, Bo Li, Yisen Wang, Sarah M. Erfani, Sudanthi Wijewickrema, Grant Schoenebeck , Dawn Song, Michael E. Houle, and James Bailey. <a href = "https://arxiv.org/abs/1801.02613">"Characterizing Adversarial Subspaces Using Local Intrinsic Dimensionality"</a>. (ICLR, 2018) [Oral].<a href="./files/bibtex/xingjun2018characterizing.txt"> [BibTeX]</a></li><li>Chaowei Xiao, Jun-Yan Zhu, Bo Li, Warren He, Mingyan Liu, and Dawn Song. <a href = "https://arxiv.org/abs/1801.02612">"Spatially Transformed Adversarial Examples"</a>. (ICLR, 2018) <a href="./files/bibtex/chaowei2018spatially.txt"> [BibTeX]</a></li><li>Warren He, Bo Li and Dawn Song. <a href = "https://openreview.net/forum?id=BkpiPMbA-">"Decision Boundary Analysis of Adversarial Examples"</a>. (ICLR, 2018) <a href="./files/bibtex/warren2018decision.txt"> [BibTeX]</a></li><li>Xiaojie Wang, Jianzhong Qi, Ramamohanarao Kotagiri, Yu Sun, Bo Li, and Rui Zhang. <a href = "https://people.eng.unimelb.edu.au/zr/publications/PAKDD2018_Personalized%20Recommendation%20Diversification.pdf">"A Joint Optimization Approach for Personalized Recommendation Diversification"</a>. (PAKDD, 2018) <a href="./files/bibtex/xiaojie2018a.txt"> [BibTeX]</a></li><li>Chao Yan, Bo Li, Yevgeniy Vorobeychik, Aron Laszka, Daniel Fabbri, Bradley Malin. <a href = "https://arxiv.org/abs/1801.07215">" Get Your Workload in Order: Game Theoretic Prioritization of Database Auditing"</a>. (ICDE, 2018) <a href="./files/bibtex/chao2018.txt"> [BibTeX]</a></li><li>Ruoxi Jia, Ioannis Konstantakopoulos, Bo Li, Dawn Song, Costas J. Spanos. <a href = "https://ruoxijia.github.io/assets/papers/IoT_poisoning.pdf">"Poisoning Attacks on Data-Driven Utility Learning in Games"</a>. (ACC, 2018) <a href="./files/bibtex/ruoxi2018poisoning.txt"> [BibTeX]</a></li>
-  </ul>
+        <li>Linyi Li, Zexuan Zhong, Tao Xie, Bo Li. <a
+                href="https://taoxie.cs.illinois.edu/publications/ijcai19-robustra.pdf">"Robustra: Training
+            Provable Robust Neural Networks over Reference Adversarial Space"</a>. (IJCAI 2019)<a href="#li2019robustra"
+                                                                                                  data-toggle="collapse"
+                                                                                                  class="collapsed"
+                                                                                                  aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2019robustra" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{li2019robustra,
+  title={Robustra: Training Provable Robust Neural Networks over Reference Adversarial Space.},
+  author={Li, Linyi and Zhong, Zexuan and Li, Bo and Xie, Tao},
+  booktitle={IJCAI},
+  pages={4711--4717},
+  year={2019}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Kimin Lee, Sukmin Yun, Kibok Lee, Honglak Lee, Bo Li, Jinwoo Shin. <a
+                href="https://arxiv.org/abs/1901.11300">"Robust Inference via Generative Classifiers for Handling Noisy
+            Labels"</a>. (ICML 2019)<a href="#lee2019robust" data-toggle="collapse" class="collapsed"
+                                       aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="lee2019robust" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{lee2019robust,
+  title={Robust inference via generative classifiers for handling noisy labels},
+  author={Lee, Kimin and Yun, Sukmin and Lee, Kibok and Lee, Honglak and Li, Bo and Shin, Jinwoo},
+  booktitle={International Conference on Machine Learning},
+  pages={3763--3772},
+  year={2019},
+  organization={PMLR}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Chaowei Xiao, Dawei Yang, Bo Li, Jia Deng, Mingyan Liu. <a
+                href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Xiao_MeshAdv_Adversarial_Meshes_for_Visual_Recognition_CVPR_2019_paper.pdf">"Realistic
+            Adversarial Examples in 3D Meshes"</a>. (CVPR 2019) [Oral]<a href="#xiao2019meshadv" data-toggle="collapse"
+                                                                         class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="xiao2019meshadv" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{xiao2019meshadv,
+  title={Meshadv: Adversarial meshes for visual recognition},
+  author={Xiao, Chaowei and Yang, Dawei and Li, Bo and Deng, Jia and Liu, Mingyan},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={6898--6907},
+  year={2019}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>​Chong Xiang, Charles R. Qi, Bo Li. <a href="https://arxiv.org/abs/1809.07016">"Generating 3D Adversarial
+            Point Clouds"</a>. (CVPR 2019)<a href="#xiang2019generating" data-toggle="collapse" class="collapsed"
+                                             aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="xiang2019generating" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{xiang2019generating,
+  title={Generating 3d adversarial point clouds},
+  author={Xiang, Chong and Qi, Charles R and Li, Bo},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9136--9144},
+  year={2019}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>​Xinlei Pan, Weiyao Wang, Xiaoshuai Zhang, Bo Li, Jinfeng Yi, Dawn Song. <a
+                href="https://arxiv.org/abs/1904.11082">"How You Act Tells a Lot: Privacy-Leakage Attack on Deep
+            Reinforcement Learning"</a>. (AAMAS 2019) [Oral]<a href="./files/bibtex/xinlei2019how.txt"> [BibTeX]</a>
+        </li>
+        <li>Ruoxi Jia, David Dao, Boxin Wang, Frances Ann Hubis, Nick Hynes, Bo Li, Ce Zhang, Dawn Song, Costas Spanos.
+            <a href="https://arxiv.org/abs/1902.10275">"Towards Efficient Data Valuation Based on the Shapley Value"</a>.
+            (AISTATS 2019)<a href="#jia2019towards" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="jia2019towards" aria-expanded="false" style="height: 0px">
+<pre><code>@article{jia2019towards,
+  title={Towards Efficient Data Valuation Based on the Shapley Value},
+  author={Jia, Ruoxi and Dao, David and Wang, Boxin and Hubis, Frances A and G{\"u}rel, Nezihe M and Hynes, Nick and Li, Bo and Zhang, Ce and Song, Dawn and Spanos, Costas J},
+  journal={Proceedings of AISTATS 2019},
+  year={2019}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Zhuolin Yang, Bo Li, Pin-Yu Chen, Dawn Song. <a href="https://openreview.net/forum?id=r1g4E3C9t7">"Characterizing
+            Audio Adversarial Examples Using Temporal Dependency"</a>. (ICLR 2019) <a href="#yang2018characterizing"
+                                                                                      data-toggle="collapse"
+                                                                                      class="collapsed"
+                                                                                      aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="yang2018characterizing" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{yang2018characterizing,
+  title={Characterizing Audio Adversarial Examples Using Temporal Dependency},
+  author={Yang, Zhuolin and Li, Bo and Chen, Pin-Yu and Song, Dawn},
+  booktitle={International Conference on Learning Representations},
+  year={2019}
+}
+</code></pre>
+            </div>
+            <p>Press: <a href="https://www.nature.com/articles/d41586-019-01510-1">Nature</a></p></li>
+        <li>Jinfeng Li, Shouling Ji, Tianyu Du, Bo Li, Ting Wang. <a href="https://arxiv.org/abs/1812.05271">"TextBugger:
+            Generating Adversarial Text Against Real-world Applications"</a>. (NDSS 2019) <a href="#li2019textbugger"
+                                                                                             data-toggle="collapse"
+                                                                                             class="collapsed"
+                                                                                             aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2019textbugger" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{li2019textbugger,
+  title={TextBugger: Generating Adversarial Text Against Real-world Applications},
+  author={Li, Jinfeng and Ji, Shouling and Du, Tianyu and Li, Bo and Wang, Ting},
+  booktitle={26th Annual Network and Distributed System Security Symposium},
+  year={2019}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Xiang Ling, Shouling Ji, Jiaxu Zou, Jiannan Wang, Chunming Wu, Bo Li, Ting Wang. <a
+                href="https://nesa.zju.edu.cn/download/DEEPSEC%20A%20Uniform%20Platform%20for%20Security%20Analysis%20of%20Deep%20Learning%20Model.pdf">"​DeepSec:
+            A Uniform Platform for Security Analysis of Deep Learning Models"</a>. (Oakland, 2019) <a
+                href="#ling2019deepsec" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="ling2019deepsec" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{ling2019deepsec,
+  title={Deepsec: A uniform platform for security analysis of deep learning model},
+  author={Ling, Xiang and Ji, Shouling and Zou, Jiaxu and Wang, Jiannan and Wu, Chunming and Li, Bo and Wang, Ting},
+  booktitle={2019 IEEE Symposium on Security and Privacy (SP)},
+  pages={673--690},
+  year={2019},
+  organization={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+    </ul>
+    <h4>2018</h4>
+    <ul>
+        <li>Ruoxi Jia, Ioannis Konstantakopoulos, Bo Li, Dawn Song, Costas J. Spanos. <a
+                href="https://ruoxijia.github.io/assets/papers/IoT_poisoning.pdf">"Poisoning Attacks on Data-Driven
+            Utility Learning in Games"</a>. (ACC, 2018) <a href="#jia2018poisoning" data-toggle="collapse"
+                                                           class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="jia2018poisoning" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{jia2018poisoning,
+  title={Poisoning attacks on data-driven utility learning in games},
+  author={Jia, Ruoxi and Konstantakopoulos, Ioannis C and Li, Bo and Spanos, Costas},
+  booktitle={2018 Annual American Control Conference (ACC)},
+  pages={5774--5780},
+  year={2018},
+  organization={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Arjun Nitin Bhagoji, Warren He, Bo Li, Dawn Song. <a
+                href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Arjun_Nitin_Bhagoji_Practical_Black-box_Attacks_ECCV_2018_paper.pdf">"Practical
+            black-box attacks on deep neural networks using efficient query mechanisms"</a>. (ECCV, 2018) <a
+                href="#bhagoji2018practical" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="bhagoji2018practical" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{bhagoji2018practical,
+  title={Practical black-box attacks on deep neural networks using efficient query mechanisms},
+  author={Bhagoji, Arjun Nitin and He, Warren and Li, Bo and Song, Dawn},
+  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+  pages={154--169},
+  year={2018}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Chaowei Xiao, Duizhi Deng, Bo Li, Fisher Yu, Jinfeng Yi, Mingyan Liu and Dawn Song. <a
+                href="https://arxiv.org/abs/1810.05162">"Characterizing Adversarial Examples Based on Spatial
+            Consistency Information for Semantic Segmentation"</a>. (ECCV, 2018) <a href="#xiao2018characterizing"
+                                                                                    data-toggle="collapse"
+                                                                                    class="collapsed"
+                                                                                    aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="xiao2018characterizing" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{xiao2018characterizing,
+  title={Characterizing adversarial examples based on spatial consistency information for semantic segmentation},
+  author={Xiao, Chaowei and Deng, Ruizhi and Li, Bo and Yu, Fisher and Liu, Mingyan and Song, Dawn},
+  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+  pages={217--234},
+  year={2018}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Lei Ma, Felix Juefei-Xu, Fuyuan Zhang, Jiyuan Sun, Minhui Xue, Bo Li, Chunyang Chen, Ting Su, Li Li, Yang
+            Liu, Jianjun Zhao, and Yadong Wang. <a href="https://arxiv.org/abs/1803.07519">"DeepGauge: Multi-Granularity
+                Testing Criteria for Deep Learning Systems"</a>. (ASE, 2018) <span style="color:#FF0000;">[Distinguished Paper Award]</span>
+            <a href="#ma2018deepgauge" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="ma2018deepgauge" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{ma2018deepgauge,
+  title={Deepgauge: Multi-granularity testing criteria for deep learning systems},
+  author={Ma, Lei and Juefei-Xu, Felix and Zhang, Fuyuan and Sun, Jiyuan and Xue, Minhui and Li, Bo and Chen, Chunyang and Su, Ting and Li, Li and Liu, Yang and others},
+  booktitle={Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering},
+  pages={120--131},
+  year={2018}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Chaowei Xiao, Armin Sarabi, Yang Liu, Bo Li, Mingyan Liu, Tudor Dumitras. <a
+                href="https://www.usenix.org/node/217574">" From Patching Delays to Infection Symptoms: Using Risk
+            Profiles for an Early Discovery of Vulnerabilities Exploited in the Wild"</a>. (USENIX Security, 2018) <a
+                href="#xiao2018patching" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="xiao2018patching" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{xiao2018patching,
+  title={From patching delays to infection symptoms: Using risk profiles for an early discovery of vulnerabilities exploited in the wild},
+  author={Xiao, Chaowei and Sarabi, Armin and Liu, Yang and Li, Bo and Liu, Mingyan and Dumitras, Tudor},
+  booktitle={27th $\{$USENIX$\}$ Security Symposium ($\{$USENIX$\}$ Security 18)},
+  pages={903--918},
+  year={2018}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Chaowei Xiao, Bo Li, Jun-Yan Zhu, Warren He, Mingyan Liu, Dawn Song. <a
+                href="https://arxiv.org/abs/1801.02610">" Generating Adversarial Examples with Adversarial Networks"</a>.
+            (IJCAI, 2018) <a href="#xiao2018generating" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="xiao2018generating" aria-expanded="false" style="height: 0px">
+<pre><code>@article{xiao2018generating,
+  title={Generating adversarial examples with adversarial networks},
+  author={Xiao, Chaowei and Li, Bo and Zhu, Jun-Yan and He, Warren and Liu, Mingyan and Song, Dawn},
+  journal={arXiv preprint arXiv:1801.02610},
+  year={2018}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Matthew Jagielski, Alina Oprea, Battista Biggio, Chang Liu, Cristina Nita-Rotaru, Bo Li. <a
+                href="https://arxiv.org/abs/1804.00308">"Manipulating Machine Learning: Poisoning Attacks and
+            Countermeasures for Regression Learning"</a>. (Oakland, 2018) <a href="#jagielski2018manipulating"
+                                                                             data-toggle="collapse" class="collapsed"
+                                                                             aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="jagielski2018manipulating" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{jagielski2018manipulating,
+  title={Manipulating machine learning: Poisoning attacks and countermeasures for regression learning},
+  author={Jagielski, Matthew and Oprea, Alina and Biggio, Battista and Liu, Chang and Nita-Rotaru, Cristina and Li, Bo},
+  booktitle={2018 IEEE Symposium on Security and Privacy (SP)},
+  pages={19--35},
+  year={2018},
+  organization={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Ivan Evtimov, Kevin Eykholt, Earlence Fernandes, Bo Li, Amir Rahmati, Chaowei Xiao, Atul Prakash, Tadayoshi
+            Kohno, Dawn Song. <a href="https://arxiv.org/abs/1707.08945">"Robust Physical-World Attacks on Deep Learning
+                Visual Classification"</a>. (CVPR, 2018) <a href="#eykholt2018robust" data-toggle="collapse"
+                                                            class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="eykholt2018robust" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{eykholt2018robust,
+  title={Robust physical-world attacks on deep learning visual classification},
+  author={Eykholt, Kevin and Evtimov, Ivan and Fernandes, Earlence and Li, Bo and Rahmati, Amir and Xiao, Chaowei and Prakash, Atul and Kohno, Tadayoshi and Song, Dawn},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={1625--1634},
+  year={2018}
+}
+</code></pre>
+            </div>
+            <p>
+                Press:&nbsp;<a
+                    href="http://spectrum.ieee.org/cars-that-think/transportation/sensors/slight-street-sign-modifications-can-fool-machine-learning-algorithms"
+                    target="">IEEE Spectrum</a>,&nbsp;<a
+                    href="https://sg.news.yahoo.com/researchers-demonstrate-limits-driverless-car-technology-151138885.html"
+                    target="">Yahoo News</a>,&nbsp;<a href="https://www.wired.com/story/security-news-august-5-2017/"
+                                                      target="">Wired</a>,&nbsp;<a
+                    href="https://www.engadget.com/2017/08/06/altered-street-signs-confuse-self-driving-cars/"
+                    target="">Engagdet</a>,&nbsp;<a
+                    href="https://www.telegraph.co.uk/technology/2017/08/07/graffiti-road-signs-could-trick-driverless-cars-driving-dangerously/"
+                    target="">Telegraph</a>,&nbsp;<a
+                    href="https://www.caranddriver.com/news/researchers-find-a-malicious-way-to-meddle-with-autonomous-cars"
+                    target="">Car and Driver,</a>&nbsp;<a
+                    href="https://www.cnet.com/roadshow/news/it-is-surprisingly-easy-to-bamboozle-a-self-driving-car/"
+                    target="">CNET</a>,&nbsp;<a
+                    href="https://www.digitaltrends.com/cars/self-driving-cars-confuse-stickers-signs/" target="">Digital
+                Trends</a>,&nbsp;<a
+                    href="https://www.scmagazine.com/home/news/iot/subtle-manipulation-of-street-signs-can-fool-self-driving-cars-researchers-report/"
+                    target="">SCMagazine</a>,&nbsp;<a
+                    href="https://www.schneier.com/blog/archives/2017/08/confusing_self-.html" target="">Schneier on
+                Security</a>,&nbsp;<a
+                    href="https://arstechnica.com/cars/2017/09/hacking-street-signs-with-stickers-could-confuse-self-driving-cars/?amp=1"
+                    target="">Ars Technica</a>,&nbsp;<a
+                    href="http://fortune.com/2017/09/02/researchers-show-how-simple-stickers-could-trick-self-driving-cars/"
+                    target="">Fortune</a>
+            </p>
+        <li>Xingjun Ma, Bo Li, Yisen Wang, Sarah M. Erfani, Sudanthi Wijewickrema, Grant Schoenebeck , Dawn Song,
+            Michael E. Houle, and James Bailey. <a href="https://arxiv.org/abs/1801.02613">"Characterizing Adversarial
+                Subspaces Using Local Intrinsic Dimensionality"</a>. (ICLR, 2018) [Oral].<a href="#ma2018characterizing"
+                                                                                            data-toggle="collapse"
+                                                                                            class="collapsed"
+                                                                                            aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="ma2018characterizing" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{ma2018characterizing,
+    title={Characterizing Adversarial Subspaces Using Local Intrinsic Dimensionality},
+    author={Ma, Xingjun and Li, Bo and Wang, Yisen and Erfani, Sarah M and Wijewickrema, Sudanthi and Schoenebeck, Grant and Song, Dawn and Houle, Michael E and Bailey, James},
+    booktitle={International Conference on Learning Representations},
+    year={2018},
+    url={https://openreview.net/forum?id=B1gJ1L2aW},
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Chaowei Xiao, Jun-Yan Zhu, Bo Li, Warren He, Mingyan Liu, and Dawn Song. <a
+                href="https://arxiv.org/abs/1801.02612">"Spatially Transformed Adversarial Examples"</a>. (ICLR, 2018)
+            <a href="#xiao2018spatially" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="xiao2018spatially" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{xiao2018spatially,
+  title={Spatially transformed adversarial examples},
+  author={Xiao, Chaowei and Zhu, Jun Yan and Li, Bo and He, Warren and Liu, Mingyan and Song, Dawn},
+  booktitle={6th International Conference on Learning Representations, ICLR 2018},
+  year={2018}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Warren He, Bo Li and Dawn Song. <a href="https://openreview.net/forum?id=BkpiPMbA-">"Decision Boundary
+            Analysis of Adversarial Examples"</a>. (ICLR, 2018) <a href="#he2018decision" data-toggle="collapse"
+                                                                   class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="he2018decision" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{he2018decision,
+  title={Decision boundary analysis of adversarial examples},
+  author={He, Warren and Li, Bo and Song, Dawn},
+  booktitle={International Conference on Learning Representations},
+  year={2018}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Xiaojie Wang, Jianzhong Qi, Ramamohanarao Kotagiri, Yu Sun, Bo Li, and Rui Zhang. <a
+                href="https://people.eng.unimelb.edu.au/zr/publications/PAKDD2018_Personalized%20Recommendation%20Diversification.pdf">"A
+            Joint Optimization Approach for Personalized Recommendation Diversification"</a>. (PAKDD, 2018) <a
+                href="#wang2018joint" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="wang2018joint" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{wang2018joint,
+  title={A joint optimization approach for personalized recommendation diversification},
+  author={Wang, Xiaojie and Qi, Jianzhong and Ramamohanarao, Kotagiri and Sun, Yu and Li, Bo and Zhang, Rui},
+  booktitle={Pacific-Asia Conference on Knowledge Discovery and Data Mining},
+  pages={597--609},
+  year={2018},
+  organization={Springer}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Chao Yan, Bo Li, Yevgeniy Vorobeychik, Aron Laszka, Daniel Fabbri, Bradley Malin. <a
+                href="https://arxiv.org/abs/1801.07215">" Get Your Workload in Order: Game Theoretic Prioritization of
+            Database Auditing"</a>. (ICDE, 2018) <a href="#yan2018get" data-toggle="collapse" class="collapsed"
+                                                    aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="yan2018get" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{yan2018get,
+  title={Get your workload in order: Game theoretic prioritization of database auditing},
+  author={Yan, Chao and Li, Bo and Vorobeychik, Yevgeniy and Laszka, Aron and Fabbri, Daniel and Malin, Bradley},
+  booktitle={2018 IEEE 34th International Conference on Data Engineering (ICDE)},
+  pages={1304--1307},
+  year={2018},
+  organization={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+    </ul>
     <h4>2017</h4>
     <ul>
-    <li>Qingrong Chen, Minhui Xue, Chong Xiang, Bo Li, Haizhong Zheng, and Haojin Zhu. <a href = "https://sgcsc.sg/doc/Camp2/RF-13.pdf">"Do We Need Original Data for Training? Toward Designing Privacy-Preserving Machine Learning"</a>. (DLSRF, 2017, Research Forum Award)).<a href="./files/bibtex/qingrong2017do.txt"> [BibTeX]</a></li><li>Lei Huang, Xianglong Liu, Bo Lang, Adams Wei Yu, Bo Li. <a href = "https://arxiv.org/abs/1709.06079">"Orthogonal Weight Normalization: Solution to Optimization over Multiple Dependent Stiefel Manifolds in Deep Neural Networks"</a>. (AAAI, 2017) <a href="./files/bibtex/lei2017orthogonal.txt"> [BibTeX]</a></li><li>Chang Liu, Bo Li, Yevgeniy Vorobeychik, and Alina Oprea. <a href = "http://vorobeychik.com/2017/poisonlr.pdf">"Robust Linear Regression Against Training Data Poisoning"</a>. (AISec, 2017, <span style="color:#FF0000;">Best paper award</span>).<a href="./files/bibtex/chang2017robust.txt"> [BibTeX]</a></li><li>B. Li, K. Roundy, C. Gates and Y. Vorobeychik. <a href="http://vorobeychik.com/2017/largeScaleDetection.pdf">“Large-scale identification of malicious singleton files”. In ACM Conference on Data and Application Security and Privacy (CODASPY)</a>. Arizona, USA, 2017. </li><li>J. Gao, B. Li, G. Schoenebeck and F. Yu. <a href = "https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14986">"Engineering Agreement: The Naming Game with Asymmetric and Heterogeneous Agents,"</a> In Proceedings of the 30th International Conference on Artificial Intelligence (AAAI). San Francisco, USA, 2017.<a href="./files/bibtex/j30engineering.txt"> [BibTeX]</a></li>
-  </ul>
+        <li>Qingrong Chen, Minhui Xue, Chong Xiang, Bo Li, Haizhong Zheng, and Haojin Zhu. <a
+                href="https://sgcsc.sg/doc/Camp2/RF-13.pdf">"Do We Need Original Data for Training? Toward Designing
+            Privacy-Preserving Machine Learning"</a>. (DLSRF, 2017, Research Forum Award)). <a href="#qingrong2017do"
+                                                                                               data-toggle="collapse"
+                                                                                               class="collapsed"
+                                                                                               aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="qingrong2017do" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{qingrong2017do,
+  title={Do We Need Original Data for Training? Toward Designing Privacy-Preserving Machine Learning},
+  author={Chen, Qingrong and Xue, Minhui and Xiang, Chong and Li, Bo and Zheng, Haizhong and Zhu, Haojin}
+   booktitle={DLSRF},
+    year={2017}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Lei Huang, Xianglong Liu, Bo Lang, Adams Wei Yu, Bo Li. <a href="https://arxiv.org/abs/1709.06079">"Orthogonal
+            Weight Normalization: Solution to Optimization over Multiple Dependent Stiefel Manifolds in Deep Neural
+            Networks"</a>. (AAAI, 2017) <a href="#huang2018orthogonal" data-toggle="collapse" class="collapsed"
+                                           aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="huang2018orthogonal" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{huang2018orthogonal,
+  title={Orthogonal weight normalization: Solution to optimization over multiple dependent stiefel manifolds in deep neural networks},
+  author={Huang, Lei and Liu, Xianglong and Lang, Bo and Yu, Adams and Wang, Yongliang and Li, Bo},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={32},
+  number={1},
+  year={2018}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Chang Liu, Bo Li, Yevgeniy Vorobeychik, and Alina Oprea. <a href="http://vorobeychik.com/2017/poisonlr.pdf">"Robust
+            Linear Regression Against Training Data Poisoning"</a>. (AISec, 2017, <span style="color:#FF0000;">Best paper award</span>)
+            <a href="#liu2017robust" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="liu2017robust" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{liu2017robust,
+  title={Robust linear regression against training data poisoning},
+  author={Liu, Chang and Li, Bo and Vorobeychik, Yevgeniy and Oprea, Alina},
+  booktitle={Proceedings of the 10th ACM Workshop on Artificial Intelligence and Security},
+  pages={91--102},
+  year={2017}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>B. Li, K. Roundy, C. Gates and Y. Vorobeychik. <a
+                href="http://vorobeychik.com/2017/largeScaleDetection.pdf">“Large-scale identification of malicious
+            singleton files”</a>. In ACM Conference on Data and Application Security and Privacy (CODASPY). Arizona,
+            USA, 2017. <a href="#li2017large" data-toggle="collapse" class="collapsed"
+                          aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2017large" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{li2017large,
+  title={Large-scale identification of malicious singleton files},
+  author={Li, Bo and Roundy, Kevin and Gates, Chris and Vorobeychik, Yevgeniy},
+  booktitle={Proceedings of the Seventh ACM on Conference on Data and Application Security and Privacy},
+  pages={227--238},
+  year={2017}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>J. Gao, B. Li, G. Schoenebeck and F. Yu. <a
+                href="https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14986">"Engineering Agreement: The Naming
+            Game with Asymmetric and Heterogeneous Agents,"</a> In Proceedings of the 30th International Conference on
+            Artificial Intelligence (AAAI). San Francisco, USA, 2017.<a href="#gao2017engineering"
+                                                                        data-toggle="collapse" class="collapsed"
+                                                                        aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="gao2017engineering" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{gao2017engineering,
+  title={Engineering agreement: the naming game with asymmetric and heterogeneous agents},
+  author={Gao, Jie and Li, Bo and Schoenebeck, Grant and Yu, Fang-Yi},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={31},
+  number={1},
+  year={2017}
+}
+</code></pre>
+            </div>
+        </li>
+    </ul>
     <h4>Before 2016</h4>
     <ul>
-    <li>B. Li, Y. Wang, A. Singh, Y. Vorobeychik, <a href = "https://arxiv.org/abs/1608.08182">"Data poisoning attacks on factorization-based collaborative filtering,"</a> In Proc. of the Neural Information Processing Systems (NIPS). Barcelona, Spain, 2016.<a href="./files/bibtex/b2016data.txt"> [BibTeX]</a></li><li>C. Yan, B. Li, Y. Chen, D. Liebovitz, and B. Malin, <a href = "https://www.ncbi.nlm.nih.gov/pubmed/28269922">"Learning clinical workflows to identify subgroups of heart failure patients"</a>, In Proc. Of the American Medical Informatics Association Annual Fall Symposium (AMIA), Chicago, USA, 2016.<a href="./files/bibtex/c2016learning.txt"> [BibTeX]</a></li><li>​B. Li, Y. Vorobeychik, M. Li, and B. Malin, <a href = "https://ieeexplore.ieee.org/document/7373399/">"Iterative classification for sanitizing large-scale datasets,"</a> In Proc. of the IEEE International Conference on Data Mining (ICDM). Atlantic City, NJ, USA, 2015.<a href="./files/bibtex/b2015iterative.txt"> [BibTeX]</a></li><li>B. Li, <a href = "https://ieeexplore.ieee.org/abstract/document/7395856/">"Secure learning and mining in adversarial environments,"</a> In Proc. of the IEEE International Conference on Data Mining (ICDM) Phd forum. Atlantic City, NJ, USA, 2015.<a href="./files/bibtex/b2015secure.txt"> [BibTeX]</a></li><li>L. Ke, B. Li , Y. Vorobeychik, <a href = "https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/11817/11671">"Behavioral Experiments in Email Filter Evasion"</a> In Proc. of the 30th International Conference on Artificial Intelligence (AAAI). Phoenix, AZ, USA, 2016.<a href="./files/bibtex/l30behavioral.txt"> [BibTeX]</a></li><li>B. Li and Y. Vorobeychik, <a href = "https://pdfs.semanticscholar.org/fc75/cb30f71d07f094b53c0b494fbdaf434a812c.pdf">"Scalable Optimization of Randomized Operational Decisions in Adversarial Classification Settings,"</a> in Proc. of the 18th International Conference on Artificial Intelligence and Statistics (AISTATS). San Diego, CA, USA, 2015.<a href="./files/bibtex/b18scalable.txt"> [BibTeX]</a></li><li>B. Li and Y. Vorobeychik, <a href = "http://www.vorobeychik.com/2014/sma.pdf">"Feature corss-substitution in adversarial classification,"</a> In Proc. of the Neural Information Processing Systems (NIPS). Quebec, Canada, 2014.<a href="./files/bibtex/b2014feature.txt"> [BibTeX]</a></li><li>Y. Vorobeychik and B. Li, <a href = "http://vorobeychik.com/2014/optmtd.pdf">"Optimal randomized classification in adversarial settings,"</a> In Proc. of the International Joint Conference on Autonomous Agents and Multiagent Systems (AAMAS). Paris, France, 2014.<a href="./files/bibtex/y2014optimal.txt"> [BibTeX]</a></li><li>Y. H. Wang, J. S. Lee, B. Li, <a href = "https://pdfs.semanticscholar.org/b5f0/6113e7ae9eb10f7efba6b03506b0de710942.pdf">"A Hybrid Illumination Refinement Technique based on Double Niblack Thresholds"</a>, In Proc. of the International Conference on Communication and Information Systems (ICCIS). Roma, Italy, 2015.<a href="./files/bibtex/y2015a.txt"> [BibTeX]</a></li><li>J. S. Lee, K. J. Wei, B. R. Huang, and B. Li, <a href = "https://www.researchgate.net/publication/262353153_An_anonymous_multi-server_authenticated_key_agreement_scheme_based_on_trust_computing_using_smart_cards_and_biometrics">"Note on an anonymous multi-server authenticated key agreement scheme based on trust computing using smart cards and biometrics,"</a> In Proc. of the Cryptography and Information Security Conference (CISC), Kaohsiung, Taiwan, 2015.<a href="./files/bibtex/j2015note.txt"> [BibTeX]</a></li><li>M. E. Koran, B. Li, N. Jahanshad, T. A. Thornton-Wells, D. C. Glahn, P. M. Thompson, J. Blangero, T. E. Nichols, P. Kochunov, and B. A. Landman. <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4281883/">"The impact of family structure and common environment on heritability estimation for neuroimaging genetics studies using SOLAR"</a>, In Proc. of the International Imaging Genetics Conference (GC). Irvine, CA, USA, 2014.<a href="./files/bibtex/m2014the.txt"> [BibTeX]</a></li><li>M. E. Koran, B. Li, N. Jahanshad, T. A. Thornton-Wells, D. C. Glahn, P. M. Thompson, J. Blangero, T. E. Nichols, P. Kochunov, and B. A. Landman. <a href = "https://www.frontiersin.org/articles/10.3389/fninf.2019.00016/full">"Neuroimaging Genetics Study Design: A Comparison of the OpenMX and SOLAR Software Packages for Estimating Heritability of Neuroimaging Traits"</a>. In Proc. of the International Imaging Genetics Conference (GC). Irvine, CA, USA, 2014.<a href="./files/bibtex/m2014neuroimaging.txt"> [BibTeX]</a></li><li>​M. E. Koran, B. Li, N. Jahanshad, T. A. Thornton-Wells, D. C. Glahn, P. M. Thompson, J. Blangero, T. E. Nichols, P. Kochunov, and B. A. Landman. <a href = "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/9034/90342P/On-study-design-in-neuroimaging-heritability-analyses/10.1117/12.2043565.full">"On study design in neuroimaging heritability analyses."</a> In Proc. of the SPIE Medical Imaging Conference. San Diego (SPIE), CA, USA, 2014.<a href="./files/bibtex/m2014on.txt"> [BibTeX]</a></li><li>Z. Xu, B. Li, S. Panda, A. J. Asman, K. L. Merkle, P. L. Shanahan, R. G. Abramson, and B. A. Landman. <a href = "https://www.ncbi.nlm.nih.gov/pubmed/24817808">"Shape-Constrained Multi-Atlas Segmentation of Spleen in CT."</a> In Proc. of the SPIE Medical Imaging Conference. San Diego (SPIE), CA, USA, 2014.<a href="./files/bibtex/z2014shapeconstrained.txt"> [BibTeX]</a></li><li>J. S. Lee, K. J. Wei, and B. Li, <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5375930/">"On the security of two ECC-based authentication mechanisms for confirming authorization,"</a> In Proc. of the Cryptography- 20 years of Cryptography in Taiwan, McGraw-Hill International Enterprises, LLC., Taiwan, 2014.<a href="./files/bibtex/j20on.txt"> [BibTeX]</a></li><li>Q. Lin, Z. Xu, B. Li, R. Baucom, B. Poulose, B. A. Landman, and R. E. Bodenheimer. <a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3877248/">"Immersive Virtual Reality for Visualization of Abdominal CT."</a> In Proc. of the SPIE Medical Imaging Conference. Orlando (SPIE), FL, USA, 2013.<a href="./files/bibtex/q2013immersive.txt"> [BibTeX]</a></li><li>B. Li, S. Panda, Z. Xu, A. J. Asman, P. L. Shanahan, R. G. Abramson, and B. A. Landman. <a href = "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.701.232&rep=rep1&type=pdf">"Regression forest region recognition enhances multi-atlas spleen labeling"</a>. In Proc. of the Medical Image Computing and Computer Assisted Intervention (MICCAI). Nagoya, Japan, 2013.<a href="./files/bibtex/b2013regression.txt"> [BibTeX]</a></li><li>B. Li, P. Volgyesi, and A. Ledeczi: <a href = "https://ieeexplore.ieee.org/document/6273598/">"Rapid Prototyping of Image Processing Workflows on Massively Parallel Architectures"</a>, In Proc. of Intelligent Solutions in Embedded Systems (WISES), Carinthia, Austria, 2012.<a href="./files/bibtex/b2012rapid.txt"> [BibTeX]</a></li><li>J. S. Lee, B. Li , and H. Y. Tsai. <a href = "http://ieeexplore.ieee.org/document/6269333/">"An Effective Preprocessor for Enhancing Edge Detection in Speckle Images,"</a> In Proc. of the 8th International Conference on Information Science and Digital Content Technology (ICIDT), Jeju, Korea, 2012.<a href="./files/bibtex/j8an.txt"> [BibTeX]</a></li><li>F. P. Lin, B. Li and J. S. Lee. <a href = "http://www.crystal-boli.com/publication.html">"A neoteric progressive scheme for visual secret sharing,"</a> In the Proc. of the First National Conference on Web Intelligence and Applications (CWIA). Kaohsiung, Taiwan, 2011.<a href="./files/bibtex/f2011a.txt"> [BibTeX]</a></li><li>B. Li, and J. S. Lee. <a href = "https://arxiv.org/pdf/1708.09535">"A wally watermarking scheme with blind extraction based on structured encoding system,"</a> In Proc. of International Conference on 2nd World Congress on Computer Science and Information Engineering (CSIE), Changchun, China, 2011.<a href="./files/bibtex/b2a.txt"> [BibTeX]</a></li><li>B. Li, J. S. Lee, and C. C. Chang. <a href = "https://ieeexplore.ieee.org/iel5/5714291/5715354/05715508.pdf">"Providing Anonymous Channels and Mutual Authentication in GSM,"</a> In Proc. of International Conference on the Fourth International Conference on Genetic and Evolutionary Computing (WCECS), Shenzhen, China, 2010.<a href="./files/bibtex/b2010providing.txt"> [BibTeX]</a></li><li>J. S. Lee, B. Li and Y. C. Chou. <a href = "https://ieeexplore.ieee.org/document/5331611">"A Brand-new Mobile Value-added Service: M-Check,"</a> In Proc. of International Conference on Networked Computing, Advanced Information Management and Digital Content and Multimedia Technologies (AICIT), Seoul, Korea, 2009.<a href="./files/bibtex/j2009a.txt"> [BibTeX]</a></li></ul>
-  <h3>Refereed Journals</h3>
-  <ul>
-      <li>Wenhao Ding, Baiming Chen, Bo Li, Ji Eun Kim, Ding Zhao. <a href="https://arxiv.org/pdf/2009.08311.pdf">Multimodal Safety-Critical Scenarios Generation for Decision-Making Algorithms Evaluation.</a>  IEEERA-L 2021.</li>
-      
-      <li>Saikiran Bulusu,  Bhavya Kailkhura,Bo Li,  Pramod K. Varshney,  Dawn Song, <a href = "https://arxiv.org/abs/2003.06979">"Anomalous Example Detection in Deep Learning:  A Survey."</a>,  IEEE Access 2020. <a href="./files/bibtex/IEEE%20Xplore%20Citation%20BibTeX%20Download%202020.8.12.16.4.26.bib.txt"> [BibTeX]</a></li>
-      <li>Chao Yan, Bo Li, Yevgeniy Vorobeychik, Aron Laszka, Daniel Fabbri, Bradley Malin, <a href = "http://aronlaszka.com/papers/yan_database.pdf">"Database Audit Workload Prioritization via Game Theory"</a>, ACM Transactions on Privacy and Security (TOPS), 2018.<a href="./files/bibtex/chao2018database.txt"> [BibTeX]</a></li><li>B. Li, Y. Vorobeychik, <a href = "http://vorobeychik.com/2018/binrobust.pdf">"Evasion-Robust Classification on Binary Domains,"</a> ACM Transactions on Knowledge Discovery from Data (TKDD), February. 2018.<a href="./files/bibtex/b2018evasionrobust.txt"> [BibTeX]</a></li><li>S. Chen, M. Xue, L. Fan, S. Hao, L. Xu, H. Zhu, and B. Li, <a href = "https://arxiv.org/abs/1706.04146">"Automated Poisoning Attacks and Defenses in Malware Detection Systems: An Adversarial Machine Learning Approach,"</a> Elsevier Computers & Security, 2017.<a href="./files/bibtex/s2017automated.txt"> [BibTeX]</a></li><li>B. Li, Y. Vorobeychik, M. Li, B. Malin, <a href = "https://www.ncbi.nlm.nih.gov/pubmed/28943741">"Scalable Iterative Classification for Sanitizing Large-Scale Datasets,"</a> IEEE Transactions on Knowledge and Data Engineering (TKDE), Oct. 2016.<a href="./files/bibtex/b2016scalable.txt"> [BibTeX]</a></li><li> J. S. Lee, B. Li, and B. R. Huang, <a href = "https://jit.ndhu.edu.tw/article/view/1436">"Oblivious Transfer System for Information Concealing and Recovery in Cloud Computing,"</a> Journal of Internet Technology, vol. 20, pp. 132-145, March 2015. <a href="./files/bibtex/20oblivious.txt"> [BibTeX]</a></li><li> J. S. Lee, K. R. Wen, and B. Li, <a href = "http://ieeexplore.ieee.org/abstract/document/7102728/">"Renovating Contaminative Image Archives based on Patch Propagation and Adaptive Confidence Collation"</a> IEEE Transactions on Circuits and Systems for Video Technology, vol. 14, pp. 112-134, April 2015.<a href="./files/bibtex/js2014renovating.txt"> [BibTeX]</a></li><li>M. Li, D. Carrell, J. Aberdeen, L. Hirschman, B. Li, Y.Vorobeychik, and B.Malin, <a href = "https://www.ncbi.nlm.nih.gov/pubmed/27020263">"Optimizing Annotation Resources for Natural Language De-identification via a Game Theoretic Framework,"</a> Journal of Biomedical Informatics, vol. 30, pp.142-179, October 2015<a href="./files/bibtex/m30optimizing.txt"> [BibTeX]</a></li><li>J. S. Lee, and B. Li, <a href = "https://www.researchgate.net/publication/260641184_Self-Recognized_Image_Protection_Technique_that_Resists_Large-Scale_Cropping">"Self-recognized Watermarking Technique with Resistance to Large Scale Cropping,"</a> IEEE Multimedia, vol. 21, pp. 60-73, March 2014. <a href="./files/bibtex/j21selfrecognized.txt"> [BibTeX]</a></li><li>​J. S. Lee, W. C. Kao, and B. Li, <a href = "https://digital-library.theiet.org/content/journals/10.1049/iet-ifs.2011.0327">"Aryabhata Remainder Theorem-Based Non-Iterative Electronic Lottery Mechanism with Robustness,"</a> IET Information Security, vol. 7, pp. 172-182, May 2013. <a href="./files/bibtex/j7aryabhata.txt"> [BibTeX]</a></li><li>J. S. Lee, and B. Li, <a href = "https://www.sciencedirect.com/science/article/pii/S0895717712003172">"Note on ‘Authentication protocol using an identifier in an ad hoc network environment’,"</a> Mathematical and Computer Modeling, vol. 57, pp. 1572-1575, July 2013. <a href="./files/bibtex/j57note.txt"> [BibTeX]</a></li><li>B. Li, F. Bryan, and B. A. Landman, <a href = "https://www.ncbi.nlm.nih.gov/pubmed/25285310">"Next Generation of the JAVA Image Science Toolkit (JIST) Visualization and Validation"</a>. InSight Journal, vol. 12, pp. 23-34, February 2012.<a href="./files/bibtex/b12next.txt"> [BibTeX]</a></li><li>C. C. Yang, K. J. Wei, B. Li and J. S. Lee, <a href = "https://onlinelibrary.wiley.com/doi/abs/10.1002/sec.704">"HORME: Hierarchical-Object-Relational Medical management for Electronic record,"</a> Security and Communication Networks, vol. 17, pp. 53-65, November 2012. <a href="./files/bibtex/c17horme.txt"> [BibTeX]</a></li><li>C. C. Chang, B. Li and J. S. Lee, <a href = "http://msn.iecs.fcu.edu.tw/~ccc/profile/publish/ij_paper2/IJ-667.pdf">"Secret Sharing Using Visual Cryptography,"</a> Journal of Electronic Science and Technology, vol. 8, pp. 289-299, June 2010.<a href="./files/bibtex/c8secret.txt"> [BibTeX]</a></li><li>B. Li and J. S. Lee, <a href = "http://www.csroc.org.tw/journal/E_Published%20Vol_21_No_3.files/JOC3Abs.pdf">"A Cryptographic Alternative for Preserving PHI in Compliance with HIPAA Privacy/Security Regulations,"</a> Journal of Computers, vol. 21, pp. 27-36, March 2010.<a href="./files/bibtex/b21a.txt"> [BibTeX]</a></li>
-</ul>
+        <li>B. Li, Y. Wang, A. Singh, Y. Vorobeychik, <a href="https://arxiv.org/abs/1608.08182">"Data poisoning attacks
+            on factorization-based collaborative filtering,"</a> In Proc. of the Neural Information Processing Systems
+            (NIPS). Barcelona, Spain, 2016. <a href="#NIPS201683fa5a43" data-toggle="collapse" class="collapsed"
+                                               aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="NIPS201683fa5a43" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{NIPS2016_83fa5a43,
+ author = {Li, Bo and Wang, Yining and Singh, Aarti and Vorobeychik, Yevgeniy},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {D. Lee and M. Sugiyama and U. Luxburg and I. Guyon and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Data Poisoning Attacks on Factorization-Based Collaborative Filtering},
+ url = {https://proceedings.neurips.cc/paper/2016/file/83fa5a432ae55c253d0e60dbfa716723-Paper.pdf},
+ volume = {29},
+ year = {2016}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>C. Yan, B. Li, Y. Chen, D. Liebovitz, and B. Malin, <a href="https://www.ncbi.nlm.nih.gov/pubmed/28269922">"Learning
+            clinical workflows to identify subgroups of heart failure patients"</a>, In Proc. Of the American Medical
+            Informatics Association Annual Fall Symposium (AMIA), Chicago, USA, 2016. <a href="#yan2016learning"
+                                                                                         data-toggle="collapse"
+                                                                                         class="collapsed"
+                                                                                         aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="yan2016learning" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{yan2016learning,
+  title={Learning clinical workflows to identify subgroups of heart failure patients},
+  author={Yan, Chao and Chen, You and Li, Bo and Liebovitz, David and Malin, Bradley},
+  booktitle={AMIA Annual Symposium Proceedings},
+  volume={2016},
+  pages={1248},
+  year={2016},
+  organization={American Medical Informatics Association}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>​B. Li, Y. Vorobeychik, M. Li, and B. Malin, <a href="https://ieeexplore.ieee.org/document/7373399/">"Iterative
+            classification for sanitizing large-scale datasets,"</a> In Proc. of the IEEE International Conference on
+            Data Mining (ICDM). Atlantic City, NJ, USA, 2015. <a href="#li2015iterative" data-toggle="collapse"
+                                                                 class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2015iterative" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{li2015iterative,
+  title={Iterative classification for sanitizing large-scale datasets},
+  author={Li, Bo and Vorobeychik, Yevgeniy and Li, Muqun and Malin, Bradley},
+  booktitle={2015 IEEE International Conference on Data Mining},
+  pages={841--846},
+  year={2015},
+  organization={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>B. Li, <a href="https://ieeexplore.ieee.org/abstract/document/7395856/">"Secure learning and mining in
+            adversarial environments,"</a> In Proc. of the IEEE International Conference on Data Mining (ICDM) Phd
+            forum. Atlantic City, NJ, USA, 2015. <a href="#li2015secure" data-toggle="collapse" class="collapsed"
+                                                    aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2015secure" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{li2015secure,
+  title={Secure learning and mining in adversarial environments},
+  author={Li, Bo},
+  booktitle={2015 IEEE International Conference on Data Mining Workshop (ICDMW)},
+  pages={1538--1539},
+  year={2015},
+  organization={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>L. Ke, B. Li , Y. Vorobeychik, <a
+                href="https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/11817/11671">"Behavioral Experiments
+            in Email Filter Evasion"</a> In Proc. of the 30th International Conference on Artificial Intelligence
+            (AAAI). Phoenix, AZ, USA, 2016. <a href="#ke2016behavioral" data-toggle="collapse" class="collapsed"
+                                               aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="ke2016behavioral" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{ke2016behavioral,
+  title={Behavioral experiments in email filter evasion},
+  author={Ke, Liyiming and Li, Bo and Vorobeychik, Yevgeniy},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={30},
+  number={1},
+  year={2016}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>B. Li and Y. Vorobeychik, <a
+                href="https://pdfs.semanticscholar.org/fc75/cb30f71d07f094b53c0b494fbdaf434a812c.pdf">"Scalable
+            Optimization of Randomized Operational Decisions in Adversarial Classification Settings,"</a> in Proc. of
+            the 18th International Conference on Artificial Intelligence and Statistics (AISTATS). San Diego, CA, USA,
+            2015. <a href="#li2015scalable" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2015scalable" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{li2015scalable,
+  title={Scalable optimization of randomized operational decisions in adversarial classification settings},
+  author={Li, Bo and Vorobeychik, Yevgeniy},
+  booktitle={Artificial Intelligence and Statistics},
+  pages={599--607},
+  year={2015},
+  organization={PMLR}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>B. Li and Y. Vorobeychik, <a href="http://www.vorobeychik.com/2014/sma.pdf">"Feature corss-substitution in
+            adversarial classification,"</a> In Proc. of the Neural Information Processing Systems (NIPS). Quebec,
+            Canada, 2014. <a href="#li2014feature" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2014feature" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{li2014feature,
+  title={Feature cross-substitution in adversarial classification},
+  author={Li, Bo and Vorobeychik, Yevgeniy},
+  booktitle={Advances in neural information processing systems},
+  pages={2087--2095},
+  year={2014}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Y. Vorobeychik and B. Li, <a href="http://vorobeychik.com/2014/optmtd.pdf">"Optimal randomized
+            classification in adversarial settings,"</a> In Proc. of the International Joint Conference on Autonomous
+            Agents and Multiagent Systems (AAMAS). Paris, France, 2014. <a href="#vorobeychik2014optimal"
+                                                                           data-toggle="collapse" class="collapsed"
+                                                                           aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="vorobeychik2014optimal" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{vorobeychik2014optimal,
+  title={Optimal randomized classification in adversarial settings.},
+  author={Vorobeychik, Yevgeniy and Li, Bo},
+  booktitle={International Foundation for Autonomous Agents and Multiagent Systems},
+  pages={485--492},
+  year={2014}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Y. H. Wang, J. S. Lee, B. Li, <a
+                href="https://pdfs.semanticscholar.org/b5f0/6113e7ae9eb10f7efba6b03506b0de710942.pdf">"A Hybrid
+            Illumination Refinement Technique based on Double Niblack Thresholds"</a>, In Proc. of the International
+            Conference on Communication and Information Systems (ICCIS). Roma, Italy, 2015. <a href="#wang2015hybrid"
+                                                                                               data-toggle="collapse"
+                                                                                               class="collapsed"
+                                                                                               aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="wang2015hybrid" aria-expanded="false" style="height: 0px">
+<pre><code>@article{wang2015hybrid,
+  title={A Hybrid Illumination Refinement Technique Based on Double Niblack Thresholds},
+  author={Wang, Yi-Hua and Lee, Jung-San and Li, Bo},
+  journal={International Journal of Future Computer and Communication},
+  volume={4},
+  number={6},
+  pages={426},
+  year={2015},
+  publisher={IACSIT Press}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>J. S. Lee, K. J. Wei, B. R. Huang, and B. Li, <a
+                href="https://www.researchgate.net/publication/262353153_An_anonymous_multi-server_authenticated_key_agreement_scheme_based_on_trust_computing_using_smart_cards_and_biometrics">"Note
+            on an anonymous multi-server authenticated key agreement scheme based on trust computing using smart cards
+            and biometrics,"</a> In Proc. of the Cryptography and Information Security Conference (CISC), Kaohsiung,
+            Taiwan, 2015. <a href="#j2015note" data-toggle="collapse" class="collapsed"
+                             aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="j2015note" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{j2015note,
+    title={Note on an anonymous multi-server authenticated key agreement scheme based on trust computing using smart cards and biometrics,},
+    author={J. S. Lee, K. J. Wei, B. R. Huang, and B. Li},
+    booktitle={In Proc. of the Cryptography and Information Security Conference (CISC)},
+    year={2015}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>M. E. Koran, B. Li, N. Jahanshad, T. A. Thornton-Wells, D. C. Glahn, P. M. Thompson, J. Blangero, T. E.
+            Nichols, P. Kochunov, and B. A. Landman. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4281883/">"The
+                impact of family structure and common environment on heritability estimation for neuroimaging genetics
+                studies using SOLAR"</a>, In Proc. of the International Imaging Genetics Conference (GC). Irvine, CA,
+            USA, 2014. <a href="#m2014familystruct" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="m2014familystruct" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{m2014familystruct,
+    title={The impact of family structure and common environment on heritability estimation for neuroimaging genetics studies using SOLAR},
+    author={M. E. Koran, B. Li, N. Jahanshad, T. A. Thornton-Wells, D. C. Glahn, P. M. Thompson, J. Blangero, T. E. Nichols, P. Kochunov, and B. A. Landman},
+    booktitle={In Proc. of the International Imaging Genetics Conference (GC)},
+    year={2014}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>M. E. Koran, B. Li, N. Jahanshad, T. A. Thornton-Wells, D. C. Glahn, P. M. Thompson, J. Blangero, T. E.
+            Nichols, P. Kochunov, and B. A. Landman. <a
+                    href="https://www.frontiersin.org/articles/10.3389/fninf.2019.00016/full">"Neuroimaging Genetics
+                Study Design: A Comparison of the OpenMX and SOLAR Software Packages for Estimating Heritability of
+                Neuroimaging Traits"</a>. In Proc. of the International Imaging Genetics Conference (GC). Irvine, CA,
+            USA, 2014. <a href="#m2014neuroimaging" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="m2014neuroimaging" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{m2014neuroimaging,
+    title={Neuroimaging Genetics Study Design: A Comparison of the OpenMX and SOLAR Software Packages for Estimating Heritability of Neuroimaging Traits},
+    author={M. E. Koran, B. Li, N. Jahanshad, T. A. Thornton-Wells, D. C. Glahn, P. M. Thompson, J. Blangero, T. E. Nichols, P. Kochunov, and B. A. Landman},
+    booktitle={In Proc. of the International Imaging Genetics Conference (GC)},
+    year={2014}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>​M. E. Koran, B. Li, N. Jahanshad, T. A. Thornton-Wells, D. C. Glahn, P. M. Thompson, J. Blangero, T. E.
+            Nichols, P. Kochunov, and B. A. Landman. <a
+                    href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/9034/90342P/On-study-design-in-neuroimaging-heritability-analyses/10.1117/12.2043565.full">"On
+                study design in neuroimaging heritability analyses."</a> In Proc. of the SPIE Medical Imaging
+            Conference. San Diego (SPIE), CA, USA, 2014.<a href="#koran2014study" data-toggle="collapse"
+                                                           class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="koran2014study" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{koran2014study,
+  title={On study design in neuroimaging heritability analyses},
+  author={Koran, Mary Ellen and Li, Bo and Jahanshad, Neda and Thornton-Wells, Tricia A and Glahn, David C and Thompson, Paul M and Blangero, John and Nichols, Thomas E and Kochunov, Peter and Landman, Bennett A},
+  booktitle={Medical Imaging 2014: Image Processing},
+  volume={9034},
+  pages={90342P},
+  year={2014},
+  organization={International Society for Optics and Photonics}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Z. Xu, B. Li, S. Panda, A. J. Asman, K. L. Merkle, P. L. Shanahan, R. G. Abramson, and B. A. Landman. <a
+                href="https://www.ncbi.nlm.nih.gov/pubmed/24817808">"Shape-Constrained Multi-Atlas Segmentation of
+            Spleen in CT."</a> In Proc. of the SPIE Medical Imaging Conference. San Diego (SPIE), CA, USA, 2014.<a
+                href="#xu2014shape" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="xu2014shape" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{xu2014shape,
+  title={Shape-constrained multi-atlas segmentation of spleen in CT},
+  author={Xu, Zhoubing and Li, Bo and Panda, Swetasudha and Asman, Andrew J and Merkle, Kristen L and Shanahan, Peter L and Abramson, Richard G and Landman, Bennett A},
+  booktitle={Medical Imaging 2014: Image Processing},
+  volume={9034},
+  pages={903446},
+  year={2014},
+  organization={International Society for Optics and Photonics}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>J. S. Lee, K. J. Wei, and B. Li, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5375930/">"On the
+            security of two ECC-based authentication mechanisms for confirming authorization,"</a> In Proc. of the
+            Cryptography- 20 years of Cryptography in Taiwan, McGraw-Hill International Enterprises, LLC., Taiwan, 2014.
+            <a href="#j2014eccauthen" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="j2014eccauthen" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{j2014eccauthen,
+    title={On the security of two ECC-based authentication mechanisms for confirming authorization},
+    author={J. S. Lee, K. J. Wei, and B. Li},
+    booktitle={ In Proc. of the Cryptography- 20 years of Cryptography in Taiwan, McGraw-Hill International Enterprises},
+    year={2014}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Q. Lin, Z. Xu, B. Li, R. Baucom, B. Poulose, B. A. Landman, and R. E. Bodenheimer. <a
+                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3877248/">"Immersive Virtual Reality for
+            Visualization of Abdominal CT."</a> In Proc. of the SPIE Medical Imaging Conference. Orlando (SPIE), FL,
+            USA, 2013. <a href="#lin2013immersive" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="lin2013immersive" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{lin2013immersive,
+  title={Immersive virtual reality for visualization of abdominal CT},
+  author={Lin, Qiufeng and Xu, Zhoubing and Li, Bo and Baucom, Rebeccah and Poulose, Benjamin and Landman, Bennett A and Bodenheimer, Robert E},
+  booktitle={Medical Imaging 2013: Image Perception, Observer Performance, and Technology Assessment},
+  volume={8673},
+  pages={867317},
+  year={2013},
+  organization={International Society for Optics and Photonics}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>B. Li, S. Panda, Z. Xu, A. J. Asman, P. L. Shanahan, R. G. Abramson, and B. A. Landman. <a
+                href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.701.232&rep=rep1&type=pdf">"Regression
+            forest region recognition enhances multi-atlas spleen labeling"</a>. In Proc. of the Medical Image Computing
+            and Computer Assisted Intervention (MICCAI). Nagoya, Japan, 2013. <a href="#li2013regression"
+                                                                                 data-toggle="collapse"
+                                                                                 class="collapsed"
+                                                                                 aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2013regression" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{li2013regression,
+  title={Regression forest region recognition enhances multi-atlas spleen labeling},
+  author={Li, Bo and Panda, Swetasudha and Xu, Zhoubing and Asman, Andrew J and Shanahan, Peter L and Abramson, Richard G and Landman, Bennett A},
+  booktitle={MICCAI Challenge Workshop on Segmentation: Algorithms, Theory and Applications (SATA)},
+  pages={82--92},
+  year={2013},
+  organization={Citeseer}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>B. Li, P. Volgyesi, and A. Ledeczi: <a href="https://ieeexplore.ieee.org/document/6273598/">"Rapid
+            Prototyping of Image Processing Workflows on Massively Parallel Architectures"</a>, In Proc. of Intelligent
+            Solutions in Embedded Systems (WISES), Carinthia, Austria, 2012. <a href="#li2012rapid"
+                                                                                data-toggle="collapse" class="collapsed"
+                                                                                aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2012rapid" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{li2012rapid,
+  title={Rapid prototyping of image processing workflows on massively parallel architectures},
+  author={Li, Bo and Sallai, J{\'a}nos and V{\"o}lgyesi, P{\'e}ter and L{\'e}deczi, {\'A}kos},
+  booktitle={Proceedings of the 10th International Workshop on Intelligent Solutions in Embedded Systems},
+  pages={15--20},
+  year={2012},
+  organization={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>J. S. Lee, B. Li , and H. Y. Tsai. <a href="http://ieeexplore.ieee.org/document/6269333/">"An Effective
+            Preprocessor for Enhancing Edge Detection in Speckle Images,"</a> In Proc. of the 8th International
+            Conference on Information Science and Digital Content Technology (ICIDT), Jeju, Korea, 2012. <a
+                    href="#lee2012effective" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="lee2012effective" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{lee2012effective,
+  title={An effective preprocessor for enhancing edge detection in speckle images},
+  author={Lee, Jung-San and Li, Bo and Tsai, Hsin-Yi},
+  booktitle={2012 8th International Conference on Information Science and Digital Content Technology (ICIDT2012)},
+  volume={3},
+  pages={546--550},
+  year={2012},
+  organization={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>F. P. Lin, B. Li and J. S. Lee. <a href="http://www.crystal-boli.com/publication.html">"A neoteric
+            progressive scheme for visual secret sharing,"</a> In the Proc. of the First National Conference on Web
+            Intelligence and Applications (CWIA). Kaohsiung, Taiwan, 2011. <a href="#f2011neoteric"
+                                                                              data-toggle="collapse" class="collapsed"
+                                                                              aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="f2011neoteric" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{f2011neoteric,
+    title={A neoteric progressive scheme for visual secret sharing},
+    author={F. P. Lin, B. Li and J. S. Lee},
+    booktitle={In the Proc. of the First National Conference on Web Intelligence and Applications (CWIA)},
+    year={2011}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>B. Li, and J. S. Lee. <a href="https://arxiv.org/pdf/1708.09535">"A wally watermarking scheme with blind
+            extraction based on structured encoding system,"</a> In Proc. of International Conference on 2nd World
+            Congress on Computer Science and Information Engineering (CSIE), Changchun, China, 2011. <a
+                    href="#b2011wallywatermarking" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="b2011wallywatermarking" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{b2011wallywatermarking,
+    title={A wally watermarking scheme with blind extraction based on structured encoding system},
+    author={B. Li, and J. S. Lee},
+    booktitle={International Conference on 2nd World Congress on Computer Science and Information Engineering (CSIE)},
+    year={2011}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>B. Li, J. S. Lee, and C. C. Chang. <a href="https://ieeexplore.ieee.org/iel5/5714291/5715354/05715508.pdf">"Providing
+            Anonymous Channels and Mutual Authentication in GSM,"</a> In Proc. of International Conference on the Fourth
+            International Conference on Genetic and Evolutionary Computing (WCECS), Shenzhen, China, 2010. <a
+                    href="#li2010providing" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2010providing" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{li2010providing,
+  title={Providing Anonymous Channels and Mutual Authentication for Mobile Communications},
+  author={Li, Bo and Chang, Chin-Chen and Lee, Jung-San},
+  booktitle={2010 Fourth International Conference on Genetic and Evolutionary Computing},
+  pages={618--621},
+  year={2010},
+  organization={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>J. S. Lee, B. Li and Y. C. Chou. <a href="https://ieeexplore.ieee.org/document/5331611">"A Brand-new Mobile
+            Value-added Service: M-Check,"</a> In Proc. of International Conference on Networked Computing, Advanced
+            Information Management and Digital Content and Multimedia Technologies (AICIT), Seoul, Korea, 2009.<a
+                    href="#lee2009brand" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="lee2009brand" aria-expanded="false" style="height: 0px">
+<pre><code>@inproceedings{lee2009brand,
+  title={A Brand-New Mobile Value-Added Service: M-Check},
+  author={Lee, Jung-San and Li, Bo and Chou, Yung-Chen},
+  booktitle={2009 Fifth International Joint Conference on INC, IMS and IDC},
+  pages={2050--2055},
+  year={2009},
+  organization={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+    </ul>
+    <h3>Refereed Journals</h3>
+    <ul>
+        <li>Wenhao Ding, Baiming Chen, Bo Li, Ji Eun Kim, Ding Zhao. <a href="https://arxiv.org/pdf/2009.08311.pdf">Multimodal
+            Safety-Critical Scenarios Generation for Decision-Making Algorithms Evaluation.</a> IEEERA-L 2021. <a
+                href="#ding2021multimodal" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="ding2021multimodal" aria-expanded="false" style="height: 0px">
+<pre><code>@article{ding2021multimodal,
+  title={Multimodal safety-critical scenarios generation for decision-making algorithms evaluation},
+  author={Ding, Wenhao and Chen, Baiming and Li, Bo and Kim, Ji Eun and Zhao, Ding},
+  journal={IEEE Robotics and Automation Letters},
+  year={2021},
+  publisher={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+
+        <li>Saikiran Bulusu, Bhavya Kailkhura,Bo Li, Pramod K. Varshney, Dawn Song, <a
+                href="https://arxiv.org/abs/2003.06979">"Anomalous Example Detection in Deep Learning: A Survey."</a>,
+            IEEE Access 2020. <a href="#bulusu2020anomalous" data-toggle="collapse" class="collapsed"
+                                 aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="bulusu2020anomalous" aria-expanded="false" style="height: 0px">
+<pre><code>@article{bulusu2020anomalous,
+  title={Anomalous example detection in deep learning: A survey},
+  author={Bulusu, Saikiran and Kailkhura, Bhavya and Li, Bo and Varshney, Pramod K and Song, Dawn},
+  journal={IEEE Access},
+  volume={8},
+  pages={132330--132347},
+  year={2020},
+  publisher={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>Chao Yan, Bo Li, Yevgeniy Vorobeychik, Aron Laszka, Daniel Fabbri, Bradley Malin, <a
+                href="http://aronlaszka.com/papers/yan_database.pdf">"Database Audit Workload Prioritization via Game
+            Theory"</a>, ACM Transactions on Privacy and Security (TOPS), 2018. <a href="#yan2019database"
+                                                                                   data-toggle="collapse"
+                                                                                   class="collapsed"
+                                                                                   aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="yan2019database" aria-expanded="false" style="height: 0px">
+<pre><code>@article{yan2019database,
+  title={Database audit workload prioritization via game theory},
+  author={Yan, Chao and Li, Bo and Vorobeychik, Yevgeniy and Laszka, Aron and Fabbri, Daniel and Malin, Bradley},
+  journal={ACM Transactions on Privacy and Security (TOPS)},
+  volume={22},
+  number={3},
+  pages={1--21},
+  year={2019},
+  publisher={ACM New York, NY, USA}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>B. Li, Y. Vorobeychik, <a href="http://vorobeychik.com/2018/binrobust.pdf">"Evasion-Robust Classification on
+            Binary Domains,"</a> ACM Transactions on Knowledge Discovery from Data (TKDD), February. 2018. <a
+                href="#li2018evasion" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2018evasion" aria-expanded="false" style="height: 0px">
+<pre><code>@article{li2018evasion,
+  title={Evasion-robust classification on binary domains},
+  author={Li, Bo and Vorobeychik, Yevgeniy},
+  journal={ACM Transactions on Knowledge Discovery from Data (TKDD)},
+  volume={12},
+  number={4},
+  pages={1--32},
+  year={2018},
+  publisher={ACM New York, NY, USA}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>S. Chen, M. Xue, L. Fan, S. Hao, L. Xu, H. Zhu, and B. Li, <a href="https://arxiv.org/abs/1706.04146">"Automated
+            Poisoning Attacks and Defenses in Malware Detection Systems: An Adversarial Machine Learning Approach,"</a>
+            <a href="#chen2018automated" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="chen2018automated" aria-expanded="false" style="height: 0px">
+<pre><code>@article{chen2018automated,
+  title={Automated poisoning attacks and defenses in malware detection systems: An adversarial machine learning approach},
+  author={Chen, Sen and Xue, Minhui and Fan, Lingling and Hao, Shuang and Xu, Lihua and Zhu, Haojin and Li, Bo},
+  journal={computers \& security},
+  volume={73},
+  pages={326--344},
+  year={2018},
+  publisher={Elsevier}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>B. Li, Y. Vorobeychik, M. Li, B. Malin, <a href="https://www.ncbi.nlm.nih.gov/pubmed/28943741">"Scalable
+            Iterative Classification for Sanitizing Large-Scale Datasets,"</a> IEEE Transactions on Knowledge and Data
+            Engineering (TKDE), Oct. 2016. <a href="#li2016scalable" data-toggle="collapse" class="collapsed"
+                                              aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2016scalable" aria-expanded="false" style="height: 0px">
+<pre><code>@article{li2016scalable,
+  title={Scalable iterative classification for sanitizing large-scale datasets},
+  author={Li, Bo and Vorobeychik, Yevgeniy and Li, Muqun and Malin, Bradley},
+  journal={IEEE transactions on knowledge and data engineering},
+  volume={29},
+  number={3},
+  pages={698--711},
+  year={2016},
+  publisher={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> J. S. Lee, B. Li, and B. R. Huang, <a href="https://jit.ndhu.edu.tw/article/view/1436">"Oblivious Transfer
+            System for Information Concealing and Recovery in Cloud Computing,"</a> Journal of Internet Technology, vol.
+            20, pp. 132-145, March 2015. <a href="#san2017oblivious" data-toggle="collapse" class="collapsed"
+                                            aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="san2017oblivious" aria-expanded="false" style="height: 0px">
+<pre><code>@article{san2017oblivious,
+  title={Oblivious transfer system for information concealing and recovery in cloud computing},
+  author={San Lee, Jung and Li, Bo and Huang, Bo Ruei},
+  journal={Journal of Internet Technology},
+  volume={18},
+  number={1},
+  pages={55--63},
+  year={2017},
+  publisher={Taiwan Academic Network Management Committee}
+}
+</code></pre>
+            </div>
+        </li>
+        <li> J. S. Lee, K. R. Wen, and B. Li, <a href="http://ieeexplore.ieee.org/abstract/document/7102728/">"Renovating
+            Contaminative Image Archives based on Patch Propagation and Adaptive Confidence Collation"</a> IEEE
+            Transactions on Circuits and Systems for Video Technology, vol. 14, pp. 112-134, April 2015.<a
+                    href="#lee2015renovating" data-toggle="collapse" class="collapsed"
+                    aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="lee2015renovating" aria-expanded="false" style="height: 0px">
+<pre><code>@article{lee2015renovating,
+  title={Renovating contaminative image archives based on patch propagation and adaptive confidence collation},
+  author={Lee, Jung-San and Wen, Kai-Rui and Li, Bo},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  volume={26},
+  number={5},
+  pages={1004--1011},
+  year={2015},
+  publisher={IEEE}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>M. Li, D. Carrell, J. Aberdeen, L. Hirschman, B. Li, Y.Vorobeychik, and B.Malin, <a
+                href="https://www.ncbi.nlm.nih.gov/pubmed/27020263">"Optimizing Annotation Resources for Natural
+            Language De-identification via a Game Theoretic Framework,"</a> Journal of Biomedical Informatics, vol. 30,
+            pp.142-179, October 2015 <a href="#li2016optimizing" data-toggle="collapse" class="collapsed"
+                                        aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2016optimizing" aria-expanded="false" style="height: 0px">
+<pre><code>@article{li2016optimizing,
+  title={Optimizing annotation resources for natural language de-identification via a game theoretic framework},
+  author={Li, Muqun and Carrell, David and Aberdeen, John and Hirschman, Lynette and Kirby, Jacqueline and Li, Bo and Vorobeychik, Yevgeniy and Malin, Bradley A},
+  journal={Journal of biomedical informatics},
+  volume={61},
+  pages={97--109},
+  year={2016},
+  publisher={Elsevier}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>J. S. Lee, and B. Li, <a
+                href="https://www.researchgate.net/publication/260641184_Self-Recognized_Image_Protection_Technique_that_Resists_Large-Scale_Cropping">"Self-recognized
+            Watermarking Technique with Resistance to Large Scale Cropping,"</a> IEEE Multimedia, vol. 21, pp. 60-73,
+            March 2014. <a href="#j2014selfrecognized" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="j2014selfrecognized" aria-expanded="false" style="height: 0px">
+<pre><code>@article{j2014selfrecognized,
+author = {Lee, Jung-San and Li, Bo},
+year = {2014},
+month = {01},
+pages = {60-73},
+title = {Self-Recognized Image Protection Technique that Resists Large-Scale Cropping},
+volume = {21},
+journal = {MultiMedia, IEEE},
+doi = {10.1109/MMUL.2014.14}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>​J. S. Lee, W. C. Kao, and B. Li, <a
+                href="https://digital-library.theiet.org/content/journals/10.1049/iet-ifs.2011.0327">"Aryabhata
+            Remainder Theorem-Based Non-Iterative Electronic Lottery Mechanism with Robustness,"</a> IET Information
+            Security, vol. 7, pp. 172-182, May 2013. <a href="#j2013aryabhata" data-toggle="collapse" class="collapsed"
+                                                        aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="j2013aryabhata" aria-expanded="false" style="height: 0px">
+<pre><code>@article{j2013aryabhata,
+author = {Lee, Jung-San and Kao, Wei-Chiang and Li, Bo},
+year = {2013},
+month = {09},
+pages = {172-180},
+title = {Aryabhata remainder theorem-based non-iterative electronic lottery mechanism with robustness},
+volume = {7},
+journal = {Information Security, IET},
+doi = {10.1049/iet-ifs.2011.0327}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>J. S. Lee, and B. Li, <a href="https://www.sciencedirect.com/science/article/pii/S0895717712003172">"Note on
+            ‘Authentication protocol using an identifier in an ad hoc network environment’,"</a> Mathematical and
+            Computer Modeling, vol. 57, pp. 1572-1575, July 2013.
+            <a href="#j2013note" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="j2013note" aria-expanded="false" style="height: 0px">
+<pre><code>@article{j2013note,
+author = {Lee, Jung-San and Li, Bo},
+year = {2013},
+month = {03},
+pages = {1572–1575},
+title = {Notes on “Authentication protocol using an identifier in an ad hoc network environment”},
+volume = {57},
+journal = {Mathematical and Computer Modelling},
+doi = {10.1016/j.mcm.2012.11.018}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>B. Li, F. Bryan, and B. A. Landman, <a href="https://www.ncbi.nlm.nih.gov/pubmed/25285310">"Next Generation
+            of the JAVA Image Science Toolkit (JIST) Visualization and Validation"</a>. InSight Journal, vol. 12, pp.
+            23-34, February 2012. <a href="#li2012next" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2012next" aria-expanded="false" style="height: 0px">
+<pre><code>@article{li2012next,
+  title={Next generation of the java image science toolkit (jist): visualization and validation},
+  author={Li, Bo and Bryan, Frederick and Landman, Bennett A},
+  journal={The insight journal},
+  volume={2012},
+  pages={1},
+  year={2012},
+  publisher={NIH Public Access}
+}
+</code></pre>
+            </div>
+        </li>
+        <li>C. C. Yang, K. J. Wei, B. Li and J. S. Lee, <a
+                href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sec.704">"HORME: Hierarchical-Object-Relational
+            Medical management for Electronic record,"</a> Security and Communication Networks, vol. 17, pp. 53-65,
+            November 2012. <a href="#yang2013horme" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="yang2013horme" aria-expanded="false" style="height: 0px">
+<pre><code>@article{yang2013horme,
+  title={HORME: hierarchical--object--relational medical management for electronic record},
+  author={Yang, Chien-Chang and Wei, Kuo-Jui and Li, Bo and Lee, Jung-San},
+  journal={Security and Communication Networks},
+  volume={6},
+  number={10},
+  pages={1261--1270},
+  year={2013},
+  publisher={Wiley Online Library}
+}
+</code></pre>
+            </div></li>
+        <li>C. C. Chang, B. Li and J. S. Lee, <a
+                href="http://msn.iecs.fcu.edu.tw/~ccc/profile/publish/ij_paper2/IJ-667.pdf">"Secret Sharing Using Visual
+            Cryptography,"</a> Journal of Electronic Science and Technology, vol. 8, pp. 289-299, June 2010. <a href="#chang2010secret" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="chang2010secret" aria-expanded="false" style="height: 0px">
+<pre><code>@article{chang2010secret,
+  title={Secret sharing using visual cryptography},
+  author={Chang, Chin-Chen and Li, Bo and Lee, Jung-San},
+  journal={Journal of Electronic Science and Technology},
+  volume={8},
+  number={4},
+  pages={289--299},
+  year={2010},
+  publisher={Journal of Electronic Science and Technology}
+}
+</code></pre>
+            </div></li>
+        <li>B. Li and J. S. Lee, <a href="http://www.csroc.org.tw/journal/E_Published%20Vol_21_No_3.files/JOC3Abs.pdf">"A
+            Cryptographic Alternative for Preserving PHI in Compliance with HIPAA Privacy/Security Regulations,"</a>
+            Journal of Computers, vol. 21, pp. 27-36, March 2010. <a href="#li2010cryptographic" data-toggle="collapse" class="collapsed" aria-expanded="false">[BibTeX]</a>
+            <div class="no-return collapse" id="li2010cryptographic" aria-expanded="false" style="height: 0px">
+<pre><code>@article{li2010cryptographic,
+  title={A Cryptographic Alternative for Preserving PHI in Compliance with HIPAA Privacy/Security Regulations},
+  author={Li, Bo and Lee, Jung-San},
+  journal={Journal of Computers},
+  volume={21},
+  number={3},
+  pages={27--36},
+  year={2010},
+}
+</code></pre>
+            </div></li>
+    </ul>
 </div>
 
 
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h4>Contact</h4>
+                <div class="text-muted">
+                    Bo Li
+                    <!-- <a href="lbo@illinois.edu">lbo@illinois.edu</a>
+                    &nbsp;&nbsp;•&nbsp;&nbsp;
+                    <a href="http://www.twitter.com/">@boli</a -->
+                    <br>
+                    Computer Science Department <br>
+                    University of Illinois at Urbana-Champaign <br>
+                    4310 Siebel Center 201 N. Goodwin Ave.
 
-    <footer>
-  <div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <h4>Contact</h4>
-          <div class="text-muted">
-          Bo Li
-          <!-- <a href="lbo@illinois.edu">lbo@illinois.edu</a>
-          &nbsp;&nbsp;•&nbsp;&nbsp;
-          <a href="http://www.twitter.com/">@boli</a -->
-          <br>
-            Computer Science Department <br> 
-            University of Illinois at Urbana-Champaign <br> 
-            4310 Siebel Center 201 N. Goodwin Ave. 
-
-Urbana, IL 61801, USA <br>
-          </div>
+                    Urbana, IL 61801, USA <br>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
 </footer>
-    
 
 
+<script>
+    if (typeof jQuery == 'undefined') {
+        document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+    }
+</script>
+<script src="../files/jquery-1.11.2.min.js"></script>
 
 
+<!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+
+<script src="../files/bootstrap.min.js"></script>
 
 
-  
-      <script>
-        if (typeof jQuery == 'undefined') {
-          document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
-        }
-      </script><script src="../files/jquery-1.11.2.min.js"></script>
-    
-  
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
-  <script src="../files/bootstrap.min.js"></script>
-    
-  
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
-  <script src="../files/main.js"></script>
-    
-  
+<!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+
+<script src="../files/main.js"></script>
 
 
-  
-
-</body></html>
+</body>
+</html>
