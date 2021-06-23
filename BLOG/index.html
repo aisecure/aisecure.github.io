@@ -20,78 +20,78 @@
 
   <meta name="author" content="Zico Kolter" />
 
-  
+
 
   <link rel="alternate" type="application/rss+xml" title="LocusLab blog - Blog for the LocusLab group." href="feed.xml.rss" />
 
-  
-    
+
+
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
-    
-  
 
-  
-    
+
+
+
+
       <link rel="stylesheet" href="css/bootstrap.min.css" />
-    
+
       <link rel="stylesheet" href="css/bootstrap-social.css" />
-    
+
       <link rel="stylesheet" href="css/main.css" />
-    
-  
 
-  
-    
+
+
+
+
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-    
+
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway::400,700,300" />
-    
+
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-    
-  
 
-  
 
-  
 
-  
+
+
+
+
+
 
     <!-- Facebook OpenGraph tags -->
-  
 
-  
+
+
   <meta property="og:title" content="Group Blog" />
-  
 
-   
+
+
   <meta property="og:description" content="{% for post in paginator.posts %} {{ post.title }} {% if post.subtitle %} {{ post.subtitle }} {% endif %} Posted on {{ post.date | date: &quot;%B %-d, %Y&quot; }} {% if post.image %} {% endif %} {% if post.tags.size &gt; 0 %} Tags: {% if site.link-tags %} {% for tag...">
-  
+
 
 
   <meta property="og:type" content="website" />
 
-  
+
   <meta property="og:url" content="index.html" />
   <link rel="canonical" href="index.html" />
-  
 
-  
-  
+
+
+
 
   <!-- Twitter summary cards -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@zicokolter" />
   <meta name="twitter:creator" content="@zicokolter" />
 
-  
+
   <meta name="twitter:title" content="Group Blog" />
-  
 
-  
+
+
   <meta name="twitter:description" content="{% for post in paginator.posts %} {{ post.title }} {% if post.subtitle %} {{ post.subtitle }} {% endif %} Posted on {{ post.date | date: &quot;%B %-d, %Y&quot; }} {% if post.image %} {% endif %} {% if post.tags.size &gt; 0 %} Tags: {% if site.link-tags %} {% for tag...">
-  
 
-  
+
+
 
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -127,7 +127,7 @@
      });
     </script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
---> 
+-->
 
 <style type="text/css">
   .navbar-custom .navbar-brand, .navbar-custom .nav li a {color:white;}
@@ -136,7 +136,7 @@
 
 
   <body>
-  
+
      <nav class="navbar navbar-default navbar-fixed-top navbar-custom top-nav-short" style="background:#8CB6E1">
   <div class="container">
     <div class="navbar-header">
@@ -150,23 +150,23 @@
 
         <a class="navbar-brand" href="https://aisecure.github.io/">Secure Learning Lab</a>
 
-      
+
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav navbar-right">
-      
-        
+
+
           <li>
-            
-            
+
+
 
 <a href="https://aisecure.github.io/PUBLICATIONS/">Publications</a>
 
           </li>
-        
-        
-        
+
+
+
           <li>
 
 
@@ -174,12 +174,12 @@
 <a href="https://aisecure.github.io/PROJECTS/">Projects</a>
 
           </li>
-        
-        
-        
+
+
+
           <li>
-            
-            
+
+
 
 
 
@@ -188,26 +188,34 @@
 <a href="https://aisecure.github.io/GROUP/">People</a>
 
           </li>
-        
-        
-        
-          <li>
-            
-            
+
+
+
+          <!-- <li>
+
+
 <a href="https://aisecure.github.io/TEACHING/">Teaching</a>
 
+          </li> -->
+          <li>
+              <!-- <a href="https://aisecure.github.io/TEACHING/CS562/">CS562</a> -->
+              <a href="../TEACHING/CS562/CS562-Fall2021.html">CS562</a>
           </li>
-        
-        
-        
+
+          <li>
+              <!-- <a href="https://aisecure.github.io/TEACHING/CS498/">CS498</a> -->
+              <a href="../TEACHING/CS498/CS498-Spring2020.html">CS498</a>
+          </li>
+
+
           <li>
 
 
 <a href="https://aisecure.github.io/BLOG/">Blog</a>
 
 </li>
-        
-        
+
+
           <li>
 
 
@@ -217,13 +225,13 @@
 <a href="https://github.com/AI-secure">GitHub</a>
 
           </li>
-        
-        
-        
+
+
+
       </ul>
     </div>
 
-  
+
 
   </div>
 </nav>
@@ -244,15 +252,15 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-heading">
-          
-          
+
+
           <p><img class="img-200" src="files/logo.jpg"/></p>
-          
-          
+
+
           <h1>Group Blog</h1>
-		  
-		  
-		  
+
+
+
         </div>
       </div>
     </div>
@@ -346,13 +354,13 @@
 
 
           </article>
-   
+
         <article class="post-preview">
           <a href="https://github.com/aisecure/Provable-Training-and-Verification-Approaches-Towards-Robust-Neural-Networks">
           <h2 class="post-title">A Leaderboard for Provable Training and Verification Approaches Towards Robust Neural Networks
           </h2>
-  
-          
+
+
           <p class="post-subtitle">
             Recently, provable (i.e. certified) adversarial robustness training and robustness verification approaches have demonstrated their importance in the adversarial learning community.
           </p>
@@ -365,19 +373,19 @@
           <p class="post-subtitle">
             Welcome to visit our repo and provide any feedback or updates!
       </p>
-      
+
       </a>
-  
+
       <p class="post-meta">
         Posted on November 7, 2019
       </p>
-  
+
       <div class="post-entry-container">
-        
+
       </div>
-  
-      
-  
+
+
+
      </article>
 
 
@@ -386,11 +394,11 @@
         <a href="https://sites.google.com/view/lidar-adv">
         <h2 class="post-title">Adversarial Objects Against LiDAR-Based Autonomous Driving Systems</h2>
 
-        
+
         <p class="post-subtitle">
         Deep neural networks (DNNs) are found to be vulnerable against adversarial examples, which are carefully crafted inputs with a small magnitude of perturbation aiming to induce arbitrarily incorrect predictions. Recent studies show that adversarial examples can pose a threat to real-world security-critical applications: a "physical adversarial Stop Sign" can be synthesized such that the autonomous driving cars will mis-recognize it as others (e.g., a speed limit sign). However, these image-space adversarial examples cannot easily alter 3D scans of widely equipped LiDAR or radar on autonomous vehicles. In this paper, we reveal the potential vulnerabilities of LiDAR-based autonomous driving detection systems, by proposing an optimization based approach LiDAR-Adv to generate adversarial objects that can evade the LiDAR-based detection system under various conditions. We first show the vulnerabilities using a blackbox evolution-based algorithm, and then explore how much a strong adversary can do, using our gradient-based approach LiDAR-Adv. We test the generated adversarial objects on the Baidu Apollo autonomous driving platform and show that such physical systems are indeed vulnerable to the proposed attacks. We also 3D-print our adversarial objects and perform physical experiments to illustrate that such vulnerability exists in the real world.
     </p>
-    
+
     </a>
 
     <p class="post-meta">
@@ -398,27 +406,27 @@
     </p>
 
     <div class="post-entry-container">
-      
+
     </div>
 
-    
+
 
    </article>
 
 
-  
+
       <article class="post-preview">
         <a href="https://sites.google.com/view/generate-semantic-adv-example">
     	  <h2 class="post-title">SemanticAdv: Generating Adversarial Examples via Attribute-conditional Image Editing
         </h2>
 
-    	  
+
     	  <p class="post-subtitle">
       	Deep neural networks (DNNs) have achieved great success in various applications due to their strong expressive power. However, recent studies have shown that DNNs are vulnerable to adversarial examples which are manipulated instances aiming to mislead DNNs to make incorrect predictions. Currently, most such adversarial examples try to guarantee the subtle perturbation by limiting its Lp norm. In this paper, we aim to explore the impact of semantic manipulation on DNNs by manipulating semantic attributes of images and generate unrestricted adversarial examples. Such semantic based perturbation is more practical compared with pixel level manipulation. In particular, we propose SemanticAdv which leverages disentangled semantic factors to generate adversarial perturbation via altering a single semantic attribute.
 
       We conduct extensive experiments to show that the semantic based adversarial examples can not only attack different learning tasks such as face verification and landmark detection, but also achieve high attack success rate against real-world black-box services such as Azure face verification service. Such structured adversarial examples with controlled semantic manipulation can shed light on further understanding about vulnerabilities of DNNs as well as potential defensive approaches.
 	  </p>
-	  
+
     </a>
 
     <p class="post-meta">
@@ -426,10 +434,10 @@
     </p>
 
     <div class="post-entry-container">
-      
+
     </div>
 
-    
+
 
    </article>
 
@@ -438,11 +446,11 @@
         <h2 class="post-title">Characterzing Audio Adversarial Examples using Temporal Dependency
         </h2>
 
-        
+
         <p class="post-subtitle">
         Recent studies have highlighted adversarial examples as a ubiquitous threat to different neural network models and many downstream applications. Nonetheless, as unique data properties have inspired distinct and powerful learning principles, this paper aims to explore their potentials towards mitigating adversarial inputs. In particular, our results reveal the importance of using the temporal dependency in audio data to gain discriminate power against adversarial examples. Tested on the automatic speech recognition (ASR) tasks and three recent audio adversarial attacks, we find that (i) input transformation developed from image adversarial defense provides limited robustness improvement and is subtle to advanced attacks; (ii) temporal dependency can be exploited to gain discriminative power against audio adversarial examples and is resistant to adaptive attacks considered in our experiments. Our results not only show promising means of improving the robustness of ASR systems but also offer novel insights in exploiting domain-specific data properties to mitigate negative effects of adversarial examples.
     </p>
-    
+
     </a>
 
     <p class="post-meta">
@@ -450,18 +458,18 @@
     </p>
 
     <div class="post-entry-container">
-      
+
     </div>
 
-    
+
 
    </article>
-  
-  
+
+
 </div>
 
 
-	    
+
     </div>
   </div>
 </div>
@@ -479,9 +487,9 @@
           &nbsp;&nbsp;•&nbsp;&nbsp;
           <a href="http://www.twitter.com/">@boli</a -->
           <br>
-            Computer Science Department <br> 
-            University of Illinois at Urbana-Champaign <br> 
-            4310 Siebel Center 201 N. Goodwin Ave. 
+            Computer Science Department <br>
+            University of Illinois at Urbana-Champaign <br>
+            4310 Siebel Center 201 N. Goodwin Ave.
 
 Urbana, IL 61801, USA <br>
           </div>
@@ -489,9 +497,9 @@ Urbana, IL 61801, USA <br>
     </div>
   </div>
 </footer>
-  
-  
-    
+
+
+
 
 
 
@@ -501,21 +509,21 @@ Urbana, IL 61801, USA <br>
           document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
         }
       </script><script src="../files/jquery-1.11.2.min.js"></script>
-    
-  
+
+
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
+
   <script src="../files/bootstrap.min.js"></script>
-    
-  
+
+
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
+
   <script src="../files/main.js"></script>
-    
-  
 
 
 
-  
+
+
+
   </body>
 </html>

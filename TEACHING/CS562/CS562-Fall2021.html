@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en"><!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159079655-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-159079655-1');
+    </script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>AI Security (UIUC)</title>
+
+  <meta name="author" content="Bo Li">
+
+
+  <meta name="description" content="Assistant Professor, University of Illinois, Urbana Champaign">
+
+  <link rel="icon" href="../../files/logo.jpg" />
+
+  <link rel="alternate" type="application/rss+xml" title="" href="">
+
+
+
+      <link rel="stylesheet" href="../../files/font-awesome.min.css">
+
+      <link rel="stylesheet" href="../../files/bootstrap.min.css">
+
+      <link rel="stylesheet" href="../../files/bootstrap-social.css">
+
+      <link rel="stylesheet" href="../../files/main.css">
+
+      <link rel="stylesheet" href="../../files/css">
+
+      <link rel="stylesheet" href="../../files/css(1)">
+
+      <link rel="stylesheet" href="../../files/css(2)">
+
+
+
+    <!-- Facebook OpenGraph tags -->
+
+
+
+  <meta property="og:title" content="Bo Li">
+
+
+
+  <meta property="og:description" content="Assistant Professor, University of Illinois, Urbana Champaign">
+
+
+
+  <meta property="og:type" content="website">
+
+
+  <meta property="og:url" content="https://aisecure.github.io/">
+  <link rel="canonical" href="https://aisecure.github.io/">
+
+
+
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@boli">
+  <meta name="twitter:creator" content="@boli">
+
+
+  <meta name="twitter:title" content="Bo Li">
+
+
+
+  <meta name="twitter:description" content="Assistant Professor, University of Illinois, Urbana Champaign">
+
+
+
+
+<script type="text/x-mathjax-config;executed=true">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$', '$'], ["$$", "$$"] ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      "HTML-CSS": {
+        linebreaks: {
+          automatic: true
+        },
+        scale: 90,
+        fonts: ["TeX"],
+        mtextFontInherit: false,
+        matchFontHeight: true
+      },
+      "TeX": {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "mediawiki-texvc.js"],
+      }
+      //,
+      //displayAlign: "left",
+      //displayIndent: "2em"
+    });
+</script>
+  <script src="./files/MathJax.js" id=""></script>
+
+<!--
+   <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+     });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+-->
+
+
+<style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+.navbar-custom .navbar-brand, .navbar-custom .nav li a {color:white;}
+
+</style></head>
+  <body><div id="MathJax_Message" style="display: none;"></div>
+
+      <nav class="navbar navbar-default navbar-fixed-top navbar-custom top-nav-short" style="background:#8CB6E1">
+  <div class="container">
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+        <a class="navbar-brand" href="https://aisecure.github.io/">Secure Learning Lab</a>
+
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a href="https://aisecure.github.io/PUBLICATIONS/"
+            >Publications</a
+            >
+        </li>
+
+        <li>
+            <a href="https://aisecure.github.io/PROJECTS/">Projects</a>
+        </li>
+
+        <li>
+            <a href="https://aisecure.github.io/GROUP/">People</a>
+        </li>
+
+        <li>
+            <!-- <a href="https://aisecure.github.io/TEACHING/CS562/">CS562</a> -->
+            <a href="./CS562-Fall2021.html">CS562</a>
+        </li>
+
+        <li>
+            <!-- <a href="https://aisecure.github.io/TEACHING/CS498/">CS498</a> -->
+            <a href="../CS498/CS498-Spring2020.html">CS498</a>
+        </li>
+
+        <li>
+            <a href="https://aisecure.github.io/BLOG/">Blog</a>
+        </li>
+
+        <li>
+            <a href="https://github.com/AI-secure">GitHub</a>
+        </li>
+      </ul>
+    </div>
+
+
+
+  </div>
+</nav>
+
+
+<!-- <!DOCTYPE html> -->
+<html>
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+
+          <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>
+              CS 562 - Advanced Topics in Security, Privacy and Machine Learning (Fall 2021)
+            </title>
+            <link rel="stylesheet" type="text/css" href="2021_fall_style.css" />
+            <link rel="icon" href="" />
+          </head>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+  <!-- -->
+
+  <body class="main">
+    <h1>CS 562: Advanced Topics in Security, Privacy and Machine Learning (Fall 2021)</h1>
+    <!-- <h2 class="h1sub">Fall 2021</h2> -->
+
+    <p>
+      This course was previously taught under the course number CS598. You can
+      refer to <a href="CS598-Fall2020.html">Fall 2020</a> for the older versions.
+    </p>
+
+    <p></p>
+    <dl>
+      <dt>
+        <b>Instructor</b>
+      </dt>
+      <dd>
+        <a href="https://aisecure.github.io" target="_blank">Bo Li</a>, <a href="mailto:lbo@illinois.edu">lbo@illinois.edu</a>, 4310 Siebel Center
+        <!-- <br /><a href="mailto:lbo@illinois.edu">lbo@illinois.edu</a> <br /> -->
+        <!-- 4310 Siebel Center -->
+        <p></p>
+      </dd>
+
+      <dt><b>Lectures</b></dt>
+      <dd>
+        TBD
+        <br />
+        <a
+          href="TBD"
+          >Zoom</a
+        >
+        <p></p>
+      </dd>
+
+      <dt><b>Teaching Assistant</b></dt>
+      <dd>
+        Huichen Li, <a href="mailto:huichen3@illinois.edu">huichen3@illinois.edu</a>
+        <p></p>
+      </dd>
+
+      <dt><b>Office Hours</b></dt>
+      <dd>
+        Bo Li: TBD
+        <!-- <br>
+            Fan Wu: TBD -->
+        <p></p>
+      </dd>
+
+      <dt><b>Forums</b></dt>
+      <dd>
+        <!-- <a href="TBD">Piazza</a> -->
+        TBD
+      </dd>
+    </dl>
+
+    <h2>Course Overview</h2>
+
+    <p>
+      This course first provides introduction for topics on machine learning,
+      security, privacy, adversarial machine learning, and game theory. Then
+      from the research perspective, we will discuss the novelty and potential
+      extension for each topic and related work. Students will understand
+      different machine learning algorithms and analyze their implementation and
+      security vulnerabilities through a series of readings and projects, as
+      well as develop ability to conduct research projects on related topics.
+    </p>
+
+    <p>
+      <b>Prerequisites:</b> CS 446 Machine Learning, CS 461 Computer Security I,
+      (CS 463 Computer Security II)
+    </p>
+
+    <p>
+      Please contact the instructor if you have questions regarding the material
+      or concerns about whether your background is suitable for the course.
+    </p>
+
+    <h2>Course Schedule</h2>
+
+    <p>
+      The following table outlines the (tentative) schedule for the course. We will update
+      it as the semester progresses.
+      The syllabus PDF version is coming soon.
+      <!-- Please refer to the -->
+      <!-- <a href="../teaching_files/files/2020_fall/598_aml_syllabus.pdf" target="_blank">
+        class syllabus
+      </a> -->
+      <!-- for more details. -->
+    </p>
+    <p></p>
+
+    <!-- <center> -->
+    <style type="text/css">
+      .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #9abad9;
+      }
+
+      .tg td {
+        font-family: Verdana, sans-serif;
+        font-size: 15px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        /*border-color: #9abad9;*/
+        color: #444;
+        /*background-color: #ebf5ff;*/
+        border-color: #FFFFFF;
+        background-color: #FFFFFF;
+      }
+
+      .tg th {
+        font-family: Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 1px;
+        overflow: hidden;
+        word-break: normal;
+        /*border-color: #9abad9;*/
+        border-color: #FFFFFF;
+        /*color: #fff;*/
+        color: #444;
+        /*background-color: #409cff;*/
+        background-color: #FFFFFF;
+      }
+
+      .tg .tg-c3ow {
+        border-color: inherit;
+        text-align: left;
+        vertical-align: center;
+      }
+
+      .tg .tg-reading {
+        border-color: inherit;
+        text-align: left;
+        vertical-align: center;
+        font-size: 15px;
+      }
+
+      .tg .tg-middle {
+        border-color: inherit;
+        text-align: center;
+        vertical-align: center;
+      }
+
+      .tg .tg-0pky {
+        border-color: inherit;
+        text-align: left;
+        vertical-align: center;
+      }
+    </style>
+    <table class="tg">
+      <tr>
+        <th class="tg-0pky">Date (tentative)</th>
+        <th class="tg-c3ow">Lecture (from Fall 2020, to be updated)</th>
+        <th class="tg-c3ow">Readings (from Fall 2020, to be updated)</th>
+        <th class="tg-0pky">Slides (from Fall 2020, to be updated)</th>
+      </tr>
+      <tr>
+        <td class="tg-0pky">8/25</td>
+        <td class="tg-c3ow"><b>Course Overview</b></td>
+        <td class="tg-reading">
+          Background ideas about general adversarial machine learning, including
+          the fundamental causes of the problem and current research status
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/1j07jts4s4wfcwb/lecture0825.pdf?dl=0"
+            target="_blank"
+          >
+            Slides</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">8/27</td>
+        <td class="tg-c3ow">
+          Evasion Attacks Against Machine Learning Models (Against Classifiers)
+        </td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/pdf/1312.6199.pdf" target="">
+            Intriguing properties of neural networks </a
+          ><br />
+          <a href="https://arxiv.org/abs/1412.6572" target="">
+            Explaining and harnessing adversarial examples </a
+          ><br />
+          <a href="https://arxiv.org/abs/1608.04644" target="">
+            Towards Evaluating the Robustness of Neural Networks
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/6f0y5axq9g9stqu/lecture0827.pdf?dl=0"
+            target="_blank"
+          >
+            Slides</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">9/1</td>
+        <td class="tg-c3ow">
+          ​Evasion Attacks Against Machine Learning Models (Non-traditional
+          Attacks)
+        </td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/abs/1801.02610" target="">
+            ​​Generating Adversarial Examples with Adversarial Networks </a
+          ><br />
+          <a href="https://arxiv.org/abs/1801.02612" target="">
+            ​Spatially Transformed Adversarial Examples </a
+          ><br />
+          <a href="https://arxiv.org/abs/1707.08945" target="">
+            ​​Robust Physical-World Attacks on Deep Learning Models </a
+          ><br />
+          <a href="https://arxiv.org/pdf/1902.07906.pdf" target="">
+            ​​Wasserstein Adversarial Examples via Projected Sinkhorn Iterations
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/nu4x7dtj8ya7ia0/class0901.pdf?dl=0"
+            target="_blank"
+          >
+            Slides</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">9/3</td>
+        <td class="tg-c3ow">
+          Evasion Attacks Against Machine Learning Models (Against
+          Detectors/Generative Models/RL)
+        </td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/pdf/1707.05373.pdf" target="">
+            ​​Houdini: Fooling Deep Structured Prediction Models </a
+          ><br />
+          <a href="https://arxiv.org/abs/1703.08603" target="">
+            Adversarial Examples for Semantic Segmentation and Object Detection </a
+          ><br />
+          <a href="https://arxiv.org/abs/1702.06832" target="">
+            Adversarial Examples for Generative Models </a
+          ><br />
+          <a href="https://arxiv.org/abs/1702.02284" target="">
+            Adversarial Attacks on Neural Network Policies
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/ai699q5jefdcozl/class0903.pdf?dl=0"
+            target="_blank"
+          >
+            Slides
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">9/8</td>
+        <td class="tg-c3ow">
+          Evasion Attacks Against Machine Learning Models (Blackbox Attacks)
+        </td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/abs/1605.07277" target="">
+            Transferability in Machine Learning: from Phenomena to Black-Box
+            Attacks using Adversarial Samples </a
+          ><br />
+          <a href="https://arxiv.org/abs/1712.09491" target="">
+            Exploring the Space of Black-box Attacks on Deep Neural Networks </a
+          ><br />
+          <a href="https://arxiv.org/abs/1712.04248" target="">
+            ​​Decision-Based Adversarial Attacks: Reliable Attacks Against
+            Black-Box Machine Learning Models </a
+          ><br />
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/p20r8iowup29aem/class0908.pdf?dl=0"
+            target="_blank"
+          >
+            Slides</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">9/10</td>
+        <td class="tg-c3ow">Detection Against Adversarial Attacks</td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/abs/1510.05328" target="">
+            ​Pre-process input: Exploring the Space of Adversarial Images </a
+          ><br />
+          <a href="https://arxiv.org/abs/1801.02613" target="">
+            ​​Characterizing Adversarial Subspaces Using Local Intrinsic
+            Dimensionality </a
+          ><br />
+          <a
+            href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Lu_SafetyNet_Detecting_and_ICCV_2017_paper.pdf"
+            target=""
+          >
+            ​​SafetyNet: Detecting and Rejecting Adversarial Examples Robustly
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/d7cezcdddiszw85/class0910.pdf?dl=0"
+            target="_blank"
+          >
+            Slides
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">9/15</td>
+        <td class="tg-c3ow">
+          Defenses Against Adversarial Attacks (Empirical)
+        </td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/pdf/1511.04508.pdf" target="">
+            Distillation as a defense to adversarial perturbations against DNNs </a
+          ><br />
+          <a href="https://arxiv.org/abs/1706.06083" target="">
+            ​Towards Deep learning models resistant to adversarial attacks </a
+          ><br />
+          <a href="https://arxiv.org/abs/1806.00088" target="">
+            ​PeerNets: Exploiting Peer Wisdom Against Adversarial Attacks </a
+          ><br />
+          <a href="https://arxiv.org/abs/1810.05162" target="">
+            Characterizing Adversarial Examples Based on Spatial Consistency
+            Information for Semantic Segmentation
+          </a>
+          <br />
+          <a href="https://arxiv.org/abs/1804.02485" target="">
+            Fortified Networks: Improving the Robustness of Deep Networks by
+            Modeling the Manifold of Hidden Representations&nbsp;
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/bunhj9k45j6tafc/class915.pdf?dl=0"
+            target="_blank"
+          >
+            Slides
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">9/17</td>
+        <td class="tg-c3ow">
+          Defenses Against Adversarial Attacks (Theoretic)
+        </td>
+        <td class="tg-reading">
+          <a href="https://openreview.net/forum?id=Bys4ob-Rb" target="">
+            Certified Defenses Against Adversarial Examples </a
+          ><br />
+          <a href="https://arxiv.org/pdf/1711.00851.pdf" target="">
+            ​Provable Defenses against adversarial examples via the convex outer
+            adversarial polytope </a
+          ><br />
+          <a href="https://arxiv.org/abs/1902.02918" target="">
+            Certified Adversarial Robustness via Randomized Smoothing
+          </a>
+          <br />
+          <a href="https://arxiv.org/pdf/1810.12715.pdf" target="">
+            ​On the Effectiveness of Interval Bound Propagation for Training
+            Verifiably Robust Models
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/0bfj0p0nnw1qq9z/class917.pdf?dl=0"
+            target="_blank"
+          >
+            Slides
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">9/22</td>
+        <td class="tg-c3ow">
+          Poisoning Attacks Against Machine Learning Models
+        </td>
+        <td class="tg-reading">
+          Optimization based poisoning attack methods against:
+          <ul>
+            <li>
+              SVM:
+              <a href="https://arxiv.org/abs/1206.6389" target="">
+                Poisoning Attacks against Support Vector Machines
+              </a>
+            </li>
+            <li>
+              Collaborative Filter:
+              <a href="https://arxiv.org/abs/1608.08182" target="">
+                Data Poisoning Attacks on Factorization-Based Collaborative
+                Filtering
+              </a>
+            </li>
+            <li>
+              General supervised learning tasks:
+              <a
+                href="http://pages.cs.wisc.edu/~jerryzhu/pub/Mei2015Machine.pdf"
+                target=""
+              >
+                Using Machine Teaching to Identify Optimal Training-Set Attacks
+                on Machine Learners
+              </a>
+            </li>
+          </ul>
+          <a href="https://arxiv.org/abs/1804.00792" target="">
+            Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural
+            Networks
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/i259qrysa5a6cbw/class922.pdf?dl=0"
+            target="_blank"
+          >
+            Slides</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">9/24</td>
+        <td class="tg-c3ow" colspan="2"><b>Proposal Report</b></td>
+        <td class="tg-0pky">
+          <a
+            href="https://docs.google.com/presentation/d/1gKBLUpXh_sGZ64a-tKTbS8LTD0k69I4aRjKf5GAnoXc/edit?usp=sharing"
+            target="_blank"
+          >
+            Slides
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">9/29</td>
+        <td class="tg-c3ow">Poisoning Attacks Analysis</td>
+        <td class="tg-reading">
+          <a
+            href="http://proceedings.mlr.press/v97/mahloujifar19a/mahloujifar19a.pdf"
+            target=""
+          >
+            Universal Multi-Party Poisoning Attacks </a
+          ><br />
+          <a
+            href="https://weihang-wang.github.io/papers/tnn_ndss18.pdf"
+            target=""
+          >
+            Trojaning Attack on Neural Networks
+          </a>
+          <br />
+          <a
+            href="http://people.cs.uchicago.edu/~ravenben/publications/pdf/backdoor-sp19.pdf"
+            target=""
+          >
+            Neural Cleanse: Identifying and Mitigating Backdoor Attacks in
+            Neural Networks
+          </a>
+          <br />
+          <a href="https://www.ijcai.org/proceedings/2019/0674.pdf" target="">
+            Data Poisoning Attack against Knowledge Graph Embedding
+          </a>
+          <br />
+          <a href="https://arxiv.org/pdf/1804.00308.pdf" target="">
+            Manipulating Machine Learning: Poisoning Attacks and Countermeasures
+            for Regression Learning
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/frpkzciu94vza2u/0929-18-Oakland-Poisoning-attack-linear-regression-Limin.pdf?dl=0"
+            target="_blank"
+            >Slides</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">10/1</td>
+        <td class="tg-c3ow">Defenses Against Poisoning Attacks</td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/abs/1706.03691" target="">
+            ​Certifed Defenses for Data poisoning attacks
+          </a>
+          <br />
+          <a
+            href="https://papers.nips.cc/paper/5515-robust-logistic-regression-and-classification.pdf"
+            target=""
+          >
+            ​Robust Logistic Regression and Classification
+          </a>
+
+          <br />
+          <a href="https://arxiv.org/pdf/1608.02257.pdf" target="">
+            ​Robust High-Dimensional Linear Regression
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/8p4jtaic8hl3u44/1001-rajarshi_paper_present.pdf?dl=0"
+            target="_blank"
+          >
+            Slides</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">10/6</td>
+        <td class="tg-c3ow">(Robust) Data Valuation</td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/abs/1908.08619" target="">
+            Efficient Task-Specific Data Valuation for Nearest Neighbor
+            Algorithms
+          </a>
+          <br />
+          <a href="https://arxiv.org/abs/1902.10275" target="">
+            Towards Efficient Data Valuation Based on the Shapley Value
+          </a>
+          <br />
+          <a href="https://arxiv.org/abs/1703.04730" target="">
+            Understanding Black-box Predictions via Influence Function</a
+          >
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/3yepfykxrb096fg/1006-Vardhan-BL598FA20.pdf?dl=0"
+            target="_blank"
+          >
+            Slides</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">10/8</td>
+        <td class="tg-c3ow" colspan="2"><b>Guest Lecture</b></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">10/13</td>
+        <td class="tg-c3ow">Robustness of Graph Neural Networks</td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/abs/1609.02907" target="">
+            Semi-supervised classification with graph convolutional networks
+          </a>
+          <br />
+          <a href="http://pengcui.thumedialab.com/papers/RGCN.pdf" target="">
+            Robust Graph Convolutional Networks Against Adversarial Attacks
+          </a>
+          <br />
+          <a href="https://arxiv.org/pdf/1902.09192.pdf" target="">
+            Batch Virtual Adversarial Training for Graph Convolutional Networks
+          </a>
+          <br />
+          <a href=" https://arxiv.org/pdf/1906.04214.pdf" target="">
+            Topology Attack and Defense for Graph Neural Networks: An
+            Optimization Perspective
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/h9un7v3kdgufok6/1013-Xinyang-598_GNN_20201013.pdf?dl=0"
+            target="_blank"
+          >
+            Slides 1
+          </a>
+          <a
+            href="https://www.dropbox.com/s/kgawltrr7cjgosh/1013-Zhiqian-Batch%20Virtual%20Adversarial%20Training%20for%20Graph%20Convolutional%20Networks.pdf?dl=0"
+            target="_blank"
+          >
+            Slides 2</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">10/15</td>
+        <td class="tg-c3ow">
+          Beyond Images: Adversarial Attacks on NLP/Audio/Video/Graphs
+        </td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/abs/1803.01128" target="">
+            Seq2Sick: Evaluating the Robustness of Sequence-to-Sequence Models
+            with Adversarial Examples
+          </a>
+          <br />
+          <a href="https://arxiv.org/pdf/1707.07328.pdf" target="">
+            Adversarial Examples for Evaluating Reading Comprehension Systems
+          </a>
+
+          <br />
+          <a href="https://arxiv.org/abs/1801.01944" target="">
+            Audio Adversarial Examples: Targeted Attacks on Speech-to-Text
+          </a>
+          <br />
+          <a href="https://arxiv.org/abs/1801.08535" target="">
+            ​CommanderSong: A Systematic Approach for Practical Adversarial
+            Voice Recognition
+          </a>
+          <br />
+          <a href="https://arxiv.org/pdf/1809.01093.pdf" target="">
+            ​Adversarial Attacks on Node Embeddings via Graph Poisoning
+          </a>
+          <br />
+          <a href="https://arxiv.org/abs/1806.02371" target="">
+            Adversarial Attack on Graph Structured Data
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/q78r7mhxctnh9qt/1015-Qi-AML_PRE.pdf?dl=0"
+            target="_blank"
+          >
+            Slides 1</a
+          >
+          <a
+            href="https://www.dropbox.com/s/in7qnhgj9g1wdab/1015-Yunan-598bl.pdf?dl=0"
+            target="_blank"
+          >
+            Slides 2</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">10/20</td>
+        <td class="tg-c3ow">Generative Adversarial Networks (Empirical)</td>
+        <td class="tg-reading">
+          <a
+            href="https://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf"
+            target=""
+          >
+            Generative Adversarial Nets </a
+          ><br />
+          <a href="https://arxiv.org/pdf/1703.10593.pdf" target="">
+            ​Unpaired Image-to-Image Translation using Cycle-Consistent
+            Adversarial Networks </a
+          ><br />
+          <a href="https://arxiv.org/abs/1411.1784" target="">
+            Conditional Generative Adversarial Nets </a
+          ><br />
+          <a href="https://arxiv.org/abs/1808.06601" target="">
+            ​​Video-to-Video Synthesis
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/enpyg4338ouwl3h/1020-Eric-GANs.pdf?dl=0"
+            target="_blank"
+          >
+            Slides 1
+          </a>
+          <a
+            href="https://www.dropbox.com/s/004jr82f8c6mhl4/1020-Jiaxin-CS598_AML_Presentation.pdf?dl=0"
+            target="_blank"
+          >
+            Slides 2</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">10/22</td>
+        <td class="tg-c3ow">Generative Adversarial Networks (Theoretic)</td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/abs/1703.00573" target="">
+            Generalization and equilibrium in generative adversarial nets (GANs)
+          </a>
+          <br />
+          <a href="https://openreview.net/forum?id=BJehNfW0-" target="">
+            ​Do GANs Actually Learn the Distribution?
+          </a>
+
+          <br />
+          <a href="https://arxiv.org/abs/1711.02651" target="">
+            Theoretical limitations of Encoder-Decoder GAN architectures
+          </a>
+
+          <br />
+          <a href="https://openreview.net/pdf?id=Hk6kPgZA-" target="">
+            ​Certifying some distributional robustness with principled
+            adversarial training
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/y1d2lwuoeeuzt94/1022-Peiye_presentation.pdf?dl=0"
+            target="_blank"
+          >
+            Slides 1</a
+          >
+          <a
+            href="https://www.dropbox.com/s/eps54mi2d9p19sp/1022-Hyoungwook-cs598bl_Oct22_hn5.pdf?dl=0"
+            target="_blank"
+          >
+            Slides 2</a
+          >
+        </td>
+      </tr>
+
+      <tr>
+        <td class="tg-0pky">10/27</td>
+        <td class="tg-c3ow" colspan="2"><b>Status Report</b></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">10/29</td>
+        <td class="tg-c3ow" colspan="2"><b>Guest Lecture</b></td>
+        <td class="tg-0pky"></td>
+      </tr>
+
+      <tr>
+        <td class="tg-0pky">11/3</td>
+        <td class="tg-c3ow">Privacy in Machine Learning Models (Attacks)</td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/pdf/1610.05820.pdf" target="">
+            ​Membership Inference attacks against machine learning models
+          </a>
+          <br />
+          <a href="https://arxiv.org/pdf/1802.08232.pdf" target="">
+            ​The secret sharer: Measuring unintended neural network memorization
+            &amp; extracting secrets
+          </a>
+          <br />
+          <a href="https://arxiv.org/pdf/1702.07464.pdf" target="">
+            ​​Deep Models Under the GAN: Information Leakage from Collaborative
+            Deep Learning
+          </a>
+        </td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">11/5</td>
+        <td class="tg-c3ow">Differentially Private Machine Learning Models</td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/abs/1607.00133" target="">
+            Deep Learning with Differential Privacy
+          </a>
+          <br />
+          <a href="https://arxiv.org/abs/1610.05755" target="">
+            Semi-supervised Knowledge Transfer for Deep Learning from Private
+            Training Data
+          </a>
+
+          <br />
+          <a href="https://openreview.net/pdf?id=rkZB1XbRZ" target="">
+            ​Scalable Private Learning With PATE </a
+          ><br />
+          <a href="https://arxiv.org/abs/1708.07975" target="">
+            ​​Plausible deniability for privacy-preserving data synthesis
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/m748ynta65gcqip/1105-Tengyang-cs598BL_paper_presentation.pdf?dl=0"
+            target="_blank"
+          >
+            Slides 1
+          </a>
+          <a
+            href="https://www.dropbox.com/s/w8hllxzlbg5rrea/1105-Baoyu-ami_baoyuj2.pdf?dl=0"
+            target="_blank"
+          >
+            Slides 2</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">11/10</td>
+        <td class="tg-c3ow">Differential Privacy on Graphs</td>
+        <td class="tg-reading">
+          <a
+            href="http://www.cse.psu.edu/~sxr48/pubs/nodeprivacy-TCC.pdf"
+            target=""
+          >
+            ​​Analyzing Graphs with Node Differential Privacy
+          </a>
+          <br />
+          <a href="https://acmccs.github.io/papers/p425-qinAemb.pdf" target="">
+            Generating Synthetic Decentralized Social Graphs with Local
+            Differential Privacy
+          </a>
+
+          <br />
+          <a href="https://arxiv.org/pdf/1607.02060.pdf" target="">
+            Detecting Communities under Differential Privacy
+          </a>
+        </td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">11/12</td>
+        <td class="tg-c3ow">Fairness of Machine Learning</td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/abs/1803.04383" target="">
+            Delayed impact of fair machine learning
+          </a>
+          <br />
+          <a href="https://arxiv.org/abs/1806.08010" target="">
+            Fairness without demographics in repeated loss minimization
+          </a>
+          <br />
+          <a href="https://arxiv.org/pdf/1710.03184.pdf" target="">
+            ​​On Formalizing Fairness in Prediction with Machine Learning
+          </a>
+          <br />
+          <a href="https://arxiv.org/abs/1706.02744" target="">
+            Avoiding Discrimination through Causal Reasoning
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/daeuv0di9jz2ylo/1112-Jian-CS598BL.pdf?dl=0"
+            target="_blank"
+            >Slides</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">11/17</td>
+        <td class="tg-c3ow">
+          Game Theoretic Analysis for Adversarial Learning
+        </td>
+        <td class="tg-reading">
+          <a href="https://ix.cs.uoregon.edu/~lowd/kdd05lowd.pdf" target="">
+            ​Adversarial Learning</a
+          >
+          <br />
+          <a
+            href="https://homes.cs.washington.edu/~pedrod/papers/kdd04.pdf"
+            target=""
+          >
+            ​Adversarial Classification
+          </a>
+          <br />
+          <a href="http://www.vorobeychik.com/2014/sma.pdf" target="">
+            ​Feature Cross-Substitution in Adversarial Classification
+          </a>
+
+          <br />
+          <a
+            href="https://pdfs.semanticscholar.org/fc75/cb30f71d07f094b53c0b494fbdaf434a812c.pdf"
+            target=""
+          >
+            Scalable Optimization of Randomized Operational Decisions in
+            Adversarial Classification Settings
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/7nnqxkml4463aie/1117-Hunter-598bl.pdf?dl=0"
+            target="_blank"
+            >Slides</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">11/19</td>
+        <td class="tg-c3ow">
+          Robust Reinforcement Learning and Improve learning robustness with
+          unlabeled data
+        </td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/pdf/1703.02702.pdf" target="">
+            Robust Adversarial reinforcement learning
+          </a>
+          <br />
+          <a
+            href="http://vision.stanford.edu/pdf/mandlekar2017iros.pdf"
+            target=""
+          >
+            ​​Adversarially Robust Policy Learning: Active Construction of
+            Physically-Plausible Perturbations
+          </a>
+
+          <br />
+          <a href="https://arxiv.org/pdf/1711.02827.pdf" target="">
+            ​Inverse Reward Design&nbsp;
+          </a>
+
+          <br />
+
+          <a href="https://arxiv.org/abs/1905.13736" target="">
+            ​​Unlabeled Data Improves Adversarial Robustness
+          </a>
+
+          <br />
+          <a href="https://arxiv.org/abs/1905.13725" target="">
+            Are Labels Required for Improving Adversarial Robustness?
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/364c08uelrnp8ps/1119-Ruochen%20Shen%20IRD%20Paper%20Presentation.pdf?dl=0"
+            target="_blank"
+          >
+            Slides</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-middle" colspan="4"><b>Fall Break</b></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">12/1</td>
+        <td class="tg-c3ow">Robustness In Distributed Learning</td>
+        <td class="tg-reading">
+          <a href="https://openreview.net/pdf?id=rkgyS0VFvr" target="">
+            DBA: Distributed Backdoor Attacks Against Federated Learning
+          </a>
+          <br />
+          <a
+            href="https://arxiv.org/abs/2004.04986"
+            target=""
+          >
+            Towards Realistic Byzantine-Robust Federated Learning
+          </a>
+        </td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">12/3</td>
+        <td class="tg-c3ow" colspan="2"><b>Final Report I</b></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">12/8</td>
+        <td class="tg-c3ow" colspan="2"><b>Final Report II</b></td>
+        <td class="tg-0pky"></td>
+      </tr>
+    </table>
+    <!-- </center> -->
+
+    <h2>Grading (tentative)</h2>
+    <p>
+      The course will involve one paper presentation, three reading reviews, and
+      a final project. Unless otherwise noted by the instructor, all work in
+      this course is to be completed independently. If you are ever uncertain of
+      how to complete an assignment, you can go to office hours or engage in
+      high-level discussions about the problem with your classmates on the
+      Piazza boards.
+    </p>
+
+    <p>Grades will be assigned as follows:</p>
+
+    <ul>
+      <li>
+        <b>Presentation:</b> Each student will present 1~2 papers (based on the
+        hardness of the paper) for a specific topic. Students need to sign up
+        for the presentation in this
+        <a
+          href="https://docs.google.com/spreadsheets/d/1eXhq-10rzOZlzEXyjU-BZDt7Hmgryre737ylz0q5OE0/edit?usp=sharing"
+          target="_blank"
+          >google sheet</a
+        >. The presentation quality will take 20% of your grade.
+      </li>
+      <li>
+        <b>Paper Reviews:</b> Each student will submit three paper reviews for
+        the papers not in your presentation pile. The three reviews will take
+        10% of your grade. You can submit more than three and the highest three
+        scores will be selected.
+      </li>
+      <li>
+        <b>Final Project:</b> Students will form groups of two and work on a
+        final project. A final project report will be submitted by 12/2
+        midnight, and the final presentation will be scheduled (Sign up here in
+        the
+        <a
+          href="https://docs.google.com/spreadsheets/d/1eXhq-10rzOZlzEXyjU-BZDt7Hmgryre737ylz0q5OE0/edit#gid=1300234808"
+          target="_blank"
+          >Google Sheet</a
+        >). The quality of the final project will take 65% of your final grade.
+      </li>
+      <li>
+        <b>Participation:</b> Accounts for 5%. Includes quizzes and class
+        discussion (either in person or online).
+      </li>
+    </ul>
+
+    <h2>Course Expectations</h2>
+
+    <p>
+      The expectations for the course are that students will attend every class,
+      do any readings assigned for class, and actively and constructively
+      participate in class discussions. Class participation will be a measure of
+      contributing to the discourse both in class, through discussion and
+      questions, and outside of class through contributing and responding to the
+      Piazza forum.
+    </p>
+
+    <p>
+      More information about course requirements will be made available leading
+      up to the start of classes.
+    </p>
+
+    <h2>Ethics Statement</h2>
+
+    <p>
+      This course will include topics related computer security and privacy. As
+      part of this investigation we may cover technologies whose abuse could
+      infringe on the rights of others. As computer scientists, we rely on the
+      ethical use of these technologies. Unethical use includes circumvention of
+      an existing security or privacy mechanisms for any purpose, or the
+      dissemination, promotion, or exploitation of vulnerabilities of these
+      services. Any activity outside the letter or spirit of these guidelines
+      will be reported to the proper authorities and may result in dismissal
+      from the class and possibly more severe academic and legal sanctions.
+    </p>
+
+    <h2>Academic Integrity Policy</h2>
+
+    <p>
+      The University of Illinois at Urbana-Champaign Student Code should also be
+      considered as a part of this syllabus. Students should pay particular
+      attention to Article 1, Part 4: Academic Integrity. Read the Code at the
+      following URL:
+      <a
+        class="paperlink"
+        href="http://studentcode.illinois.edu/"
+        target="_blank"
+        >http://studentcode.illinois.edu/</a
+      >.
+    </p>
+    <p>
+      Academic dishonesty may result in a failing grade. Every student is
+      expected to review and abide by the Academic Integrity Policy:
+      <a
+        class="paperlink"
+        href="http://studentcode.illinois.edu/"
+        target="_blank"
+        >http://studentcode.illinois.edu/</a
+      >. Ignorance is not an excuse for any academic dishonesty. It is your
+      responsibility to read this policy to avoid any misunderstanding. Do not
+      hesitate to ask the instructor(s) if you are ever in doubt about what
+      constitutes plagiarism, cheating, or any other breach of academic
+      integrity.
+    </p>
+
+    <h2>Students with Disabilities</h2>
+
+    <p>
+      To obtain disability-related academic adjustments and/or auxiliary aids,
+      students with disabilities must contact the course instructor and the as
+      soon as possible. To insure that disability-related concerns are properly
+      addressed from the beginning, students with disabilities who require
+      assistance to participate in this class should contact Disability
+      Resources and Educational Services (DRES) and see the instructor as soon
+      as possible. If you need accommodations for any sort of disability, please
+      speak to me after class, or make an appointment to see me, or see me
+      during my office hours. DRES provides students with academic
+      accommodations, access, and support services. To contact DRES you may
+      visit 1207 S. Oak St., Champaign, call 333-4603 (V/TDD), or e-mail a
+      message to <a href="mailto:disability@uiuc.edu">disability@uiuc.edu</a>.
+      Please refer to
+      <a
+        class="paperlink"
+        href="http://www.disability.illinois.edu/"
+        target="_blank"
+        >http://www.disability.illinois.edu/</a
+      >.
+    </p>
+
+    <h2>Emergency Response Recommendations</h2>
+    <p>
+      Emergency response recommendations can be found at the following website:
+      <a
+        class="paperlink"
+        href="http://police.illinois.edu/emergency-preparedness/"
+        target="_blank"
+        >http://police.illinois.edu/emergency-preparedness/</a
+      >. I encourage you to review this website and the campus building floor
+      plans website within the first 10 days of class:
+      <a
+        class="paperlink"
+        href="http://police.illinois.edu/emergency-preparedness/building-emergency-action-plans/"
+        target="_blank"
+        >http://police.illinois.edu/emergency-preparedness/building-emergency-action-plans/</a
+      >.
+    </p>
+
+    <h2>Family Educational Rights and Privacy Act (FERPA)</h2>
+
+    <p>
+      Any student who has suppressed their directory information pursuant to
+      Family Educational Rights and Privacy Act (FERPA) should self-identify to
+      the instructor to ensure protection of the privacy of their attendance in
+      this course. See
+      <a
+        class="paperlink"
+        href="http://registrar.illinois.edu/ferpa"
+        target="_blank"
+        >http://registrar.illinois.edu/ferpa</a
+      >
+      for more information on FERPA.
+    </p>
+
+    <div class="footer">
+      <hr /> Contact:
+      <a href="mailto:huichen3@illinois.edu">huichen3@illinois.edu</a>
+    </div>
+  </body>
+</html>
