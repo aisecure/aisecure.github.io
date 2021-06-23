@@ -165,6 +165,27 @@
 #MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
 .navbar-custom .navbar-brand, .navbar-custom .nav li a {color:white;}
 
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #a0a0a0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #a0a0a0;}
+
 </style></head>
   <body><div id="MathJax_Message" style="display: none;"></div>
 
@@ -228,15 +249,21 @@
 <a href="https://aisecure.github.io/TEACHING/">Teaching</a>
 
           </li> -->
-          <li>
-              <!-- <a href="https://aisecure.github.io/TEACHING/CS562/">CS562</a> -->
+          <li class="dropdown right">
+            <a href="javascript:void(0)" class="dropbtn">TEACHING</a>
+            <div class="dropdown-content">
               <a href="../TEACHING/CS562/CS562-Fall2021.html">CS562</a>
+              <a href="../TEACHING/CS498/CS498-Spring2020.html">CS498</a>
+            </div>
+          </li>
+
+          <!-- <li>
+              <a href="TEACHING/CS562/CS562-Fall2021.html">CS562</a>
           </li>
 
           <li>
-              <!-- <a href="https://aisecure.github.io/TEACHING/CS498/">CS498</a> -->
-              <a href="../TEACHING/CS498/CS498-Spring2020.html">CS498</a>
-          </li>
+              <a href="TEACHING/CS498/CS498-Spring2020.html">CS498</a>
+          </li> -->
 
 
 
