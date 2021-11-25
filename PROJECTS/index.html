@@ -210,7 +210,7 @@
 
 
           <li class="dropdown right">
-              <a href="https://aisecure.github.io/PUBLICATIONS/">PUBLICATIONS</a>
+            <a href="https://aisecure.github.io/PUBLICATIONS/">PUBLICATIONS</a>
           </li>
 
 
@@ -335,12 +335,15 @@
 <li>
 <!-- <h3>Research statement and overview:</h3> </li> -->
 
-<p>Despite great advancements from machine learning, especially deep learning, current learning systems have severe limitations.  Even if a learner performs well on the typical scenario in which it is trained and tested on the same/similar data distribution, it can fail under new scenarios and be fooled and misled by attacks at inference time (adversarial examples) or training time (data poisoning attacks). As learning systems become pervasive, safeguarding their security and privacy is critical.</p>
+<p>Despite great advancements from machine learning, especially deep learning, current learning systems have severe limitations. Even if a learner performs well on the typical scenario in which it is trained and tested on the same/similar data distribution, it can fail under new scenarios and be fooled and misled by attacks at inference time (adversarial examples) or training time (data poisoning attacks). As learning systems become pervasive, safeguarding their security and privacy is critical.
+</p>
 
-<p>In  particular,  recent  studies  have  shown  that  the  current  learning  systems  are  vulnerable  to  evasion attacks such as adversarial examples for which the perturbation could be of very small magnitude.  For example, our work has shown that by putting printed color stickers on road signs, a learner can be easily fooled by such physical perturbation.  This is one of the first works to generate robust physical adversarial perturbation that remain effective under various conditions and viewpoints. Moreover, the model may be trained with a poisoned data set, causing it to give wrong predictions under certain scenarios.  Our recent work has demonstrated that attackers can embed “backdoors” in a learner using a poisoned data set on real-world applications such as face recognition.</p>
+<p>In particular, recent studies have shown that the current learning systems are vulnerable to evasion attacks such as adversarial examples for which the perturbation could be of very small magnitude. For example, our work has shown that by putting printed color stickers on road signs, a learner can be easily fooled by such physical perturbation. This is one of the first works to generate robust physical adversarial perturbations that remain effective under various conditions and viewpoints. Moreover, the model may be trained with a poisoned data set, causing it to give wrong predictions under certain scenarios. Our recent work has demonstrated that attackers can embed “backdoors” in a learner using a poisoned data set on real-world applications such as face recognition.
+</p>
 
-<p>Several solutions to these threats have been proposed, but they are not resilient against intelligent adversaries responding dynamically to the deployed defenses. Generalization is a key challenge to deep learning systems. How do we know how a deep learning system such as a neural program, a robot or a self-driving car will behave in a new environment and still be safe and secure against attacks such as adversarial perturbation? How do we specify security properties for deep learning systems? How do we test and verify desired security properties for deep learning systems? Is it possible to provide provable guarantees? Thus, the question of how to improve the robustness of machine learning models against advanced adversaries remains largely unanswered. Here we aim to explore practical novel attack strategies against real-world machine learning models, and therefore develop robust learning algorithms that are resilient against strong adaptive attackers. </p>
-
+<p>
+  Several solutions to these threats have been proposed, but they are not resilient against intelligent adversaries responding dynamically to the deployed defenses. Generalization is a key challenge to deep learning systems. How do we know how a deep learning system such as a neural program, a robot or a self-driving car will behave in a new environment and still be safe and secure against attacks such as adversarial perturbation? How do we specify security properties for deep learning systems? How do we test and verify desired security properties for deep learning systems? Is it possible to provide provable guarantees? Thus, the question of how to improve the robustness of machine learning models against advanced adversaries remains largely unanswered. Here we aim to answer the above questions and explore practical novel attack strategies against real-world machine learning models, and therefore develop certifiably robust learning systems.
+  </p>
 
 
 
@@ -364,10 +367,13 @@
 <ul style="list-style-type:none">
 <li>
 <!-- <h3>Research statement and overview:</h3> -->
-<p>Machine learning has recently been widely adopted in various applications, and such success is largely due to a combination of algorithmic breakthroughs, computation resource improvements, and especially the access to a large amount of diverse training data. However, such massive data usually contain privacy sensitive information such as medical and financial information of individuals. With the rise of ubiquitous sensing, personalization, and virtual assistants, users' privacy is at ever-increasing risk. Can we enable the power and utility of machine learning and data analytics while still ensuring users' privacy? What is the relationship between privacy-preservation and generalization and robustness in machine learning? Can we design privacy preserving learning algorithms that can ensure privacy and guarantee high data utility?
+
+<p>Machine learning has recently been widely adopted in various applications, and such success is largely due to a combination of algorithmic breakthroughs, computation resource improvements, and especially the access to a large amount of diverse training data. However, such massive data usually contain privacy sensitive information such as medical and financial information of individuals. With the rise of ubiquitous sensing, personalization, and virtual assistants, users' privacy is at ever-increasing risk. Can we enable the power and utility of machine learning and data analytics while still ensuring users' privacy? Can we design privacy-preserving learning algorithms that can ensure privacy and guarantee high data utility? Can we design privacy-preserving data generative models for general downstream tasks?
 </p>
-<p>We will explore novel techniques including differential privacy to enable privacy-preserving machine learning and data analytics in practice. Our long-term goal is to both provide practical real-world solutions for privacy-preserving machine learning and data analytics and deepen the theoretical understanding in the big data era.
+
+<p>Here we aim to explore novel techniques including differential privacy, homomorphic encryption, and information theoretic analysis to enable privacy-preserving machine learning and data analytics in practice. Our long-term goal is to both provide practical real-world solutions to privacy-preserving machine learning and data analytics and deepen the theoretical understanding of data privacy in the big data era.
 </p>
+
 
 
 </li>
@@ -379,6 +385,13 @@
 <ul style="list-style-type:none">
 <li>
 <!-- <h3>Research statement and overview:</h3> -->
+
+<p>
+As robustness and privacy are mainly concerned about data distribution shift and inference under an adversarial setting, ML generalization---an ever-ending pursuit of the ML community for decades---tackles these aspects appearing in a natural setting. Thus, natural questions arise: What is the relationship between the privacy, robustness, and generalization of learning algorithms? Can we leverage the advances of one to help address another? Is there a tradeoff between robustness, privacy, and domain generalization? 
+</p>
+<p>
+Towards improving ML generalization, we focus on two perspectives: (1) uncovering the underlying connections between ML robustness, privacy, and generalization; (2) enabling one based on the advances of the other. For instance, our work has proved that the adversarial (robustness) and domain (generalization) transferability is a bidirectional indicator for each other, which has great implications for a range of applications such as model selection. This line of research provides the potential to further tighten the generalization of different learning systems based on their robustness or privacy properties.
+</p>
 
 </li>
 </ul>
