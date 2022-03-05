@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-159079655-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+
+      gtag("config", "UA-159079655-1");
+    </script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>AI Security (UIUC)</title>
+
+    <meta name="author" content="Bo Li" />
+
+    <meta
+      name="description"
+      content="Assistant Professor, University of Illinois, Urbana Champaign"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fredericka+the+Great%7CAllura%7CAmatic+SC%7CArizonia%7CAveria+Sans+Libre%7CCabin+Sketch%7CFrancois+One%7CJacques+Francois+Shadow%7CJosefin+Slab%7CKaushan+Script%7CLove+Ya+Like+A+Sister%7CMerriweather%7COffside%7COpen+Sans%7COpen+Sans+Condensed%7COswald%7COver+the+Rainbow%7CPacifico%7CRomanesco%7CSacramento%7CSeaweed+Script%7CSpecial+Elite"> -->
+
+    <link rel="icon" href="../files/logo.jpg" />
+
+    <link rel="alternate" type="../application/rss+xml" title="" href="" />
+
+    <link rel="stylesheet" href="../files/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="../files/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="../files/bootstrap-social.css" />
+
+    <link rel="stylesheet" href="../files/main.css" />
+
+    <link rel="stylesheet" href="../files/css" />
+
+    <link rel="stylesheet" href="../files/css(1)" />
+
+    <link rel="stylesheet" href="../files/css(2)" />
+
+    <!-- Facebook OpenGraph tags -->
+
+    <meta property="og:title" content="Bo Li" />
+
+    <meta
+      property="og:description"
+      content="Assistant Professor, University of Illinois, Urbana Champaign"
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:url" content="https://aisecure.github.io/" />
+    <link rel="canonical" href="https://aisecure.github.io/" />
+
+    <!-- Twitter summary cards -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@boli" />
+    <meta name="twitter:creator" content="@boli" />
+
+    <meta name="twitter:title" content="Bo Li" />
+
+    <meta
+      name="twitter:description"
+      content="Assistant Professor, University of Illinois, Urbana Champaign"
+    />
+
+    <script type="text/x-mathjax-config;executed=true">
+      MathJax.Hub.Config({
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+          inlineMath: [ ['$', '$'], ["$$", "$$"] ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        },
+        "HTML-CSS": {
+          linebreaks: {
+            automatic: true
+          },
+          scale: 90,
+          fonts: ["TeX"],
+          mtextFontInherit: false,
+          matchFontHeight: true
+        },
+        "TeX": {
+          extensions: ["AMSmath.js", "AMSsymbols.js", "mediawiki-texvc.js"],
+        }
+        //,
+        //displayAlign: "left",
+        //displayIndent: "2em"
+      });
+    </script>
+    <script src="./files/MathJax.js" id=""></script>
+
+    <!--
+   <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+     });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+-->
+
+    <style type="text/css">
+      .MathJax_Preview {
+        color: #888;
+      }
+
+      #MathJax_Message {
+        position: fixed;
+        left: 1em;
+        bottom: 1.5em;
+        background-color: #e6e6e6;
+        border: 1px solid #959595;
+        margin: 0px;
+        padding: 2px 8px;
+        z-index: 102;
+        color: black;
+        font-size: 80%;
+        width: auto;
+        white-space: nowrap;
+      }
+
+      #MathJax_MSIE_Frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0px;
+        z-index: 101;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .MathJax_Error {
+        color: #cc0000;
+        font-style: italic;
+      }
+    </style>
+    <style type="text/css">
+      #MathJax_About {
+        position: fixed;
+        left: 50%;
+        width: auto;
+        text-align: center;
+        border: 3px outset;
+        padding: 1em 2em;
+        background-color: #dddddd;
+        color: black;
+        cursor: default;
+        font-family: message-box;
+        font-size: 120%;
+        font-style: normal;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        z-index: 201;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -khtml-border-radius: 15px;
+        box-shadow: 0px 10px 20px #808080;
+        -webkit-box-shadow: 0px 10px 20px #808080;
+        -moz-box-shadow: 0px 10px 20px #808080;
+        -khtml-box-shadow: 0px 10px 20px #808080;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true');
+      }
+
+      #MathJax_About.MathJax_MousePost {
+        outline: none;
+      }
+
+      .MathJax_Menu {
+        position: absolute;
+        background-color: white;
+        color: black;
+        width: auto;
+        padding: 5px 0px;
+        border: 1px solid #cccccc;
+        margin: 0;
+        cursor: default;
+        font: menu;
+        text-align: left;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        z-index: 201;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -khtml-border-radius: 5px;
+        box-shadow: 0px 10px 20px #808080;
+        -webkit-box-shadow: 0px 10px 20px #808080;
+        -moz-box-shadow: 0px 10px 20px #808080;
+        -khtml-box-shadow: 0px 10px 20px #808080;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true');
+      }
+
+      .MathJax_MenuItem {
+        padding: 1px 2em;
+        background: transparent;
+      }
+
+      .MathJax_MenuArrow {
+        position: absolute;
+        right: 0.5em;
+        padding-top: 0.25em;
+        color: #666666;
+        font-size: 0.75em;
+      }
+
+      .MathJax_MenuActive .MathJax_MenuArrow {
+        color: white;
+      }
+
+      .MathJax_MenuArrow.RTL {
+        left: 0.5em;
+        right: auto;
+      }
+
+      .MathJax_MenuCheck {
+        position: absolute;
+        left: 0.7em;
+      }
+
+      .MathJax_MenuCheck.RTL {
+        right: 0.7em;
+        left: auto;
+      }
+
+      .MathJax_MenuRadioCheck {
+        position: absolute;
+        left: 0.7em;
+      }
+
+      .MathJax_MenuRadioCheck.RTL {
+        right: 0.7em;
+        left: auto;
+      }
+
+      .MathJax_MenuLabel {
+        padding: 1px 2em 3px 1.33em;
+        font-style: italic;
+      }
+
+      .MathJax_MenuRule {
+        border-top: 1px solid #dddddd;
+        margin: 4px 3px;
+      }
+
+      .MathJax_MenuDisabled {
+        color: GrayText;
+      }
+
+      .MathJax_MenuActive {
+        background-color: #606872;
+        color: white;
+      }
+
+      .MathJax_MenuDisabled:focus,
+      .MathJax_MenuLabel:focus {
+        background-color: #e8e8e8;
+      }
+
+      .MathJax_ContextMenu:focus {
+        outline: none;
+      }
+
+      .MathJax_ContextMenu .MathJax_MenuItem:focus {
+        outline: none;
+      }
+
+      #MathJax_AboutClose {
+        top: 0.2em;
+        right: 0.2em;
+      }
+
+      .MathJax_Menu .MathJax_MenuClose {
+        top: -10px;
+        left: -10px;
+      }
+
+      .MathJax_MenuClose {
+        position: absolute;
+        cursor: pointer;
+        display: inline-block;
+        border: 2px solid #aaa;
+        border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        -khtml-border-radius: 18px;
+        font-family: "Courier New", Courier;
+        font-size: 24px;
+        color: #f0f0f0;
+      }
+
+      .MathJax_MenuClose span {
+        display: block;
+        background-color: #aaa;
+        border: 1.5px solid;
+        border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        -khtml-border-radius: 18px;
+        line-height: 0;
+        padding: 8px 0 6px;
+      }
+
+      .MathJax_MenuClose:hover {
+        color: white !important;
+        border: 2px solid #ccc !important;
+      }
+
+      .MathJax_MenuClose:hover span {
+        background-color: #ccc !important;
+      }
+
+      .MathJax_MenuClose:hover:focus {
+        outline: none;
+      }
+    </style>
+    <style type="text/css">
+      #MathJax_Zoom {
+        position: absolute;
+        background-color: #f0f0f0;
+        overflow: auto;
+        display: block;
+        z-index: 301;
+        padding: 0.5em;
+        border: 1px solid black;
+        margin: 0;
+        font-weight: normal;
+        font-style: normal;
+        text-align: left;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        box-shadow: 5px 5px 15px #aaaaaa;
+        -webkit-box-shadow: 5px 5px 15px #aaaaaa;
+        -moz-box-shadow: 5px 5px 15px #aaaaaa;
+        -khtml-box-shadow: 5px 5px 15px #aaaaaa;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true');
+      }
+
+      #MathJax_ZoomOverlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 300;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+
+      #MathJax_ZoomFrame {
+        position: relative;
+        display: inline-block;
+        height: 0;
+        width: 0;
+      }
+
+      #MathJax_ZoomEventTrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 302;
+        display: inline-block;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .nav li a {
+        color: white;
+      }
+
+      .intro-header .page-heading .page-subheading,
+      .intro-header .post-heading .post-subheading {
+        color: #a0a0a0;
+        font-size: 16px;
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #a0a0a0;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {
+        background-color: #a0a0a0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="MathJax_Message" style="display: none"></div>
+
+    <nav
+      class="navbar navbar-default navbar-fixed-top navbar-custom top-nav-short"
+      style="background: #8cb6e1"
+    >
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#main-navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="https://aisecure.github.io/"
+            >Secure Learning Lab</a
+          >
+        </div>
+
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown right">
+              <a href="../PUBLICATIONS/index.html">PUBLICATIONS</a>
+            </li>
+
+            <li>
+              <a href="../PROJECTS/index.html">Projects</a>
+            </li>
+
+            <li>
+              <a href="../GROUP/index.html">People</a>
+            </li>
+
+            <li class="dropdown right">
+              <a href="javascript:void(0)" class="dropbtn">TEACHING</a>
+              <div class="dropdown-content">
+                <a href="../TEACHING/CS562/CS562.html">CS562</a>
+                <a href="../TEACHING/CS442/CS442.html">CS442</a>
+                <a href="../TEACHING/CS307/CS307.html">CS307</a>
+              </div>
+            </li>
+
+            <li>
+              <a href="../BLOG/index.html">Blog</a>
+            </li>
+
+            <li>
+              <a href="https://github.com/AI-secure">GitHub</a>
+            </li>
+
+            <li>
+              <a href="../BIO/index.html">Bio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+    <header class="header-section">
+      <div class="intro-header no-img">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="page-heading">
+                <p>
+                  <img class="img-circle img-200" src="../files/bo_li.jpg" />
+                </p>
+
+                <h1>Bo Li</h1>
+
+                <hr class="small" />
+                <span class="page-subheading"> Assistant Professor </span>
+
+                <!-- <hr class="small"> -->
+                <span class="page-subheading"
+                  >University of Illinois at Urbana-Champaign</span
+                >
+                <span class="page-subheading">
+                  <strong style="font-family: seaweed script">Email </strong>:
+                  lbo at illinois dot edu or lxbosky at gmail dot com</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container" role="main">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <p align="justify">
+            Dr. Bo Li is an assistant professor in the Department of Computer
+            Science at the University of Illinois at Urbana-Champaign. She is
+            the recipient of the MIT Technology Review TR-35 Award, Alfred P.
+            Sloan Research Fellowship, NSF CAREER Award, Dean's Award for
+            Excellence in Research, Intel Rising Star award, Symantec Research
+            Labs Fellowship, Rising Star Award, Research Awards from Tech
+            companies such as Amazon, Facebook, Intel, and IBM, and best paper
+            awards at several top machine learning and security conferences. Her
+            research focuses on both theoretical and practical aspects of
+            trustworthy machine learning, security, machine learning, privacy,
+            and game theory. She has designed several scalable frameworks for
+            robust machine learning and privacy-preserving data publishing
+            systems. Her work has been featured by major publications and media
+            outlets such as Nature, Wired, Fortune, and New York Times.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <h4>Contact</h4>
+            <div class="text-muted">
+              Bo Li
+              <!-- <a href="lbo@illinois.edu">lbo@illinois.edu</a>
+                &nbsp;&nbsp;•&nbsp;&nbsp;
+                <a href="http://www.twitter.com/">@boli</a -->
+              <br />
+              Computer Science Department <br />
+              University of Illinois at Urbana-Champaign <br />
+              4310 Siebel Center 201 N. Goodwin Ave. Urbana, IL 61801, USA
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      if (typeof jQuery == "undefined") {
+        document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + "ipt>");
+      }
+    </script>
+    <script src="./files/jquery-1.11.2.min.js"></script>
+
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+
+    <script src="./files/bootstrap.min.js"></script>
+
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+
+    <script src="./files/main.js"></script>
+  </body>
+</html>
