@@ -1,285 +1,17 @@
 <!DOCTYPE html>
-<html lang="en"><!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159079655-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-159079655-1');
-    </script>
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-  <title>AI Security (UIUC)</title>
-
-  <meta name="author" content="Bo Li">
-
-
-  <meta name="description" content="Assistant Professor, University of Illinois, Urbana Champaign">
-
-  <link rel="icon" href="../../files/logo.jpg" />
-
-  <link rel="alternate" type="application/rss+xml" title="" href="">
-
-
-
-      <link rel="stylesheet" href="../../files/font-awesome.min.css">
-
-      <link rel="stylesheet" href="../../files/bootstrap.min.css">
-
-      <link rel="stylesheet" href="../../files/bootstrap-social.css">
-
-      <link rel="stylesheet" href="../../files/main.css">
-
-      <link rel="stylesheet" href="../../files/css">
-
-      <link rel="stylesheet" href="../../files/css(1)">
-
-      <link rel="stylesheet" href="../../files/css(2)">
-
-
-
-    <!-- Facebook OpenGraph tags -->
-
-
-
-  <meta property="og:title" content="Bo Li">
-
-
-
-  <meta property="og:description" content="Assistant Professor, University of Illinois, Urbana Champaign">
-
-
-
-  <meta property="og:type" content="website">
-
-
-  <meta property="og:url" content="https://aisecure.github.io/">
-  <link rel="canonical" href="https://aisecure.github.io/">
-
-
-
-
-
-  <!-- Twitter summary cards -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@boli">
-  <meta name="twitter:creator" content="@boli">
-
-
-  <meta name="twitter:title" content="Bo Li">
-
-
-
-  <meta name="twitter:description" content="Assistant Professor, University of Illinois, Urbana Champaign">
-
-
-
-
-<script type="text/x-mathjax-config;executed=true">
-    MathJax.Hub.Config({
-      jax: ["input/TeX", "output/HTML-CSS"],
-      tex2jax: {
-        inlineMath: [ ['$', '$'], ["$$", "$$"] ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      },
-      "HTML-CSS": {
-        linebreaks: {
-          automatic: true
-        },
-        scale: 90,
-        fonts: ["TeX"],
-        mtextFontInherit: false,
-        matchFontHeight: true
-      },
-      "TeX": {
-        extensions: ["AMSmath.js", "AMSsymbols.js", "mediawiki-texvc.js"],
-      }
-      //,
-      //displayAlign: "left",
-      //displayIndent: "2em"
-    });
-</script>
-  <script src="./files/MathJax.js" id=""></script>
-
-<!--
-   <script type="text/x-mathjax-config">
-     MathJax.Hub.Config({
-         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-     });
-    </script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
--->
-
-
-<style type="text/css">.MathJax_Preview {color: #888}
-#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
-#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
-.MathJax_Error {color: #CC0000; font-style: italic}
-</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_About.MathJax_MousePost {outline: none}
-.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-.MathJax_MenuItem {padding: 1px 2em; background: transparent}
-.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
-.MathJax_MenuActive .MathJax_MenuArrow {color: white}
-.MathJax_MenuArrow.RTL {left: .5em; right: auto}
-.MathJax_MenuCheck {position: absolute; left: .7em}
-.MathJax_MenuCheck.RTL {right: .7em; left: auto}
-.MathJax_MenuRadioCheck {position: absolute; left: .7em}
-.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
-.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
-.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
-.MathJax_MenuDisabled {color: GrayText}
-.MathJax_MenuActive {background-color: #606872; color: white}
-.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
-.MathJax_ContextMenu:focus {outline: none}
-.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
-#MathJax_AboutClose {top: .2em; right: .2em}
-.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
-.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
-.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
-.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_MenuClose:hover span {background-color: #CCC!important}
-.MathJax_MenuClose:hover:focus {outline: none}
-</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
-#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-.navbar-custom .navbar-brand, .navbar-custom .nav li a {color:white;}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #a0a0a0;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #a0a0a0;}
-
-</style></head>
-  <body><div id="MathJax_Message" style="display: none;"></div>
-
-      <nav class="navbar navbar-default navbar-fixed-top navbar-custom top-nav-short" style="background:#8CB6E1">
-  <div class="container">
-    <div class="navbar-header">
-
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
-        <a class="navbar-brand" href="https://aisecure.github.io/">Secure Learning Lab</a>
-
-
-    </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown right">
-          <a href="https://aisecure.github.io/PUBLICATIONS/">PUBLICATIONS</a>
-        </li>
-
-        <li>
-            <a href="https://aisecure.github.io/PROJECTS/">Projects</a>
-        </li>
-
-        <li>
-            <a href="https://aisecure.github.io/GROUP/">People</a>
-        </li>
-
-        <li class="dropdown right">
-          <a href="javascript:void(0)" class="dropbtn">TEACHING</a>
-          <div class="dropdown-content">
-            <a href="./CS562.html">CS562</a>
-            <a href="../CS598/CS562.html">CS598</a>
-            <a href="../CS442/CS442.html">CS442</a>
-            <a href="../CS307/CS307.html">CS307</a>
-          </div>
-        </li>
-
-        <!-- <li>
-            <a href="TEACHING/CS562/CS562-Fall2021.html">CS562</a>
-        </li>
-
-        <li>
-            <a href="TEACHING/CS498/CS498-Spring2020.html">CS498</a>
-        </li> -->
-
-        <li>
-            <a href="https://aisecure.github.io/BLOG/">Blog</a>
-        </li>
-
-        <li>
-            <a href="https://github.com/AI-secure">GitHub</a>
-        </li>
-
-        <li>
-          <a href="../../BIO/index.html">Bio</a>
-        </li>
-      </ul>
-    </div>
-
-
-
-  </div>
-</nav>
-
-
-<!-- <!DOCTYPE html> -->
 <html>
-<header class="header-section ">
-
-<div class="intro-header no-img">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-heading">
-
-          <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-            <title>
-              CS 562 - Advanced Topics in Security, Privacy and Machine Learning (Fall 2022)
-            </title>
-            <link rel="stylesheet" type="text/css" href="2022_fall_style.css" />
-            <link rel="icon" href="" />
-          </head>
-
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</header>
-
-  <!-- -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>
+      CS 598 - Special Topics on Adversarial Machine Learning (Fall 2020)
+    </title>
+    <link rel="stylesheet" type="text/css" href="2020_fall_style.css" />
+    <link rel="icon" href="" />
+  </head>
 
   <body class="main">
-    <h1>CS 562: Advanced Topics in Security, Privacy and Machine Learning (Fall 2022)</h1>
-    <!-- <h2 class="h1sub">Fall 2021</h2> -->
-
-    <!--<p>
-      This course was previously taught under the course number CS598. You can
-      refer to <a href="CS598-Fall2020.html">Fall 2020</a> for the older versions.
-    </p>-->
+    <h1>CS 598: Special Topics on Adversarial Machine Learning</h1>
+    <h2 class="h1sub">Fall 2020</h2>
 
     <p></p>
     <dl>
@@ -287,18 +19,18 @@
         <b>Instructor</b>
       </dt>
       <dd>
-        <a href="https://aisecure.github.io" target="_blank">Bo Li</a>, <a href="mailto:lbo@illinois.edu">lbo@illinois.edu</a>, 4310 Siebel Center
-        <!-- <br /><a href="mailto:lbo@illinois.edu">lbo@illinois.edu</a> <br /> -->
-        <!-- 4310 Siebel Center -->
+        <a href="https://aisecure.github.io" target="_blank">Bo Li</a>
+        <br /><a href="mailto:lbo@illinois.edu">lbo@illinois.edu</a> <br />
+        4310 Siebel Center
         <p></p>
       </dd>
 
       <dt><b>Lectures</b></dt>
       <dd>
-        Online
+        Tue/Thu 3:30-4:45pm
         <br />
         <a
-          href="https://illinois.zoom.us/j/89959281193?pwd=alVReHlaS0NYVENUeExBVTJNOEttQT09"
+          href="https://illinois.zoom.us/j/7486428863?pwd=RFFCSnE0UkluMTd3UXpxS01BY3puUT09"
           >Zoom</a
         >
         <p></p>
@@ -306,23 +38,21 @@
 
       <dt><b>Teaching Assistant</b></dt>
       <dd>
-        Zijian Huang, <a href="mailto:zijianh4@illinois.edu">zijianh4@illinois.edu</a>
+        Fan Wu, <a href="mailto:fanw6@illinois.edu">fanw6@illinois.edu</a>
         <p></p>
       </dd>
 
       <dt><b>Office Hours</b></dt>
       <dd>
-        Bo Li: After class each day
+        Bo Li: Tue/Thu 4:45-5:30 pm
+        <!-- <br>
+            Fan Wu: TBD -->
+        <p></p>
       </dd>
-      <dd>
-        Zijian Huang: TBA, <a href="javascript:void(0);">Zoom</a>
-      </dd>
-      
 
       <dt><b>Forums</b></dt>
       <dd>
-        <!-- <a href="TBD">Piazza</a> -->
-        Canvas <a href="https://canvas.illinois.edu/enroll/3BLPLE"> link</a>
+        <a href="https://piazza.com/illinois/fall2020/cs598bl">Piazza</a>
       </dd>
     </dl>
 
@@ -339,7 +69,7 @@
     </p>
 
     <p>
-      <b>Prerequisites:</b> CS 446 Machine Learning, CS 461 Computer Security I
+      <b>Prerequisites:</b> CS 446 Machine Learning, CS 461 Computer Security I,
       (CS 463 Computer Security II)
     </p>
 
@@ -352,9 +82,8 @@
 
     <p>
       The following table outlines the schedule for the course. We will update
-      it as the semester progresses.
-      Please refer to the
-      <a href="Fall2022_files/syllabus.pdf" target="_blank">
+      it as the semester progresses. Please refer to the
+      <a href="teaching_files/files/2020_fall/598_aml_syllabus.pdf" target="_blank">
         class syllabus
       </a>
       for more details.
@@ -370,35 +99,30 @@
       }
 
       .tg td {
-        font-family: Verdana, sans-serif;
-        font-size: 15px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
         padding: 10px 5px;
         border-style: solid;
         border-width: 1px;
         overflow: hidden;
         word-break: normal;
-        /*border-color: #9abad9;*/
+        border-color: #9abad9;
         color: #444;
-        /*background-color: #ebf5ff;*/
-        border-color: #FFFFFF;
-        background-color: #FFFFFF;
+        background-color: #ebf5ff;
       }
 
       .tg th {
-        font-family: Verdana, sans-serif;
-        font-size: 16px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
         font-weight: normal;
         padding: 10px 5px;
         border-style: solid;
         border-width: 1px;
         overflow: hidden;
         word-break: normal;
-        /*border-color: #9abad9;*/
-        border-color: #FFFFFF;
-        /*color: #fff;*/
-        color: #444;
-        /*background-color: #409cff;*/
-        background-color: #FFFFFF;
+        border-color: #9abad9;
+        color: #fff;
+        background-color: #409cff;
       }
 
       .tg .tg-c3ow {
@@ -411,7 +135,7 @@
         border-color: inherit;
         text-align: left;
         vertical-align: center;
-        font-size: 15px;
+        font-size: 13px;
       }
 
       .tg .tg-middle {
@@ -431,10 +155,10 @@
         <th class="tg-0pky">Date</th>
         <th class="tg-c3ow">Lecture</th>
         <th class="tg-c3ow">Readings</th>
-        <th class="tg-0pky">Slides</th>
+        <th class="tg-0pky">Related Materials</th>
       </tr>
       <tr>
-        <td class="tg-0pky">8/23</td>
+        <td class="tg-0pky">8/25</td>
         <td class="tg-c3ow"><b>Course Overview</b></td>
         <td class="tg-reading">
           Background ideas about general adversarial machine learning, including
@@ -442,7 +166,7 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/1j07jts4s4wfcwb/lecture0825.pdf?dl=0"
             target="_blank"
           >
             Slides</a
@@ -450,7 +174,7 @@
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">8/25</td>
+        <td class="tg-0pky">8/27</td>
         <td class="tg-c3ow">
           Evasion Attacks Against Machine Learning Models (Against Classifiers)
         </td>
@@ -467,7 +191,7 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/6f0y5axq9g9stqu/lecture0827.pdf?dl=0"
             target="_blank"
           >
             Slides</a
@@ -475,7 +199,7 @@
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">8/30</td>
+        <td class="tg-0pky">9/1</td>
         <td class="tg-c3ow">
           ​Evasion Attacks Against Machine Learning Models (Non-traditional
           Attacks)
@@ -496,7 +220,7 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/nu4x7dtj8ya7ia0/class0901.pdf?dl=0"
             target="_blank"
           >
             Slides</a
@@ -504,7 +228,7 @@
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">9/1</td>
+        <td class="tg-0pky">9/3</td>
         <td class="tg-c3ow">
           Evasion Attacks Against Machine Learning Models (Against
           Detectors/Generative Models/RL)
@@ -525,7 +249,7 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/ai699q5jefdcozl/class0903.pdf?dl=0"
             target="_blank"
           >
             Slides
@@ -533,7 +257,7 @@
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">9/6</td>
+        <td class="tg-0pky">9/8</td>
         <td class="tg-c3ow">
           Evasion Attacks Against Machine Learning Models (Blackbox Attacks)
         </td>
@@ -552,7 +276,7 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/p20r8iowup29aem/class0908.pdf?dl=0"
             target="_blank"
           >
             Slides</a
@@ -560,7 +284,7 @@
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">9/8</td>
+        <td class="tg-0pky">9/10</td>
         <td class="tg-c3ow">Detection Against Adversarial Attacks</td>
         <td class="tg-reading">
           <a href="https://arxiv.org/abs/1510.05328" target="">
@@ -579,7 +303,7 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/d7cezcdddiszw85/class0910.pdf?dl=0"
             target="_blank"
           >
             Slides
@@ -587,7 +311,7 @@
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">9/13</td>
+        <td class="tg-0pky">9/15</td>
         <td class="tg-c3ow">
           Defenses Against Adversarial Attacks (Empirical)
         </td>
@@ -613,7 +337,7 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/bunhj9k45j6tafc/class915.pdf?dl=0"
             target="_blank"
           >
             Slides
@@ -621,7 +345,7 @@
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">9/15</td>
+        <td class="tg-0pky">9/17</td>
         <td class="tg-c3ow">
           Defenses Against Adversarial Attacks (Theoretic)
         </td>
@@ -644,7 +368,7 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/0bfj0p0nnw1qq9z/class917.pdf?dl=0"
             target="_blank"
           >
             Slides
@@ -652,7 +376,7 @@
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">9/20</td>
+        <td class="tg-0pky">9/22</td>
         <td class="tg-c3ow">
           Poisoning Attacks Against Machine Learning Models
         </td>
@@ -690,7 +414,7 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/i259qrysa5a6cbw/class922.pdf?dl=0"
             target="_blank"
           >
             Slides</a
@@ -698,54 +422,19 @@
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">9/22</td>
-        <td class="tg-c3ow"><b>Guest Lecture</b></td>
-        <td class="tg-reading">
-        How Can We Trust a Black-box? A Quest for Scalable and Powerful Neural Network Verifiers 
-          <a
-            href="Fall2022_files/abstract0923.pdf"
-            target="_blank"
-            >Speaker Bio and Talk Abstract</a>
-        </td>
-        <td class="tg-0pky">
-        <a
-            href=""
-            target="_blank"
-            ></a>
-          
-        </td>
-      </tr>
-      <tr>
-        <td class="tg-0pky">9/27</td>
-        <td class="tg-c3ow"><b>Guest Lecture</b></td>
-        <td class="tg-reading">
-        Adversarial, Backdoor and Unlearnable 
-          <a
-            href="javascript:void(0);"
-            target="_blank"
-            >Speaker Bio and Talk Abstract</a>
-        </td>
-        <td class="tg-0pky">
-        <a
-            href=""
-            target="_blank"
-            ></a>
-        </td>
-      </tr>
-      <tr>
-        <td class="tg-0pky">9/29</td>
+        <td class="tg-0pky">9/24</td>
         <td class="tg-c3ow" colspan="2"><b>Proposal Report</b></td>
         <td class="tg-0pky">
           <a
-            href=""
+            href="https://docs.google.com/presentation/d/1gKBLUpXh_sGZ64a-tKTbS8LTD0k69I4aRjKf5GAnoXc/edit?usp=sharing"
             target="_blank"
           >
-            
+            Slides
           </a>
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">10/4</td>
+        <td class="tg-0pky">9/29</td>
         <td class="tg-c3ow">Poisoning Attacks Analysis</td>
         <td class="tg-reading">
           <a
@@ -780,19 +469,14 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/frpkzciu94vza2u/0929-18-Oakland-Poisoning-attack-linear-regression-Limin.pdf?dl=0"
             target="_blank"
-            >Slides 1</a
-          >
-          <a
-            href="javascript:void(0);"
-            target="_blank"
-            >Slides 2</a
+            >Slides</a
           >
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">10/6</td>
+        <td class="tg-0pky">10/1</td>
         <td class="tg-c3ow">Defenses Against Poisoning Attacks</td>
         <td class="tg-reading">
           <a href="https://arxiv.org/abs/1706.03691" target="">
@@ -813,21 +497,15 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/8p4jtaic8hl3u44/1001-rajarshi_paper_present.pdf?dl=0"
             target="_blank"
           >
-            Slides 1</a
-          >
-          <a
-            href="javascript:void(0);"
-            target="_blank"
-          >
-            Slides 2</a
+            Slides</a
           >
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">10/11</td>
+        <td class="tg-0pky">10/6</td>
         <td class="tg-c3ow">(Robust) Data Valuation</td>
         <td class="tg-reading">
           <a href="https://arxiv.org/abs/1908.08619" target="">
@@ -845,34 +523,20 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/3yepfykxrb096fg/1006-Vardhan-BL598FA20.pdf?dl=0"
             target="_blank"
           >
-           Slides </a
+            Slides</a
           >
         </td>
       </tr>
-      
+      <tr>
+        <td class="tg-0pky">10/8</td>
+        <td class="tg-c3ow" colspan="2"><b>Guest Lecture</b></td>
+        <td class="tg-0pky"></td>
+      </tr>
       <tr>
         <td class="tg-0pky">10/13</td>
-        <td class="tg-c3ow"><b>Guest Lecture</b></td>
-        <td class="tg-reading">
-        Open the black-box of self-supervised learning 
-          <a
-            href="Fall2022_files/abstract1014.pdf"
-            target="_blank"
-            >Speaker Bio and Talk Abstract</a>
-        </td>
-        <td class="tg-0pky">
-        <a
-            href="javascript:void(0);"
-            target="_blank"
-            >Slides</a>
-        </td>
-      </tr>
-      
-      <tr>
-        <td class="tg-0pky">10/18</td>
         <td class="tg-c3ow">Robustness of Graph Neural Networks</td>
         <td class="tg-reading">
           <a href="https://arxiv.org/abs/1609.02907" target="">
@@ -894,13 +558,13 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/h9un7v3kdgufok6/1013-Xinyang-598_GNN_20201013.pdf?dl=0"
             target="_blank"
           >
             Slides 1
           </a>
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/kgawltrr7cjgosh/1013-Zhiqian-Batch%20Virtual%20Adversarial%20Training%20for%20Graph%20Convolutional%20Networks.pdf?dl=0"
             target="_blank"
           >
             Slides 2</a
@@ -908,7 +572,7 @@
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">10/20</td>
+        <td class="tg-0pky">10/15</td>
         <td class="tg-c3ow">
           Beyond Images: Adversarial Attacks on NLP/Audio/Video/Graphs
         </td>
@@ -942,21 +606,21 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/q78r7mhxctnh9qt/1015-Qi-AML_PRE.pdf?dl=0"
             target="_blank"
           >
-           Slides1 </a
+            Slides 1</a
           >
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/in7qnhgj9g1wdab/1015-Yunan-598bl.pdf?dl=0"
             target="_blank"
           >
-           Slides2 </a
+            Slides 2</a
           >
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">10/25</td>
+        <td class="tg-0pky">10/20</td>
         <td class="tg-c3ow">Generative Adversarial Networks (Empirical)</td>
         <td class="tg-reading">
           <a
@@ -978,24 +642,21 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/enpyg4338ouwl3h/1020-Eric-GANs.pdf?dl=0"
             target="_blank"
           >
-            Slides1
+            Slides 1
           </a>
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/004jr82f8c6mhl4/1020-Jiaxin-CS598_AML_Presentation.pdf?dl=0"
             target="_blank"
           >
-            Slides2</a
+            Slides 2</a
           >
         </td>
       </tr>
-
-      
-      
       <tr>
-        <td class="tg-0pky">10/27</td>
+        <td class="tg-0pky">10/22</td>
         <td class="tg-c3ow">Generative Adversarial Networks (Theoretic)</td>
         <td class="tg-reading">
           <a href="https://arxiv.org/abs/1703.00573" target="">
@@ -1019,22 +680,33 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/y1d2lwuoeeuzt94/1022-Peiye_presentation.pdf?dl=0"
             target="_blank"
           >
-           Slides </a
+            Slides 1</a
           >
           <a
-            href="Fall2022_files/student_pres/"
+            href="https://www.dropbox.com/s/eps54mi2d9p19sp/1022-Hyoungwook-cs598bl_Oct22_hn5.pdf?dl=0"
             target="_blank"
           >
-            </a
+            Slides 2</a
           >
         </td>
       </tr>
 
       <tr>
-        <td class="tg-0pky">11/1</td>
+        <td class="tg-0pky">10/27</td>
+        <td class="tg-c3ow" colspan="2"><b>Status Report</b></td>
+        <td class="tg-0pky"></td>
+      </tr>
+      <tr>
+        <td class="tg-0pky">10/29</td>
+        <td class="tg-c3ow" colspan="2"><b>Guest Lecture</b></td>
+        <td class="tg-0pky"></td>
+      </tr>
+
+      <tr>
+        <td class="tg-0pky">11/3</td>
         <td class="tg-c3ow">Privacy in Machine Learning Models (Attacks)</td>
         <td class="tg-reading">
           <a href="https://arxiv.org/pdf/1610.05820.pdf" target="">
@@ -1051,23 +723,10 @@
             Deep Learning
           </a>
         </td>
-        <td class="tg-0pky">
-        <a
-            href="javascript:void(0);"
-            target="_blank"
-          >
-            Slides1 </a
-          >
-          <a
-            href="javascript:void(0);"
-            target="_blank"
-          >
-            Slides2 </a
-          >
-        </td>
+        <td class="tg-0pky"></td>
       </tr>
       <tr>
-        <td class="tg-0pky">11/10</td>
+        <td class="tg-0pky">11/5</td>
         <td class="tg-c3ow">Differentially Private Machine Learning Models</td>
         <td class="tg-reading">
           <a href="https://arxiv.org/abs/1607.00133" target="">
@@ -1089,15 +748,21 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/m748ynta65gcqip/1105-Tengyang-cs598BL_paper_presentation.pdf?dl=0"
             target="_blank"
           >
-            Slides
+            Slides 1
           </a>
+          <a
+            href="https://www.dropbox.com/s/w8hllxzlbg5rrea/1105-Baoyu-ami_baoyuj2.pdf?dl=0"
+            target="_blank"
+          >
+            Slides 2</a
+          >
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">11/15</td>
+        <td class="tg-0pky">11/10</td>
         <td class="tg-c3ow">Differential Privacy on Graphs</td>
         <td class="tg-reading">
           <a
@@ -1117,43 +782,38 @@
             Detecting Communities under Differential Privacy
           </a>
         </td>
-        <td class="tg-0pky">
-        <a
-            href="javascript:void(0);"
-            target="_blank"
-          >
-          Slides1
-            </a>
-         <a
-            href="javascript:void(0);"
-            target="_blank"
-          >
-          Slides2
-            </a>
-      </td>
+        <td class="tg-0pky"></td>
       </tr>
-      
+      <tr>
+        <td class="tg-0pky">11/12</td>
+        <td class="tg-c3ow">Fairness of Machine Learning</td>
+        <td class="tg-reading">
+          <a href="https://arxiv.org/abs/1803.04383" target="">
+            Delayed impact of fair machine learning
+          </a>
+          <br />
+          <a href="https://arxiv.org/abs/1806.08010" target="">
+            Fairness without demographics in repeated loss minimization
+          </a>
+          <br />
+          <a href="https://arxiv.org/pdf/1710.03184.pdf" target="">
+            ​​On Formalizing Fairness in Prediction with Machine Learning
+          </a>
+          <br />
+          <a href="https://arxiv.org/abs/1706.02744" target="">
+            Avoiding Discrimination through Causal Reasoning
+          </a>
+        </td>
+        <td class="tg-0pky">
+          <a
+            href="https://www.dropbox.com/s/daeuv0di9jz2ylo/1112-Jian-CS598BL.pdf?dl=0"
+            target="_blank"
+            >Slides</a
+          >
+        </td>
+      </tr>
       <tr>
         <td class="tg-0pky">11/17</td>
-        <td class="tg-c3ow"><b>Guest Lecture</b></td>
-        <td class="tg-reading">
-         Towards Understanding End-to-end Learning in the Context of Data: Machine Learning Dancing over Semirings and Codd’s Table
-          <a
-            href="Fall2022_files/abstract1111.pdf"
-            target="_blank"
-            >Speaker Bio and Talk Abstract</a>
-        </td>
-        <td class="tg-0pky">
-        <a
-            href=""
-            target="_blank"
-            ></a>
-          
-        </td>
-      </tr>
-      
-      <tr>
-        <td class="tg-0pky">11/22</td>
         <td class="tg-c3ow">
           Game Theoretic Analysis for Adversarial Learning
         </td>
@@ -1184,42 +844,14 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/7nnqxkml4463aie/1117-Hunter-598bl.pdf?dl=0"
             target="_blank"
             >Slides</a
           >
         </td>
       </tr>
       <tr>
-        <td class="tg-0pky">11/24 (Part 1)</td>
-        <td class="tg-c3ow">Fairness of Machine Learning</td>
-        <td class="tg-reading">
-          <a href="https://arxiv.org/abs/1803.04383" target="">
-            Delayed impact of fair machine learning
-          </a>
-          <br />
-          <a href="https://arxiv.org/abs/1806.08010" target="">
-            Fairness without demographics in repeated loss minimization
-          </a>
-          <br />
-          <a href="https://arxiv.org/pdf/1710.03184.pdf" target="">
-            ​​On Formalizing Fairness in Prediction with Machine Learning
-          </a>
-          <br />
-          <a href="https://arxiv.org/abs/1706.02744" target="">
-            Avoiding Discrimination through Causal Reasoning
-          </a>
-        </td>
-        <td class="tg-0pky">
-          <a
-            href=""
-            target="_blank"
-            ></a
-          >
-        </td>
-      </tr>
-      <tr>
-        <td class="tg-0pky">11/24 (Part 2)</td>
+        <td class="tg-0pky">11/19</td>
         <td class="tg-c3ow">
           Robust Reinforcement Learning and Improve learning robustness with
           unlabeled data
@@ -1255,7 +887,7 @@
         </td>
         <td class="tg-0pky">
           <a
-            href="javascript:void(0);"
+            href="https://www.dropbox.com/s/364c08uelrnp8ps/1119-Ruochen%20Shen%20IRD%20Paper%20Presentation.pdf?dl=0"
             target="_blank"
           >
             Slides</a
@@ -1266,40 +898,29 @@
         <td class="tg-middle" colspan="4"><b>Fall Break</b></td>
       </tr>
       <tr>
-        <td class="tg-0pky">11/29</td>
+        <td class="tg-0pky">12/1</td>
         <td class="tg-c3ow">Robustness In Distributed Learning</td>
         <td class="tg-reading">
-          <a href="https://arxiv.org/abs/2106.08283" target="">
-            CRFL: Certifiably Robust Federated Learning against Backdoor Attacks
-          </a>
-          <br />
           <a href="https://openreview.net/pdf?id=rkgyS0VFvr" target="">
             DBA: Distributed Backdoor Attacks Against Federated Learning
           </a>
           <br />
           <a
-            href="https://arxiv.org/abs/2004.04986"
+            href="Towards Realistic Byzantine-Robust Federated Learning"
             target=""
           >
             Towards Realistic Byzantine-Robust Federated Learning
           </a>
         </td>
-        <td class="tg-0pky">
-        <a
-            href="javascript:void(0);"
-            target="_blank"
-          >
-            Slides</a
-          >
-        </td>
+        <td class="tg-0pky"></td>
       </tr>
       <tr>
-        <td class="tg-0pky">12/1</td>
+        <td class="tg-0pky">12/3</td>
         <td class="tg-c3ow" colspan="2"><b>Final Report I</b></td>
         <td class="tg-0pky"></td>
       </tr>
       <tr>
-        <td class="tg-0pky">12/6</td>
+        <td class="tg-0pky">12/8</td>
         <td class="tg-c3ow" colspan="2"><b>Final Report II</b></td>
         <td class="tg-0pky"></td>
       </tr>
@@ -1313,7 +934,7 @@
       this course is to be completed independently. If you are ever uncertain of
       how to complete an assignment, you can go to office hours or engage in
       high-level discussions about the problem with your classmates on the
-      Canvas boards.
+      Piazza boards.
     </p>
 
     <p>Grades will be assigned as follows:</p>
@@ -1324,34 +945,27 @@
         hardness of the paper) for a specific topic. Students need to sign up
         for the presentation in this
         <a
-          href="https://docs.google.com/spreadsheets/d/1snk16fUAY9XloU9q0J5ryoXzdbY5LBOSE5L-ovUEQXg/edit?usp=sharing"
+          href="https://docs.google.com/spreadsheets/d/1eXhq-10rzOZlzEXyjU-BZDt7Hmgryre737ylz0q5OE0/edit?usp=sharing"
           target="_blank"
-          >Google Sheet</a
-          > (please log in with Illinois credentials to edit it). The presentation quality will take 20% of your grade.
+          >google sheet</a
+        >. The presentation quality will take 20% of your grade.
       </li>
       <li>
         <b>Paper Reviews:</b> Each student will submit three paper reviews for
         the papers not in your presentation pile. The three reviews will take
         10% of your grade. You can submit more than three and the highest three
-        scores will be selected. You can find the guidelines here in the 
-        <a
-          href="https://docs.google.com/document/d/1uckmVHjkYh_iK1FXechdlidRuvPKm7VoBHyanjsJpLU/edit?usp=sharing"
-          target="_blank"
-          >Google Doc</a
-        > (please log in with Illinois credentials to view it). 
-        You should submit the reviews on Canvas.
-        
+        scores will be selected.
       </li>
       <li>
         <b>Final Project:</b> Students will form groups of two and work on a
-        final project. A final project report will be submitted by <strike>12/2</strike> 12/05
-        midnight. <strike>and the final presentation will be scheduled (The spreadsheet for signup will be posted here</strike>
-        The final presentation will take place on Dec. 2 and Dec. 7. Please sign up and add your slides following the instructions here:
+        final project. A final project report will be submitted by 12/2
+        midnight, and the final presentation will be scheduled (Sign up here in
+        the
         <a
-          href="https://docs.google.com/presentation/d/1EgP2bJgUuRdGQSosbeBPL1qOhMlN69znV5mnSXuEWKc/edit?usp=sharing"
+          href="https://docs.google.com/spreadsheets/d/1eXhq-10rzOZlzEXyjU-BZDt7Hmgryre737ylz0q5OE0/edit#gid=1300234808"
           target="_blank"
-          >Google Slides Link</a
-        > (please log in with Illinois credentials to view it). The quality of the final project will take 65% of your final grade.
+          >Google Sheet</a
+        >). The quality of the final project will take 65% of your final grade.
       </li>
       <li>
         <b>Participation:</b> Accounts for 5%. Includes quizzes and class
@@ -1367,7 +981,7 @@
       participate in class discussions. Class participation will be a measure of
       contributing to the discourse both in class, through discussion and
       questions, and outside of class through contributing and responding to the
-      Canvas forum.
+      Piazza forum.
     </p>
 
     <p>
@@ -1476,16 +1090,9 @@
       for more information on FERPA.
     </p>
 
-    <h2>Statement on CS CARES and CS Values and Code of Conduct</h2>
-
-    <p>
-      All members of the Illinois Computer Science department - faculty, staff, and students - are expected to adhere to the <a href="https://cs.illinois.edu/about/values">CS Values and Code of Conduct</a>. The <a href="https://cs.illinois.edu/about/cs-cares">CS CARES Committee</a> is available to serve as a resource to help people who are concerned about or experience a potential violation of the Code. If you experience such issues, please <a href="https://cs.illinois.edu/about/cs-cares/contact">contact the CS CARES Committee</a>. The instructors of this course are also available for issues related to this class.
-    </p>
-
-
     <div class="footer">
-      <hr /> Contact:
-      <a href="mailto:zijianh4@illinois.edu">zijianh4@illinois.edu</a>
+      <hr />
+      <a href="mailto:fanw6@illinois.edu">fanw6@illinois.edu</a>
     </div>
   </body>
 </html>
