@@ -749,3 +749,8 @@ ul p {
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
+blockquote {
+  padding-top: 0;
+  padding-bottom: 0;
+}
