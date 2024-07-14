@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>ChatScene</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <img src="static/images/chatscene.png" alt="ChatScene Icon" style="height: 125px;"> <!-- Adjust the styling as needed -->
+          <h1 class="title is-2 publication-title">[CVPR 2024] ChatScene: Knowledge-Enabled <br> Safety-Critical Scenario Generation for Autonomous Vehicles</h1>
+          <div class="is-size-4 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block">
+              <a href="https://javyduck.github.io/" target="_blank">Jiawei Zhang<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://xuchejian.com/" target="_blank">Chejian Xu<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://aisecure.github.io/" target="_blank">Bo Li<sup>1, 2</sup></a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>UIUC, <sup>2</sup>UChicago</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Arxiv PDF link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2405.14062" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://github.com/javyduck/ChatScene" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present ChatScene, a Large Language Model (LLM)-based agent that leverages the capabilities of LLMs to generate safety-critical scenarios for autonomous vehicles. Given unstructured language instructions, the agent first generates textually described traffic scenarios using LLMs. These scenario descriptions are subsequently broken down into several sub-descriptions for specified details such as behaviors and locations of vehicles. The agent then distinctively transforms the textually described sub-scenarios into domain-specific languages, which then generate actual code for prediction and control in simulators, facilitating the creation of diverse and complex scenarios within the CARLA simulation environment. A key part of our agent is a comprehensive knowledge retrieval component, which efficiently translates specific textual descriptions into corresponding domain-specific code snippets by training a knowledge database containing the scenario description and code pairs. Extensive experimental results underscore the efficacy of ChatScene in improving the safety of autonomous vehicles. For instance, the scenarios generated by ChatScene show a 15% increase in collision rates compared to state-of-the-art baselines when tested against different reinforcement learning-based ego vehicles. Furthermore, we show that by using our generated safety-critical scenarios to fine-tune different RL-based autonomous driving models, they can achieve a 9% reduction in collision rates, surpassing current SOTA methods. ChatScene effectively bridges the gap between textual descriptions of traffic scenarios and practical CARLA simulations, providing a unified way to conveniently generate safety-critical scenarios for safety testing and improvement for AVs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h2 class="title">Pipeline</h2>
+
+      <img  src="static/images/chatscene.svg" width="100%" height="550">
+      </img>
+        
+      </div>
+    </div>
+  </section>
+<!--End paper poster -->
+
+<!-- End image carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Title for the Video Section -->
+      <h1 class="title is-3 has-text-centered">Straight Obstacle</h1>
+      
+      <!-- First row of videos: Three videos -->
+      <div class="columns">
+        <div class="column is-4">
+          <video poster="" id="video1" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_1/1.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is driving on a straight road; the adversarial pedestrian suddenly crosses the road from the right front and suddenly stops in front of the ego.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video2" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_1/2.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is driving on a straight road; the adversarial pedestrian stands behind a bus stop on the right front, then suddenly sprints out onto the road in front of the ego vehicle and stops.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video3" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_1/3.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is driving on a straight road; the adversarial pedestrian is hidden behind a vending machine on the right front, and abruptly dashes out onto the road, and stops directly in the path of the ego.</p>
+        </div>
+      </div>
+
+      <!-- Second row of videos: Two videos centered -->
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <video poster="" id="video4" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_1/4.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is driving on a straight road; the adversarial pedestrian appears from a driveway on the left and suddenly stop and walk diagonally.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video5" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_1/5.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is driving on a straight road; the adversarial pedestrian suddenly appears from behind a parked car on the right front and suddenly stop.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Title for the Video Section -->
+      <h1 class="title is-3 has-text-centered">Turning Obstacle</h1>
+      
+      <!-- First row of videos: Three videos -->
+      <div class="columns">
+        <div class="column is-4">
+          <video poster="" id="video1" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_2/1.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is turning left at an intersection; the adversarial motorcyclist on the right front pretends to cross the road but brakes abruptly at the edge of the road, causing confusion.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video2" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_2/2.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is turning left at an intersection; the adversarial pedestrian on the opposite sidewalk suddenly crosses the road from the right front and stops in the middle of the intersection.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video3" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_2/3.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is turning right at an intersection; the adversarial motorcyclist on the opposite sidewalk abruptly crosses the road from the right front and comes to a halt in the center of the intersection.</p>
+        </div>
+      </div>
+
+      <!-- Second row of videos: Two videos centered -->
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <video poster="" id="video4" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_2/4.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is turning right at an intersection; the adversarial pedestrian on the left front suddenly crosses the road and stops in the middle of the intersection, blocking the ego vehicle's path.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video5" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_2/5.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is turning left at an intersection; the adversarial cyclist on the left front suddenly stops in the middle of the intersection and dismounts, obstructing the ego vehicle's path.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Title for the Video Section -->
+      <h1 class="title is-3 has-text-centered">Lane Changing</h1>
+      
+      <!-- First row of videos: Three videos -->
+      <div class="columns">
+        <div class="column is-4">
+          <video poster="" id="video1" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_3/1.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is attempting to change lanes to avoid a slow-moving leading vehicle; the adversarial car in the target lane suddenly merges into the ego vehicle's original lane, blocking the ego vehicle from returning to its initial position.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video2" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_3/2.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is changing to the right lane; the adversarial car is driving parallel to the ego and blocking its path.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video3" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_3/3.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is attempting to change lanes to avoid a slow-moving leading vehicle; the adversarial car in the target lane suddenly slows down, matching the speed of the leading vehicle, and effectively blocking the ego vehicle from completing the lane change.</p>
+        </div>
+      </div>
+
+      <!-- Second row of videos: Two videos centered -->
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <video poster="" id="video4" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_3/4.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is performing a lane change to evade a slow-moving vehicle; the adversarial car in the target lane on the right front suddenly brakes, causing the ego vehicle to react quickly to avoid a collision.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video5" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_3/5.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is preparing to change lanes to evade a slow-moving leading vehicle; the adversarial car in the target lane starts weaving between lanes, making it difficult for the ego vehicle to predict its position and safely execute the lane change.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Title for the Video Section -->
+      <h1 class="title is-3 has-text-centered">Vehicle Passing</h1>
+      
+      <!-- First row of videos: Three videos -->
+      <div class="columns">
+        <div class="column is-4">
+          <video poster="" id="video1" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_4/1.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego approaches a parked car that is blocking its lane and must use the opposite lane to bypass the vehicle, cautiously monitoring oncoming traffic, and suddenly encounters a jaywalking pedestrian, requiring the ego to quickly assess the situation and respond appropriately to avoid a collision.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video2" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_4/2.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego encounters a parked car blocking its lane and must use the opposite lane to bypass the vehicle, carefully assessing the situation and yielding to oncoming traffic, when an oncoming motorcyclist swerves into the lane unexpectedly, necessitating the ego to brake or maneuver to avoid a potential accident.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video3" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_4/3.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego encounters a parked car blocking its lane and must use the opposite lane to bypass the vehicle when an oncoming pedestrian enters the lane without warning and suddenly stop, necessitating the ego to brake sharply or steer to avoid hitting the pedestrian.</p>
+        </div>
+      </div>
+
+      <!-- Second row of videos: Two videos centered -->
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <video poster="" id="video4" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_4/4.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego approaches a parked car obstructing its lane and must use the opposite lane to go around when an oncoming car suddenly turns into the ego's path without signaling, requiring the ego to react quickly and take evasive action to prevent a collision.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video5" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_4/5.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego encounters a parked car blocking its lane and must use the opposite lane to bypass the vehicle when an oncoming car suddenly accelerates, closing the gap for the ego to safely return to its lane, necessitating the ego to quickly decide whether to accelerate or brake to avoid a collision.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Title for the Video Section -->
+      <h1 class="title is-3 has-text-centered">Red-light Running</h1>
+      
+      <!-- First row of videos: Three videos -->
+      <div class="columns">
+        <div class="column is-4">
+          <video poster="" id="video1" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_5/1.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego is driving straight through an intersection when a crossing vehicle runs the red light and unexpectedly accelerates, forcing the ego to quickly reassess the situation and perform a collision avoidance maneuver.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video2" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_5/2.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is moving straight through the intersection; the adversarial agent, initially on the left front, runs the red light and makes an abrupt right turn, forcing the ego vehicle to perform a collision avoidance maneuver.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video3" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_5/3.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is going straight through the intersection; the adversarial vehicle approaches from the left front and cuts off the ego vehicle.</p>
+        </div>
+      </div>
+
+      <!-- Second row of videos: Two videos centered -->
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <video poster="" id="video4" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_5/4.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is moving straight through the intersection; the adversarial agent, initially on the left front, runs the red light and makes an abrupt left turn, forcing the ego vehicle to perform a collision avoidance maneuver.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video5" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_5/5.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego moves straight at an intersection when a crossing vehicle runs the red light from right and brakes abruptly, causing the ego to rapidly adapt its trajectory and perform a collision avoidance maneuver.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Title for the Video Section -->
+      <h1 class="title is-3 has-text-centered">Unprotected Left-turn</h1>
+      
+      <!-- First row of videos: Three videos -->
+      <div class="columns">
+        <div class="column is-4">
+          <video poster="" id="video1" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_6/1.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego starts an unprotected left turn at an intersection while yielding to an oncoming car when the oncoming car's throttle malfunctions, leading to an unexpected acceleration and forcing the ego to quickly modify its turning path to avoid a collision.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video2" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_6/2.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego attempts an unprotected left turn at an intersection while yielding to an oncoming car when the oncoming car's suddenly brakes, necessitating the ego to rapidly reassess the situation and adjust its turn.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video3" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_6/3.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego commences an unprotected left turn at an intersection while yielding to an oncoming car when the adversarial car, comes from the right, blocks multiple lanes by driving extremely slowly, forcing the ego vehicle to change lanes.</p>
+        </div>
+      </div>
+
+      <!-- Second row of videos: Two videos centered -->
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <video poster="" id="video4" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_6/4.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is making an unprotected left turn; the adversarial vehicle approaches the intersection at a normal speed but then suddenly attempts to make a last-second right turn.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video5" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_6/5.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego attempts an unprotected left turn at an intersection while yielding to an oncoming car when the oncoming car veer erratically.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Title for the Video Section -->
+      <h1 class="title is-3 has-text-centered">Right Turn</h1>
+      
+      <!-- First row of videos: Three videos -->
+      <div class="columns">
+        <div class="column is-4">
+          <video poster="" id="video1" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_7/1.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego is performing a right turn at an intersection when the crossing car suddenly speeds up, entering the intersection and causing the ego to brake abruptly to avoid a collision.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video2" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_7/2.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is turning right; the adversarial car (positioned ahead on the right) blocks the lane by braking suddenly.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video3" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_7/3.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is turning right; the adversarial vehicle enters the intersection from the left side, swerving to the right suddenly.</p>
+        </div>
+      </div>
+
+      <!-- Second row of videos: Two videos centered -->
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <video poster="" id="video4" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_7/4.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is turning right; the adversarial car (positioned ahead on the right) reverses abruptly.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video5" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_7/5.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is turning right; the adversarial car (positioned behind on the right) suddenly accelerates and then decelerates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Title for the Video Section -->
+      <h1 class="title is-3 has-text-centered">Crossing Negotiation</h1>
+      
+      <!-- First row of videos: Three videos -->
+      <div class="columns">
+        <div class="column is-4">
+          <video poster="" id="video1" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_8/1.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is approaching the intersection; the adversarial car (on the left) suddenly accelerates and enters the intersection first and suddenly stop.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video2" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_8/2.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is approaching the intersection; the adversarial car (on the right) suddenly accelerates and enters the intersection first and suddenly stop.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video3" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_8/3.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is maintaining a constant speed; the adversarial car, comes from the right, blocks multiple lanes by driving extremely slowly, forcing the ego vehicle to change lanes.</p>
+        </div>
+      </div>
+
+      <!-- Second row of videos: Two videos centered -->
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <video poster="" id="video4" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_8/4.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is entering the intersection; the adversarial vehicle comes from the opposite direction and turns left and stop, causing a near collision with the ego vehicle.</p>
+        </div>
+        <div class="column is-4">
+          <video poster="" id="video5" autoplay controls muted loop width="100%">
+            <source src="static/videos/scenario_8/5.mp4" type="video/mp4">
+          </video>
+          <p class="has-text-centered">The ego vehicle is entering the intersection; the adversarial vehicle comes from the right and turns left and stop, causing a near collision with the ego vehicle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End video carousel -->
+
+<!-- Image carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h2 class="title">Poster</h2>
+
+      <img  src="static/images/ChatScene_poster.svg" width="100%" height="550">
+      </img>
+        
+      </div>
+    </div>
+  </section>
+<!--End paper poster -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Citation</h2>
+      <pre><code>@inproceedings{zhang2024chatscene,
+  title={ChatScene: Knowledge-Enabled Safety-Critical Scenario Generation for Autonomous Vehicles},
+  author={Zhang, Jiawei and Xu, Chejian and Li, Bo},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={15459--15469},
+  year={2024}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-4">
+        <div class="content">
+
+          <p>
+            The web was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">academic template</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
